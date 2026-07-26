@@ -1,8 +1,8 @@
 # KB build — CS221 (Artificial Intelligence: Principles and Techniques, Stanford)
 
 ## Transcripts
-- [ ] 01 Course Overview and AI Foundations — video yaLEGZuIIgE
-- [ ] 02 Learning I — video ypZJaTqrNdk
+- [x] 01 Course Overview and AI Foundations — video yaLEGZuIIgE
+- [x] 02 Learning I — video ypZJaTqrNdk
 
 ## Crawl
 - [ ] Fetch course site index: https://stanford-cs221.github.io/autumn2025/
