@@ -16,5 +16,5 @@
 - [x] INDEX.md table of contents
 
 ## Publish
-- [ ] Commit and push
-- [ ] PATCH kbUrl onto the catalog entry
+- [x] Commit and push
+- [x] PATCH kbUrl onto the catalog entry
