@@ -10,10 +10,10 @@
 - [x] Write sources.md
 
 ## Wiki
-- [ ] wiki/01-course-overview.md
-- [ ] wiki/02-learning-i.md
-- [ ] Topic pages (cross-lecture concepts)
-- [ ] INDEX.md table of contents
+- [x] wiki/01-course-overview.md
+- [x] wiki/02-learning-i.md
+- [x] Topic pages (cross-lecture concepts)
+- [x] INDEX.md table of contents
 
 ## Publish
 - [ ] Commit and push
