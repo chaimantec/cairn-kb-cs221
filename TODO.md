@@ -5,9 +5,9 @@
 - [x] 02 Learning I — video ypZJaTqrNdk
 
 ## Crawl
-- [ ] Fetch course site index: https://stanford-cs221.github.io/autumn2025/
-- [ ] Download linked PDFs and slides
-- [ ] Write sources.md
+- [x] Fetch course site index: https://stanford-cs221.github.io/autumn2025/
+- [x] Download linked PDFs and slides
+- [x] Write sources.md
 
 ## Wiki
 - [ ] wiki/01-course-overview.md
