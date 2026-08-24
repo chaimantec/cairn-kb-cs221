@@ -14,6 +14,8 @@ raw.githubusercontent.com and follows relative markdown links.
 | `raw/transcripts/`  | Lecture transcripts with `[MM:SS]` paragraph marks.           |
 | `raw/pdfs/`         | Slides and handouts downloaded from the course website.       |
 | `sources.md`        | Crawl inventory: source URL → local file, fetch date.         |
+| `kb.json`           | Machine-readable coverage and provenance. Read this to know what this KB does and does not cover, and how far to trust a citation. |
+| `SEE_ALSO.md`       | Sibling KBs worth reading for this course, by raw URL.        |
 | `TODO.md`           | Build tracker. Unchecked boxes are outstanding work.          |
 
 ## Conventions
