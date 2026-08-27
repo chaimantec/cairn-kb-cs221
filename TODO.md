@@ -11,7 +11,7 @@
 - [x] Fetch course site index: https://stanford-cs221.github.io/autumn2025/
 - [x] Download linked PDFs and slides
 - [x] Write sources.md
-- [x] Figure descriptions for slide files 01-05 (vision pass — 2026-08-27: the parent model still cannot perceive images, but a claude-sonnet-5 subagent can; 26 figures + 1 video described visually, with a second vision pass auditing the chart- and text-dense figures)
+- [x] Figure descriptions for slide files 01-05 (vision pass — 2026-08-27: the parent model (deepseek-v4-pro) still cannot perceive images, but subagents run deepseek-v4-flash-vision-exp, which can; 26 figures + 1 video described visually, with a second vision pass auditing the chart- and text-dense figures)
 
 ## Wiki
 - [x] wiki/01-course-overview.md

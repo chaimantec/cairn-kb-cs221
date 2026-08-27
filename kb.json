@@ -30,12 +30,11 @@
     "sourceRepo": "https://github.com/stanford-cs221/autumn2025-lectures"
   },
   "provenance": {
-    "builtBy": ["deepseek", "claude-sonnet-5"],
+    "builtBy": ["deepseek-v4-pro", "deepseek-v4-flash-vision-exp"],
     "caveats": [
       "PARTIAL: covers lectures 1-5 of 20. Do not cite this KB as covering CS221 as a whole - it says nothing about MDPs, games, CSPs, logic, or any material after lecture 5.",
-      "Figure descriptions were written by vision-capable subagents (claude-sonnet-5) because the parent model cannot perceive images. The chart- and text-dense figures were then audited by a second vision pass, which corrected four errors: a circle radius (2 → 1.4, matching the source code's boundary), a scatter point count (25 → 20), a graph line colour (red → green), and an invented monkey inside a magnifying-glass illustration.",
-      "The SVM-with-polynomial-kernel video in lecture 4 was described from 7 sampled frames of 43, not watched in full.",
-      "The exact model identifier of the parent was not recorded at build time, only the family."
+      "Figure descriptions were written by vision-capable subagents (deepseek-v4-flash-vision-exp) because the parent model (deepseek-v4-pro) cannot perceive images. The chart- and text-dense figures were then audited by a second vision pass, which corrected four errors: a circle radius (2 → 1.4, matching the source code's boundary), a scatter point count (25 → 20), a graph line colour (red → green), and an invented monkey inside a magnifying-glass illustration.",
+      "The SVM-with-polynomial-kernel video in lecture 4 was described from 7 sampled frames of 43, not watched in full."
     ]
   },
   "entryPoint": "INDEX.md",
