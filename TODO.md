@@ -5,17 +5,22 @@
 - [x] 02 Learning I — video ypZJaTqrNdk
 - [x] 03 Learning II — video Mbe5ICIUw5Q
 - [x] 04 Learning III — video 89NND-Ca0yY
+- [x] 05 Search I — video fPESauMaJYA
 
 ## Crawl
 - [x] Fetch course site index: https://stanford-cs221.github.io/autumn2025/
 - [x] Download linked PDFs and slides
 - [x] Write sources.md
+- [ ] Figure descriptions for slide files 01-05 (vision pass — BLOCKED: no model in this harness could perceive images; slide files carry source-text-grounded descriptions and a pending-vision caveat. Re-run with a vision-capable model.)
 
 ## Wiki
 - [x] wiki/01-course-overview.md
 - [x] wiki/02-learning-i.md
 - [x] wiki/03-learning-ii.md
 - [x] wiki/04-learning-iii.md
+- [x] wiki/05-search-i.md
+- [x] Search topic pages (search problems, dynamic programming, beam search)
+- [ ] Re-link Bayesian networks / Turing test mentions in wiki/01-course-overview.md when those lectures are built (unlinked 2026-08-27 because the pages did not exist yet)
 - [x] Topic pages (cross-lecture concepts)
 - [x] INDEX.md table of contents (update for lectures 3-4)
 

@@ -20,7 +20,7 @@ An intelligent agent — whether human or machine — must be able to do four th
 
 1. **Perceive** — process raw inputs from the world and turn them into understanding. Includes visual scene understanding, speech recognition, and natural language understanding ([≈3:14](../raw/transcripts/01-course-overview.md)).
 
-2. **Reason** — use knowledge and percepts to draw inferences. Techniques covered in this course include uniform cost search, value iteration (for MDPs), minimax (for adversarial games), and probabilistic inference in [Bayesian networks](bayesian-networks.md) ([≈4:00](../raw/transcripts/01-course-overview.md)).
+2. **Reason** — use knowledge and percepts to draw inferences. Techniques covered in this course include uniform cost search, value iteration (for MDPs), minimax (for adversarial games), and probabilistic inference in Bayesian networks ([≈4:00](../raw/transcripts/01-course-overview.md)).
 
 3. **Act** — output actions that affect the world: generate text, synthesize speech, control a robot ([≈5:32](../raw/transcripts/01-course-overview.md)).
 
@@ -40,7 +40,7 @@ Liang tells the history of AI as the story of three intellectual traditions. The
 
 ### Symbolic AI
 
-- **1950**: Alan Turing asks "Can machines think?" and proposes the imitation game (the [Turing test](turing-test.md)), grounding a philosophical question in objective measurement ([≈17:55](../raw/transcripts/01-course-overview.md)).
+- **1950**: Alan Turing asks "Can machines think?" and proposes the imitation game (the Turing test), grounding a philosophical question in objective measurement ([≈17:55](../raw/transcripts/01-course-overview.md)).
 - **1956**: John McCarthy organizes the Dartmouth workshop and coins the term "artificial intelligence." Early successes include Samuel's checkers player and Newell & Simon's Logic Theorist ([≈20:13](../raw/transcripts/01-course-overview.md)).
 - **1966**: The ALPAC report cuts MT funding → **first AI winter**. Problems: limited computation, limited information ([≈23:16](../raw/transcripts/01-course-overview.md)).
 - **1970s–80s**: Expert systems (MYCIN, DENDRAL) encode domain knowledge as rules. First real industrial AI impact, but rules don't handle uncertainty and become too complex → **second AI winter** in 1987 ([≈24:50](../raw/transcripts/01-course-overview.md)).

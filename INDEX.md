@@ -1,6 +1,6 @@
 # CS221 — Artificial Intelligence: Principles and Techniques | Autumn 2025 — Percy Liang
 
-Stanford's introductory AI course. Covers perception, reasoning, action, and learning under resource constraints, drawing on symbolic, neural, and statistical AI traditions. This knowledge base covers lectures 1–4 of 20, with edited transcripts, slide transcriptions, and interlinked wiki pages.
+Stanford's introductory AI course. Covers perception, reasoning, action, and learning under resource constraints, drawing on symbolic, neural, and statistical AI traditions. This knowledge base covers lectures 1–5 of 20, with edited transcripts, slide transcriptions, and interlinked wiki pages.
 
 ## Lectures
 
@@ -8,6 +8,7 @@ Stanford's introductory AI course. Covers perception, reasoning, action, and lea
 - **[Lecture 2 — Learning I](wiki/02-learning-i.md)** — Einops review, gradients and partial derivatives, computation graphs and backpropagation (building a mini-PyTorch), and linear regression as the first complete ML pipeline: hypothesis class → loss function → optimization algorithm.
 - **[Lecture 3 — Learning II](wiki/03-learning-ii.md)** — Linear classification: from zero-one loss (zero gradients → optimization fails) through logistic regression (maximum likelihood with a smooth, differentiable loss), logistic function and its properties, multiclass extension via softmax and cross entropy, and representing text as tensors (tokenization → one-hot → bag of words).
 - **[Lecture 4 — Learning III](wiki/04-learning-iii.md)** — Deep neural networks: PyTorch as NumPy + autodiff, the feature-map insight (linear in φ-space = nonlinear in x-space), MLPs with ReLU activation (why two linear layers don't help but one ReLU does), deep networks and the vanishing/exploding gradient problem, and five survival techniques: residual connections, layer normalization, Xavier initialization, activation function choice, and SGD/Adam optimizers.
+- **[Lecture 5 — Search I](wiki/05-search-i.md)** — Search as reasoning: the search-problem abstraction (start_state, successors, is_end), the travel problem and what belongs in the state, future cost and exhaustive search (exponential time), dynamic programming = exhaustive search + caching, approximate search via best-of-n and beam search, and test-time compute in language models cast as a search problem (the Bitter Lesson's "search and learning").
 
 ## Topic Pages
 
@@ -16,6 +17,9 @@ Stanford's introductory AI course. Covers perception, reasoning, action, and lea
 - **[Backpropagation](wiki/backpropagation.md)** — Reverse-mode automatic differentiation. Computation graphs, the chain rule, forward and backward passes, node-level gradient rules (Add, Multiply, Squared), and how PyTorch works under the hood.
 - **[Linear Regression](wiki/linear-regression.md)** — The simplest complete ML pipeline. Hypothesis class (parameterized linear functions), squared loss, and training loss minimization via gradient descent. Demonstrates the general ML template.
 - **[Gradient Descent](wiki/gradient-descent.md)** — Iterative optimization by moving in the negative gradient direction. Learning rate tradeoffs, convex vs. non-convex convergence, and variants (SGD, Adam).
+- **[Search Problems](wiki/search-problems.md)** — The abstraction that turns word problems into code: state, successors (action–cost–next-state), is_end, and the minimum-total-cost objective. What belongs in the state, why keeping it small matters, and the Bitter Lesson motivation.
+- **[Dynamic Programming](wiki/dynamic-programming.md)** — Exhaustive search plus caching: Bellman's terminology, the future-cost recurrence, the three-line diff from exhaustive search, and when the cache pays off (states fit in memory, many paths to a state).
+- **[Beam Search and Best-of-n](wiki/beam-search.md)** — The two approximate search methods: n random rollouts of a policy, and keeping the best `beam_width` partial solutions. The width-1/infinity extremes, determinism vs. stochasticity, the policy-as-prior distinction, and particle filtering.
 
 ## Raw Materials
 
@@ -25,4 +29,4 @@ Stanford's introductory AI course. Covers perception, reasoning, action, and lea
 
 ---
 
-Built with the Cairn KB skill. Lectures 1–4 of 20. See [`TODO.md`](TODO.md) for build progress.
+Built with the Cairn KB skill. Lectures 1–5 of 20. See [`TODO.md`](TODO.md) for build progress.

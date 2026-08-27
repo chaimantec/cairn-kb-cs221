@@ -9,11 +9,11 @@
     "courseUrl": "https://stanford-cs221.github.io/autumn2025/"
   },
   "coverage": {
-    "lecturesCovered": 4,
+    "lecturesCovered": 5,
     "lecturesTotal": 20,
-    "transcripts": 4,
-    "wikiLecturePages": 4,
-    "wikiTopicPages": 5
+    "transcripts": 5,
+    "wikiLecturePages": 5,
+    "wikiTopicPages": 8
   },
   "materials": {
     "primary": "executable-lectures",
@@ -23,13 +23,13 @@
     "sourceRepo": "https://github.com/stanford-cs221/autumn2025-lectures"
   },
   "provenance": {
-    "builtBy": ["deepseek"],
+    "builtBy": ["deepseek", "claude-sonnet-5"],
     "caveats": [
-      "PARTIAL: covers lectures 1-4 of 20. Do not cite this KB as covering CS221 as a whole - it says nothing about search, MDPs, games, CSPs, logic, or any material after lecture 4.",
-      "Built by a model without vision. That is immaterial for this course: CS221 uses executable Python lectures rather than slide decks, so the material is source text and was transcribed exactly. A deck-based course built the same way would have lost every figure.",
-      "The exact model identifier was not recorded at build time, only the family."
+      "PARTIAL: covers lectures 1-5 of 20. Do not cite this KB as covering CS221 as a whole - it says nothing about MDPs, games, CSPs, logic, or any material after lecture 5.",
+      "No model in the build sessions could perceive images. That is nearly immaterial for this course: CS221 uses executable Python lectures rather than slide decks, so the substantive material is source text and was transcribed exactly (demo outputs were reproduced by executing the lecture's own code). The one gap: the figures shown in lectures (diagrams, photos, a paper's plot) are described in the slide files only at the level of the accompanying source text, with 'vision pass pending' notes. A vision-capable model should revisit them - see TODO.md.",
+      "The exact model identifier of the parent was not recorded at build time, only the family."
     ]
   },
   "entryPoint": "INDEX.md",
-  "updated": "2026-08-24"
+  "updated": "2026-08-27"
 }
