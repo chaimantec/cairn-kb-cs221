@@ -8,7 +8,8 @@ note: >
   lecture content — rather than traditional slide PDFs. This file transcribes the
   content of the three source files that comprise Lecture 1, organized by section.
   There are no traditional slide numbers; sections correspond to function calls
-  in the source.
+  in the source. Figure descriptions were written by a vision pass: a
+  vision-capable model read each rendered figure and described what it shows.
 ---
 
 # Lecture 1 Slides — Course Overview and AI Foundations
@@ -20,6 +21,8 @@ Lecture 1 comprises three executable Python files: `welcome.py`, `history.py`, a
 ## Part 1: Welcome (`welcome.py`)
 **Source:** <https://raw.githubusercontent.com/stanford-cs221/autumn2025-lectures/main/welcome.py>
 **Rendered:** <https://stanford-cs221.github.io/autumn2025-lectures/?trace=welcome>
+
+(Staff roster — `course-staff.png`: circular portrait headshots with two-line labels (name in dark red, role in gray). Top row: "Percy Liang / Instructor" and "Ken Liu / Head CA"; below a divider, seven CAs: Adi Badlani, Aryaman Arora, Erick Ramirez, Iddah Mlauze, Linda Liu, Minsik Oh, and Zhengxuan (Zen) Wu.)
 
 ### Section: What is AI?
 
@@ -35,6 +38,10 @@ Examples of AI all around us:
 ### Section: Ingredients of Intelligence
 
 What kinds of things should an intelligent agent be able to do?
+
+(Diagram: `perceive-reason-act-learn.png` — a grayscale diagram: an "Agent" box in the center, a straight arrow labeled "perceive" entering from the left, a straight arrow labeled "act" exiting to the right, a looped arrow curving over the top of the box labeled "reason", and a looped arrow curving under the box labeled "learn".)
+
+**Motivating example: driving** — (Image: `self-driving-image.png` — a stylized first-person view of a city intersection from a vehicle, in flat purple/blue/olive tones: the vehicle's hood in the foreground labeled "self-driving car", a dark blue street with a zebra crosswalk labeled "road" and "crosswalk", and white-labeled scene elements: "tree", "building", several "car"s, "traffic light"s on green poles, "sidewalk", and a pink "pedestrian" on the right.)
 
 1. **Perceive** — process raw inputs from the world
    - Visual scene understanding
@@ -104,11 +111,19 @@ This is an executable lecture — a program whose execution delivers the content
 
 The history of AI is the story of three intellectual traditions: symbolic AI, neural AI, and statistical AI.
 
+(Image: `symbolic-neural-statistical.png` — the three traditions arranged in a triangle: top center a marble bust of a Greek philosopher labeled "symbolic AI" in orange; lower left a biological neuron with branching dendrites and glowing synapses labeled "neural AI" in green; lower right a 3D plot of a wavy surface made of blue data points labeled "statistical AI" in blue.)
+
 ### Section: The Turing Test (1950)
 
 Alan Turing published his 1950 paper asking: "Can machines think?"
+
+(Photo: `alan-turing.jpg` — a black-and-white head-and-shoulders portrait of Turing, mid-20th-century print, dark jacket and tie, looking slightly left of camera. Image: `turing-1950-paper.jpg` — the first page of the *Mind* journal article "I.—COMPUTING MACHINERY AND INTELLIGENCE" by A. M. TURING (Vol. LIX, October 1950), opening with section "1. The Imitation Game." and the paragraph beginning "I propose to consider the question, 'Can machines think?' ...")
+
 - More basically: How could you tell?
 - His answer: The Imitation Game (the Turing Test)
+
+  (Diagram: `turing-test.jpg` — the classic setup: above a horizontal line, candidate A (a computer monitor on a keyboard base) and candidate B (a stick figure); below the line, interrogator C with a thought bubble cycling through both candidates and ending in a question mark.)
+
 - Significance: grounds a philosophical question in objective measurement
 - Left open the solution: machine learning? logic?
 
@@ -116,6 +131,9 @@ Alan Turing published his 1950 paper asking: "Can machines think?"
 
 **Dartmouth Workshop (1956):**
 - John McCarthy organized workshop at Dartmouth College
+
+  (Photo: `dartmouth.jpg` — a red-brick college building with a tall white central clock tower, photographed across a wide green lawn on a sunny day.)
+
 - Convened leading thinkers (Shannon, Minsky, etc.)
 - Goal: make a "significant advance" in 2 months
 - Coined the term "artificial intelligence"
@@ -142,6 +160,14 @@ Alan Turing published his 1950 paper asking: "Can machines think?"
 
 **Knowledge-Based Systems (1970s–80s):**
 - Expert systems: elicit domain knowledge as rules
+
+  (Image: `knowledge-key.jpg` — an antique skeleton key lying diagonally across a cream paper strip printed "KNOWLEDGE" — knowledge as the key. Screenshot: `mycin-rule.png` — a MYCIN-style production rule:
+
+  "IF: 1) The stain of the organism is gramneg, and
+      2) The morphology of the organism is rod, and
+      3) The aerobicity of the organism is aerobic
+  THEN: There is strongly suggestive evidence (.8) that the class of the organism is enterobacteriaceae")
+
 - Systems: DENDRAL (mass spectrometry), MYCIN (blood infections), XCON (order-to-parts)
 - Wins: knowledge bridged information/computation gaps; first real industrial AI impact
 - Shortcomings: deterministic rules couldn't handle real-world uncertainty; rules became too complex
@@ -195,6 +221,8 @@ Alan Turing published his 1950 paper asking: "Can machines think?"
 - BERT: Transformer pretraining + fine-tuning
 - Google's T5 (11B): everything cast as text-to-text
 
+  (Diagram: `t5.png` — the T5 text-to-text framework: a central "T5" box with four color-paired input boxes on the left and four output boxes on the right — green: "translate English to German: That is good." → "Das ist gut."; pink: "cola sentence: The course is jumping well." → "not acceptable"; yellow: "stsb sentence1: The rhino grazed on the grass. sentence2: A rhino is grazing in a field." → "3.8"; blue: "summarize: state authorities dispatched emergency crews tuesday..." → "six people hospitalized after a storm in attala county.")
+
 **Scaling Up:**
 - GPT-2: fluent text, first zero-shot capability signs
 - Scaling laws: predictability for scaling
@@ -208,10 +236,15 @@ Alan Turing published his 1950 paper asking: "Can machines think?"
 - Models: OpenAI's o1–o4, DeepSeek's r1
 
 **Industrialization of AI:**
+
+(Photo: `industrialisation.jpg` — a wide photograph of a vast industrial complex — an oil refinery or petrochemical plant — at dusk: a maze of steel pipe racks, tanks and towers dotted with hundreds of glowing lights, striped smoke stacks rising into a pink-purple-blue sunset sky.)
+
 - GPT-4: ~1.8T parameters; ~$100M training cost
 - xAI's Colossus cluster: 200,000 H100s for Grok
 - Stargate project (OpenAI, NVIDIA, Oracle): $500B over 4 years
 - No public details on frontier model construction
+
+  (Screenshot: `gpt4-no-details.png` — from the GPT-4 technical report, section "2  Scope and Limitations of this Technical Report", with one passage highlighted in blue: "Given both the competitive landscape and the safety implications of large-scale models like GPT-4, this report contains no further details about the architecture (including model size), hardware, training compute, dataset construction, training method, or similar.")
 - AI has emerged from research and now is shaping businesses and public policy
 - The research is still far from done
 
@@ -238,6 +271,8 @@ This class will see elements of all three traditions.
 ## Part 3: Tensors (`tensors.py`)
 **Source:** <https://raw.githubusercontent.com/stanford-cs221/autumn2025-lectures/main/tensors.py>
 **Rendered:** <https://stanford-cs221.github.io/autumn2025-lectures/?trace=tensors>
+
+(Image: `tensor.jpg` — a drawing of a 3×3×3 cube of small cuboids in isometric view: the front face (bluish-gray) shows the numbers 1–9 in a 3×3 grid, the top face (orange) shows letters A, B, C in its back row and a, b, c in its front row, and the right face (salmon-pink) shows c, g, j and C, G, J in its columns — each face a 3×3 matrix, the cube built from three matrices. Shown with the note: 'This is probably what you think of when you hear the word "tensor".')
 
 Tensors are the atoms of modern machine learning. They represent data, model parameters, gradients, intermediate computations (activations), etc. Tensors show up elsewhere in science and engineering.
 

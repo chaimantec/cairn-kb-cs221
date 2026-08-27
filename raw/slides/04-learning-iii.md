@@ -9,7 +9,9 @@ note: >
   CS221 uses "executable lectures" — Python programs whose execution delivers the
   lecture content — rather than traditional slide PDFs. This file transcribes the
   content of `deep_learning.py`. There are no traditional slide numbers;
-  sections correspond to function calls in the source.
+  sections correspond to function calls in the source. Figure descriptions were
+  written by a vision pass: a vision-capable model read each rendered figure
+  and described what it shows.
 ---
 
 # Lecture 4 Slides — Learning III
@@ -130,9 +132,13 @@ optimizer.step()  # Updates the parameters
 
 **So far:** linear classifiers → decision boundaries are straight cuts of input space.
 
+Or in linear regression:
+
+(Chart: `linear-regressors.png` — two straight-line regressors on axes x (0 to 5) and y (0 to 4): a red line rising from (0, 1) to about (5, 3.9), slope ≈ 0.6, and a purple line rising gently from (0, 2) to about (5, 3), slope ≈ 0.2; the two lines cross around x ≈ 2.5–3.)
+
 **But data sometimes looks like this:**
-- Points arranged in concentric circles
-- Non-linear patterns that no straight line can separate
+
+(Chart: `nonlinear-points.png` — a scatter plot, x from 0 to 5, y from 0 to 4, of 20 green points tracing a wavy hump: rising from (0, 2.4) to a peak around (2.1, 4.2), plateauing at y ≈ 3.2–3.9 between x ≈ 2.7 and 4.0, then falling to about (5, 2.6). The trend rises then falls, so no single straight line would fit it well.)
 
 For these cases, we need **non-linear** models.
 
@@ -152,6 +158,8 @@ def quadratic_classifier(x):
 ```
 The decision boundary is a **circle** — definitely non-linear.
 
+(Chart: `quadratic-classifier.png` — the circular decision boundary in 2D input space: a thick purple circle centered at (1, 1) with radius ≈ 1.4 (the boundary $(x_0-1)^2 + (x_1-1)^2 = 2$, i.e. radius $\sqrt{2}$), drawn on axes x1 and x2 both running −3 to 3 with horizontal gray gridlines; four short purple arrows just inside the circle — top pointing down, bottom pointing up, left pointing right, right pointing left — mark the inside as one predicted class and the outside as the other.)
+
 ### Making it Linear via Feature Maps
 Define a fixed non-linear feature map:
 ```python
@@ -168,6 +176,8 @@ def predictor(x):
 ```
 
 A **linear classifier in a higher-dimensional space** leads to a **non-linear classifier in the original space**.
+
+(Video: `svm-polynomial-kernel.mp4` — a 43-second animation of an SVM with a polynomial kernel, credited to Udi Aharoni, with no axis labels or scales. It starts from a flat 2D plane holding a cluster of blue points ringed by a glowing white circle with red points scattered outside. The view lifts into 3D and the surface deforms into a cyan bowl (paraboloid): blue points sit inside the bowl's hollow, red points on the plane and the bowl's outside. A purple plane appears behind the bowl, then the animation returns to the top-down 2D view showing the glowing circle around the blue cluster — the non-linear boundary in the original space that corresponds to a linear separator in the lifted space.)
 
 ### Simple Algorithm:
 1. Preprocess data by applying `feature_map`
@@ -259,10 +269,14 @@ Balance tradeoff between **linear** (better gradients) and **non-linear** (bette
 
 **Solution:** stack multiple MLP layers.
 
+(Image: `more-layers.png` — a two-panel meme cartoon contrasting research styles. Top panel, "STATISTICAL LEARNING": a stick figure points at an x–y loss graph with a jagged green line and says "Gentlemen, our learner overgeneralizes because the VC-Dimension of our Kernel is too high. Get some experts and minimize the structural risk in a new one. Rework our loss function, make the next kernel stable, unbiased and consider using a soft margin." Bottom panel, "NEURAL NETWORKS": a stick figure whose head is a scribbled tangle of lines says "STACK MORE LAYERS", next to a graph of LAYERS vs performance rising from bottom-left to top-right. The joke: the statistical side elaborates kernels while the neural side just stacks layers.)
+
 Intuition: each layer learns more abstract features of the input.
 - Early layers: edges, textures
 - Middle layers: parts, patterns
 - Later layers: objects, concepts
+
+(Diagram: `feature-hierarchy.png` — a vertical four-level hierarchy with blue double-headed arrows between levels. Bottom to top: "Pixels" — a 4×4 tile of colored dots; "1st layer 'Edges'" — a grid of patches showing striped and blob-like patterns; "2nd layer 'Object parts'" — a grid of patches each showing a partial face part (an eye, an ear, a mouth, a nose); "3rd layer 'Objects'" — a grid of complete blurry front-facing faces. Each level is a wider grid than the one below it: features grow more abstract from pixels to edges to object parts to whole objects.)
 
 ### Deep Neural Network Architecture
 ```python

@@ -11,7 +11,7 @@
 - [x] Fetch course site index: https://stanford-cs221.github.io/autumn2025/
 - [x] Download linked PDFs and slides
 - [x] Write sources.md
-- [ ] Figure descriptions for slide files 01-05 (vision pass — BLOCKED: no model in this harness could perceive images; slide files carry source-text-grounded descriptions and a pending-vision caveat. Re-run with a vision-capable model.)
+- [x] Figure descriptions for slide files 01-05 (vision pass — 2026-08-27: the parent model still cannot perceive images, but a claude-sonnet-5 subagent can; 26 figures + 1 video described visually, with a second vision pass auditing the chart- and text-dense figures)
 
 ## Wiki
 - [x] wiki/01-course-overview.md

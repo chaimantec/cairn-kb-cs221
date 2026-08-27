@@ -24,7 +24,7 @@ Stanford's introductory AI course. Covers perception, reasoning, action, and lea
 ## Raw Materials
 
 - **[`raw/transcripts/`](raw/transcripts/)** — Edited lecture transcripts with `[MM:SS]` timestamps. The **edited** versions (not the originals in `original/`) are the ones to read — auto-caption errors (names, notation, punctuation) have been corrected while preserving all content and timestamps.
-- **[`raw/slides/`](raw/slides/)** — Full text transcription of every lecture's slide content. CS221 uses executable Python lectures rather than PDFs; each slide file documents the sections and content from the source `.py` files.
+- **[`raw/slides/`](raw/slides/)** — Full text transcription of every lecture's slide content. CS221 uses executable Python lectures rather than PDFs; each slide file documents the sections and content from the source `.py` files. The figures embedded in the lectures (diagrams, charts, photos, screenshots) are described visually in each slide file — written by a vision pass over the rendered figures, not inferred from filenames.
 - **[`sources.md`](sources.md)** — Every course document and external paper with its canonical URL. Slide and handout PDFs are linked (not committed) to keep the repo small — see `sources.md` for provenance.
 
 ---

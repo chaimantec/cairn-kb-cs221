@@ -11,10 +11,8 @@ note: >
   content of `search.py`. There are no traditional slide numbers; sections
   correspond to function calls in the source. Demo outputs (states explored,
   solution costs) were reproduced by executing the lecture's own code with the
-  same call sequence. FIGURE CAVEAT: no model in the build session could
-  perceive images, so figure descriptions are grounded in the accompanying
-  source text only, not in the actual visuals. A vision pass over the lecture's
-  figures is pending.
+  same call sequence. Figure descriptions were written by a vision pass: a
+  vision-capable model read each rendered figure and described what it shows.
 ---
 
 # Lecture 5 Slides — Search I
@@ -29,14 +27,22 @@ Lecture 5 introduces search as a form of reasoning. The lecture defines the **se
 - Learning algorithm: training data {(input, output)} → predictor
 - Predictor: input → output (number for regression, class for classification)
 
-**Recall the ingredients of intelligence** (the perceive–reason–act–learn cycle shown as a diagram):
+**Recall the ingredients of intelligence**:
+
+(Diagram: `perceive-reason-act-learn.png` — a white-background diagram of an agent: a light-gray rectangle labeled "Agent" in the center, with an arrow entering from the left labeled "perceive" and an arrow exiting to the right labeled "act"; a curved arc looping over the top of the box back into it is labeled "reason", and a curved arc looping under the box back into it is labeled "learn".)
+
 - A predictor reflexively maps **percepts** to **actions** (and we're **learning** it).
 - But many problems in the real world require reasoning (thinking, problem solving, planning).
 
 **This week: search** (one form of reasoning, when the world is deterministic)
 
-- Example: finding a sequence of moves to solve a Rubik's cube (photo of a Rubik's cube).
-- Example: finding the shortest path from point A to point B (photo of a map with a route).
+- Example: finding a sequence of moves to solve a Rubik's cube.
+
+  (Photo: `rubiks-cube.jpg` — a standard 3×3×3 Rubik's cube in its solved state, photographed from a three-quarter angle on a white background: yellow top face, blue left face, red right face, separated by thick black grid lines.)
+
+- Example: finding the shortest path from point A to point B.
+
+  (Photo: `maps.png` — a Google Maps screenshot of the San Francisco Bay Area: a route from "Soda Hall" (Berkeley) to "Gates Computer Science" (Redwood City/Menlo Park), with three route options shown in white boxes — "54 min / 40.9 miles", "56 min / 41.7 miles", "1 h 3 min / 48.2 miles" — and a thick blue highlighted route running south along the east side of the bay before crossing west to the destination.)
 
 Recall: (symbolic) AI started in the 1950s with search, and that didn't pan out. So is this still relevant today?
 
@@ -62,7 +68,7 @@ So far, we have focused on the **modeling** (representing the problem formally).
 
 ### The Travel Problem (`example_travel_problem`)
 
-(Diagram: `walk-tram.png` — illustrates the street with blocks numbered 1 to n, the walk transition i → i+1 and the tram transition i → 2i. Exact visual layout not yet described — vision pass pending.)
+(Diagram: `walk-tram.png` — a number line with tick marks at six positions labeled 1 through 6. Two gray arc arrows curve below the line: a short upper arc from the tick at 3 to the tick at 4, labeled "walk", and a longer, shallower lower arc from near 3 to the tick at 6, labeled "tram". No numeric costs are printed on the arcs.)
 
 - Street with blocks numbered 1 to n.
 - Walking from i to i+1 takes 1 minute.
@@ -199,7 +205,7 @@ class Solution:
 
 `future_cost(state)`: the cost of the minimum cost solution from `state` to an end state.
 
-(Diagram: `future_cost.png` — illustrates the recurrence below. Exact visual layout not yet described — vision pass pending.)
+(Diagram: `future_cost.png` — a gray-toned state-transition diagram: on the left a rounded box labeled "state"; three straight arrows fan out from it to three stacked rounded boxes each labeled "state' ", each with a short arrow continuing out to the right; an ellipsis follows, then a final box labeled "end" on the far right. The edges carry no cost labels.)
 
 How to compute this?
 - Consider a first step (`successor.cost`)
@@ -410,7 +416,7 @@ Demo: `best_of_n(problem, uniform_policy, num_candidates=10)` finds cost **6** (
 
 ## Section: Beam Search (`introduce_beam_search`)
 
-(Image: `beam_car.jpeg` — a visual pun on the word "beam"; per the source text, the beam is the set of partial solutions at each step. Exact visual content not yet described — vision pass pending.)
+(Image: `beam_car.jpeg` — a flat cartoon illustration: a bright blue car facing left, with two light-blue windows, two black tires with gray hubs, and a small yellow detail at the front; from the car's nose a huge solid-yellow wedge of light flares out to the left edge of the image. The pun: the car shines a "beam" — and in beam search the beam is the set of partial solutions kept at each step.)
 
 **Beam search**:
 - Keep track of a set of `beam_width` partial solutions (from the starting state).
@@ -470,7 +476,9 @@ Given:
 
 **Test-time compute**: rather than sampling one answer, expend more compute to get a better answer. Simple strategy: **best-of-n sampling**.
 
-The lecture cites **"Large Language Monkeys: Scaling Inference Compute with Repeated Sampling"** ([arXiv 2407.21787](https://arxiv.org/pdf/2407.21787)), showing its main figure (`llm-monkeys.png`): repeated sampling — how the fraction of problems solved rises as more samples are drawn per problem. Axis labels and series not yet described — vision pass pending.
+The lecture cites **"Large Language Monkeys: Scaling Inference Compute with Repeated Sampling"** ([arXiv 2407.21787](https://arxiv.org/pdf/2407.21787)), showing its Figure 1 (`llm-monkeys.png`):
+
+(Diagram: `llm-monkeys.png` — the paper's two-step pipeline, drawn left to right. Left: a beige box "Problem: input a number from stdin and ..." feeds an arrow into a pink box titled "Step 1: Generate many candidate solutions.", containing an "LLM" box with a cartoon monkey at a laptop and the question "Problem 1 (coverage): Can we generate a correct solution?"; three arrows fan out from the LLM to three dashed-border candidate-solution boxes with monospace code snippets ("data = ()...", "x = int(input())...", "import requests ..."). The middle (green) candidate continues into a gray-blue box titled "Step 2: Use a verifier to pick a final answer.", containing "Verifier (e.g. unit tests, proof checkers, majority voting)" with a magnifying-glass illustration and the question "Problem 2 (precision): Can we identify a correct solution from the generated samples?"; a final arrow points to a green box holding the chosen solution "x = int(input())...".)
 
 ### Cast This as a Search Problem
 

@@ -19,14 +19,22 @@
     "primary": "executable-lectures",
     "executableLectures": { "available": 4, "transcribed": 4 },
     "method": "source-text",
-    "figuresAudited": false,
+    "figuresAudited": true,
+    "figureImages": {
+      "available": 26,
+      "described": 26,
+      "method": "vision-pass",
+      "audited": true,
+      "video": { "available": 1, "describedFromSampledFrames": 1 }
+    },
     "sourceRepo": "https://github.com/stanford-cs221/autumn2025-lectures"
   },
   "provenance": {
     "builtBy": ["deepseek", "claude-sonnet-5"],
     "caveats": [
       "PARTIAL: covers lectures 1-5 of 20. Do not cite this KB as covering CS221 as a whole - it says nothing about MDPs, games, CSPs, logic, or any material after lecture 5.",
-      "No model in the build sessions could perceive images. That is nearly immaterial for this course: CS221 uses executable Python lectures rather than slide decks, so the substantive material is source text and was transcribed exactly (demo outputs were reproduced by executing the lecture's own code). The one gap: the figures shown in lectures (diagrams, photos, a paper's plot) are described in the slide files only at the level of the accompanying source text, with 'vision pass pending' notes. A vision-capable model should revisit them - see TODO.md.",
+      "Figure descriptions were written by vision-capable subagents (claude-sonnet-5) because the parent model cannot perceive images. The chart- and text-dense figures were then audited by a second vision pass, which corrected four errors: a circle radius (2 → 1.4, matching the source code's boundary), a scatter point count (25 → 20), a graph line colour (red → green), and an invented monkey inside a magnifying-glass illustration.",
+      "The SVM-with-polynomial-kernel video in lecture 4 was described from 7 sampled frames of 43, not watched in full.",
       "The exact model identifier of the parent was not recorded at build time, only the family."
     ]
   },

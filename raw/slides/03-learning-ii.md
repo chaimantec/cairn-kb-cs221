@@ -9,12 +9,16 @@ note: >
   CS221 uses "executable lectures" — Python programs whose execution delivers the
   lecture content — rather than traditional slide PDFs. This file transcribes the
   content of `linear_classification.py`. There are no traditional slide numbers;
-  sections correspond to function calls in the source.
+  sections correspond to function calls in the source. Figure descriptions were
+  written by a vision pass: a vision-capable model read each rendered figure
+  and described what it shows.
 ---
 
 # Lecture 3 Slides — Learning II
 
 Lecture 3 covers linear classification through a single executable Python file: `linear_classification.py`.
+
+(Lecture opener — `survey1.png`: a slide titled "CS221 Week 1 Survey" showing a large black-and-white QR code centered under the heading, with no other text or content — the survey itself is behind the code.)
 
 ---
 
@@ -30,6 +34,9 @@ Lecture 3 covers linear classification through a single executable Python file: 
 
 ### Example Task: Image Classification
 - **Input:** an image
+
+  (Photo: `cat-on-snow.jpg` — a brownish-grey tabby cat standing outdoors in snow, facing left with its head turned toward the viewer, ears up and yellow-green eyes; the tail sticks up behind it with a slightly darker rounded tip. The background is bright white snow, out of focus behind the cat, with trodden snow and blue-grey shadows in the foreground.)
+
 - **Output:** what kind of object it is (e.g., cat)
 
 ### Example Task: Sentiment Classification
