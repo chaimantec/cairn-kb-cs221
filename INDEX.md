@@ -1,6 +1,6 @@
 # CS221 — Artificial Intelligence: Principles and Techniques | Autumn 2025 — Percy Liang
 
-Stanford's introductory AI course. Covers perception, reasoning, action, and learning under resource constraints, drawing on symbolic, neural, and statistical AI traditions. This knowledge base covers lectures 1–5 of 20, with edited transcripts, slide transcriptions, and interlinked wiki pages.
+Stanford's introductory AI course. Covers perception, reasoning, action, and learning under resource constraints, drawing on symbolic, neural, and statistical AI traditions. This knowledge base covers lectures 1–6 of 20, with edited transcripts, slide transcriptions, and interlinked wiki pages.
 
 ## Lectures
 
@@ -9,6 +9,7 @@ Stanford's introductory AI course. Covers perception, reasoning, action, and lea
 - **[Lecture 3 — Learning II](wiki/03-learning-ii.md)** — Linear classification: from zero-one loss (zero gradients → optimization fails) through logistic regression (maximum likelihood with a smooth, differentiable loss), logistic function and its properties, multiclass extension via softmax and cross entropy, and representing text as tensors (tokenization → one-hot → bag of words).
 - **[Lecture 4 — Learning III](wiki/04-learning-iii.md)** — Deep neural networks: PyTorch as NumPy + autodiff, the feature-map insight (linear in φ-space = nonlinear in x-space), MLPs with ReLU activation (why two linear layers don't help but one ReLU does), deep networks and the vanishing/exploding gradient problem, and five survival techniques: residual connections, layer normalization, Xavier initialization, activation function choice, and SGD/Adam optimizers.
 - **[Lecture 5 — Search I](wiki/05-search-i.md)** — Search as reasoning: the search-problem abstraction (start_state, successors, is_end), the travel problem and what belongs in the state, future cost and exhaustive search (exponential time), dynamic programming = exhaustive search + caching, approximate search via best-of-n and beam search, and test-time compute in language models cast as a search problem (the Bitter Lesson's "search and learning").
+- **[Lecture 6 — Search II](wiki/06-search-ii.md)** — Search with cycles: uniform cost search (past costs in increasing order, priority queue, correctness proof) and A* (UCS with heuristic-modified costs, consistency and admissibility, telescoping-sums correctness). Then the relaxation recipe for heuristics: knock down walls (Manhattan distance), free tram (fewer states), overlapping tiles (independent subproblems), and combining heuristics with max.
 
 ## Topic Pages
 
@@ -20,6 +21,9 @@ Stanford's introductory AI course. Covers perception, reasoning, action, and lea
 - **[Search Problems](wiki/search-problems.md)** — The abstraction that turns word problems into code: state, successors (action–cost–next-state), is_end, and the minimum-total-cost objective. What belongs in the state, why keeping it small matters, and the Bitter Lesson motivation.
 - **[Dynamic Programming](wiki/dynamic-programming.md)** — Exhaustive search plus caching: Bellman's terminology, the future-cost recurrence, the three-line diff from exhaustive search, and when the cache pays off (states fit in memory, many paths to a state).
 - **[Beam Search and Best-of-n](wiki/beam-search.md)** — The two approximate search methods: n random rollouts of a policy, and keeping the best `beam_width` partial solutions. The width-1/infinity extremes, determinism vs. stochasticity, the policy-as-prior distinction, and particle filtering.
+- **[Uniform Cost Search](wiki/uniform-cost-search.md)** — Dijkstra's algorithm for cyclic search problems: past cost vs. future cost, the explored/frontier/unexplored buckets, priority-queue mechanics (in-place updates, stale entries), the correctness proof, and why non-negative costs are required.
+- **[A* Search](wiki/a-star-search.md)** — UCS with heuristic-shifted costs: ordering by PastCost + h(s), the modified-cost trick, consistency (and admissibility), correctness via telescoping sums, the efficiency bound, and the counterexample of a bad heuristic.
+- **[Heuristics from Relaxation](wiki/heuristics.md)** — How to construct heuristics that are consistent by construction: solve a relaxed problem (fewer costs) and use its future cost. The three structured relaxations (closed form, fewer states, independent subproblems), fair accounting, and max-combining heuristics.
 
 ## Raw Materials
 
@@ -29,4 +33,4 @@ Stanford's introductory AI course. Covers perception, reasoning, action, and lea
 
 ---
 
-Built with the Cairn KB skill. Lectures 1–5 of 20. See [`TODO.md`](TODO.md) for build progress.
+Built with the Cairn KB skill. Lectures 1–6 of 20. See [`TODO.md`](TODO.md) for build progress.

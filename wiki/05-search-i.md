@@ -185,4 +185,4 @@ Search problems formally define states, actions, and costs; the objective is a m
 
 The **synergy of search and learning** ([≈1:20:52](../raw/transcripts/05-search-i.md)): the costs are **learned from data** (the LM's token probabilities are supervised learning over huge corpora), and **search finds the best solution given those costs**. A good recipe for robust AI systems.
 
-**Next time**: what to do when there are cycles — uniform-cost search and A* ([≈1:20:52](../raw/transcripts/05-search-i.md)).
+**Next time**: [lecture 6](06-search-ii.md) — what to do when there are cycles — [uniform-cost search](uniform-cost-search.md) and [A*](a-star-search.md) ([≈1:20:52](../raw/transcripts/05-search-i.md)).

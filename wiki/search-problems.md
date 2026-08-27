@@ -4,7 +4,7 @@ title: Search Problems — States, Actions, Costs, and the Modeling Game
 
 # Search Problems
 
-A **search problem** is the formal abstraction that turns a word problem ("how do I get from location 1 to location n the fastest?") into a structure general algorithms can solve. It is the unit of lecture 5, and the foundation everything after it builds on: dynamic programming, best-of-n and beam search in [lecture 5](05-search-i.md), uniform-cost search and A* in lecture 6, and — via the same state/action/cost vocabulary — Markov decision processes and reinforcement learning.
+A **search problem** is the formal abstraction that turns a word problem ("how do I get from location 1 to location n the fastest?") into a structure general algorithms can solve. It is the unit of lecture 5, and the foundation everything after it builds on: dynamic programming, best-of-n and beam search in [lecture 5](05-search-i.md), [uniform-cost search](uniform-cost-search.md) and [A*](a-star-search.md) in lecture 6, and — via the same state/action/cost vocabulary — Markov decision processes and reinforcement learning.
 
 ## The Three Components
 
@@ -45,5 +45,5 @@ Symbolic AI of the 1950s was built on search and stalled. Rich Sutton's 2019 ess
 
 - [Exhaustive search and dynamic programming](05-search-i.md) solve the minimum-cost objective exactly — one with exponential time, one with caching (see [dynamic programming](dynamic-programming.md)).
 - [Best-of-n and beam search](beam-search.md) approximate it when exact search is intractable.
-- Lecture 6 lifts the no-cycles assumption with uniform-cost search and A* ([≈33:32](../raw/transcripts/05-search-i.md)).
+- [Lecture 6](06-search-ii.md) lifts the no-cycles assumption with [uniform-cost search](uniform-cost-search.md) and [A*](a-star-search.md) ([≈33:32](../raw/transcripts/05-search-i.md)).
 - Next week the same state vocabulary reappears in **MDPs**, where transitions become probabilistic and value iteration handles cycles ([≈15:39](../raw/transcripts/05-search-i.md)).

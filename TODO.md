@@ -6,12 +6,14 @@
 - [x] 03 Learning II — video Mbe5ICIUw5Q
 - [x] 04 Learning III — video 89NND-Ca0yY
 - [x] 05 Search I — video fPESauMaJYA
+- [x] 06 Search II — video 4Iu4KPVbnAY
 
 ## Crawl
 - [x] Fetch course site index: https://stanford-cs221.github.io/autumn2025/
 - [x] Download linked PDFs and slides
 - [x] Write sources.md
 - [x] Figure descriptions for slide files 01-05 (vision pass — 2026-08-27: the parent model (deepseek-v4-pro) still cannot perceive images, but subagents run deepseek-v4-flash-vision-exp, which can; 26 figures + 1 video described visually, with a second vision pass auditing the chart- and text-dense figures)
+- [x] Figure descriptions for slide file 06 (vision pass, 2026-08-28: 6 static images; numeric figures cross-checked against source-derived values — 8-puzzle Manhattan sum and A* counterexample modified costs both reconcile exactly)
 
 ## Wiki
 - [x] wiki/01-course-overview.md
@@ -20,9 +22,12 @@
 - [x] wiki/04-learning-iii.md
 - [x] wiki/05-search-i.md
 - [x] Search topic pages (search problems, dynamic programming, beam search)
+- [x] wiki/06-search-ii.md
+- [x] Search II topic pages (uniform cost search, A*, heuristics from relaxation)
 - [ ] Re-link Bayesian networks / Turing test mentions in wiki/01-course-overview.md when those lectures are built (unlinked 2026-08-27 because the pages did not exist yet)
 - [x] Topic pages (cross-lecture concepts)
 - [x] INDEX.md table of contents (update for lectures 3-4)
+- [x] INDEX.md table of contents (update for lecture 6)
 
 ## Publish
 - [x] Commit and push
