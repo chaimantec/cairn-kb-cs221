@@ -20,7 +20,7 @@ An intelligent agent — whether human or machine — must be able to do four th
 
 1. **Perceive** — process raw inputs from the world and turn them into understanding. Includes visual scene understanding, speech recognition, and natural language understanding ([≈3:14](../raw/transcripts/01-course-overview.md)).
 
-2. **Reason** — use knowledge and percepts to draw inferences. Techniques covered in this course include uniform cost search, value iteration (for MDPs), minimax (for adversarial games), and probabilistic inference in Bayesian networks ([≈4:00](../raw/transcripts/01-course-overview.md)).
+2. **Reason** — use knowledge and percepts to draw inferences. Techniques covered in this course include uniform cost search, [value iteration](value-iteration.md) (for MDPs), minimax (for adversarial games), and probabilistic inference in Bayesian networks ([≈4:00](../raw/transcripts/01-course-overview.md)).
 
 3. **Act** — output actions that affect the world: generate text, synthesize speech, control a robot ([≈5:32](../raw/transcripts/01-course-overview.md)).
 
@@ -55,7 +55,7 @@ Liang tells the history of AI as the story of three intellectual traditions. The
 
 ### Statistical AI
 
-- Mathematical tools predating AI: linear regression (Gauss, 1801), stochastic gradient descent (1951), Dijkstra's algorithm (1956), MDPs (Bellman, 1957) ([≈30:10](../raw/transcripts/01-course-overview.md)).
+- Mathematical tools predating AI: linear regression (Gauss, 1801), stochastic gradient descent (1951), Dijkstra's algorithm (1956), [MDPs](markov-decision-processes.md) (Bellman, 1957) ([≈30:10](../raw/transcripts/01-course-overview.md)).
 - 1980s–2000s: Bayesian networks, SVMs, variational inference, conditional random fields, topic models — rooted in mathematical principles ([≈30:56](../raw/transcripts/01-course-overview.md)).
 
 ### Foundation Models (2018–present)

@@ -4,7 +4,7 @@ title: Dynamic Programming — Exhaustive Search Plus Caching
 
 # Dynamic Programming
 
-**Dynamic programming = exhaustive search + caching** ([≈38:52](../raw/transcripts/05-search-i.md)). In lecture 5 it is introduced as a three-line patch to exhaustive search that turns exponential time into time proportional to the number of states. The same idea returns in later lectures as value iteration for MDPs, and in games.
+**Dynamic programming = exhaustive search + caching** ([≈38:52](../raw/transcripts/05-search-i.md)). In lecture 5 it is introduced as a three-line patch to exhaustive search that turns exponential time into time proportional to the number of states. The same idea returns in later lectures as [value iteration](value-iteration.md) for [MDPs](markov-decision-processes.md), and in games.
 
 ## Where the Name Comes From
 

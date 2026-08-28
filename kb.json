@@ -9,15 +9,15 @@
     "courseUrl": "https://stanford-cs221.github.io/autumn2025/"
   },
   "coverage": {
-    "lecturesCovered": 6,
+    "lecturesCovered": 7,
     "lecturesTotal": 20,
-    "transcripts": 6,
-    "wikiLecturePages": 6,
-    "wikiTopicPages": 11
+    "transcripts": 7,
+    "wikiLecturePages": 7,
+    "wikiTopicPages": 15
   },
   "materials": {
     "primary": "executable-lectures",
-    "executableLectures": { "available": 5, "transcribed": 5 },
+    "executableLectures": { "available": 6, "transcribed": 6 },
     "method": "source-text",
     "figuresAudited": true,
     "figureImages": {
@@ -32,11 +32,12 @@
   "provenance": {
     "builtBy": ["deepseek-v4-pro", "deepseek-v4-flash-vision-exp"],
     "caveats": [
-      "PARTIAL: covers lectures 1-6 of 20. Do not cite this KB as covering CS221 as a whole - it says nothing about MDPs, games, CSPs, logic, or any material after lecture 6.",
+      "PARTIAL: covers lectures 1-7 of 20. Do not cite this KB as covering CS221 as a whole - it says nothing about reinforcement learning, games, CSPs, logic, or any material after lecture 7.",
       "Figure descriptions were written by vision-capable subagents (deepseek-v4-flash-vision-exp) because the parent model (deepseek-v4-pro) cannot perceive images. The chart- and text-dense figures were then audited by a second vision pass, which corrected four errors: a circle radius (2 → 1.4, matching the source code's boundary), a scatter point count (25 → 20), a graph line colour (red → green), and an invented monkey inside a magnifying-glass illustration.",
       "Lecture 6 figures were described by a single vision pass, cross-checked against source-derived values instead of a second vision audit: the 8-puzzle Manhattan distances sum exactly to the lecture's 1+1+3+1+1+1+1+3 = 12, and the A* counterexample's modified costs reconcile exactly with the code arithmetic (e.g. C→D: 1 + 0 − 1000 = −999).",
       "The SVM-with-polynomial-kernel video in lecture 4 was described from 7 sampled frames of 43, not watched in full.",
-      "At ≈45:21 of the lecture 6 transcript the lecturer says the bad heuristic gives a modified cost of −9999; the slide figure shows −999, which is what the definition computes. Both readings are preserved (transcript as spoken, slide file as printed)."
+      "At ≈45:21 of the lecture 6 transcript the lecturer says the bad heuristic gives a modified cost of −9999; the slide figure shows −999, which is what the definition computes. Both readings are preserved (transcript as spoken, slide file as printed).",
+      "Lecture 7's two graphviz figures (flaky tram, dice game) were vision-passed against the rendered PNGs and matched the draw_graph source exactly (no discrepancies). The two distance plots are described from their exact data (traced from executing the lecture's code), not from images."
     ]
   },
   "entryPoint": "INDEX.md",

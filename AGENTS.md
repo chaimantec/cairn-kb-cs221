@@ -23,9 +23,11 @@ raw.githubusercontent.com and follows relative markdown links.
 - **INDEX.md is the front door.** The chat reads it first on every conversation.
   Every wiki page must appear there with a one-line description of what it holds.
   An unindexed page is effectively invisible.
-- **Relative links only** (`[gradient descent](gradient-descent.md)`,
-  `[slides](../raw/pdfs/lecture03.pdf)`). Absolute GitHub URLs break when the
-  repo is renamed or forked.
+- **Relative links only** (`[gradient descent](wiki/gradient-descent.md)`,
+  `[slides](raw/slides/03-learning-ii.md)`). Absolute GitHub URLs break when the
+  repo is renamed or forked. Slide PDFs are not committed to this repo — link
+  slide *transcriptions* under `raw/slides/`, and canonical course-site URLs
+  only when pointing outside the repo.
 - **Cite everything.** Claims trace back to a transcript timestamp or a slide.
 - **Never invent course content.** If the transcript is unclear at some point,
   say so on the page. Do not fill the gap from outside knowledge — the chat

@@ -1,6 +1,6 @@
 # CS221 — Artificial Intelligence: Principles and Techniques | Autumn 2025 — Percy Liang
 
-Stanford's introductory AI course. Covers perception, reasoning, action, and learning under resource constraints, drawing on symbolic, neural, and statistical AI traditions. This knowledge base covers lectures 1–6 of 20, with edited transcripts, slide transcriptions, and interlinked wiki pages.
+Stanford's introductory AI course. Covers perception, reasoning, action, and learning under resource constraints, drawing on symbolic, neural, and statistical AI traditions. This knowledge base covers lectures 1–7 of 20, with edited transcripts, slide transcriptions, and interlinked wiki pages.
 
 ## Lectures
 
@@ -10,6 +10,7 @@ Stanford's introductory AI course. Covers perception, reasoning, action, and lea
 - **[Lecture 4 — Learning III](wiki/04-learning-iii.md)** — Deep neural networks: PyTorch as NumPy + autodiff, the feature-map insight (linear in φ-space = nonlinear in x-space), MLPs with ReLU activation (why two linear layers don't help but one ReLU does), deep networks and the vanishing/exploding gradient problem, and five survival techniques: residual connections, layer normalization, Xavier initialization, activation function choice, and SGD/Adam optimizers.
 - **[Lecture 5 — Search I](wiki/05-search-i.md)** — Search as reasoning: the search-problem abstraction (start_state, successors, is_end), the travel problem and what belongs in the state, future cost and exhaustive search (exponential time), dynamic programming = exhaustive search + caching, approximate search via best-of-n and beam search, and test-time compute in language models cast as a search problem (the Bitter Lesson's "search and learning").
 - **[Lecture 6 — Search II](wiki/06-search-ii.md)** — Search with cycles: uniform cost search (past costs in increasing order, priority queue, correctness proof) and A* (UCS with heuristic-modified costs, consistency and admissibility, telescoping-sums correctness). Then the relaxation recipe for heuristics: knock down walls (Manhattan distance), free tram (fewer states), overlapping tiles (independent subproblems), and combining heuristics with max.
+- **[Lecture 7 — Markov Decision Processes](wiki/07-markov-decision-processes.md)** — Search with stochastic actions: the MDP formalism (states, actions, transition probabilities, rewards, discount), policies as solutions, rollouts and expected utility, Monte Carlo estimation, and the two exact algorithms — policy evaluation (value of a given policy) and value iteration (value and construction of the optimal policy), differing by a single max. Running examples: the flaky tram (walk until 5, then tram) and the dice game (stay: 12 > 10).
 
 ## Topic Pages
 
@@ -24,6 +25,10 @@ Stanford's introductory AI course. Covers perception, reasoning, action, and lea
 - **[Uniform Cost Search](wiki/uniform-cost-search.md)** — Dijkstra's algorithm for cyclic search problems: past cost vs. future cost, the explored/frontier/unexplored buckets, priority-queue mechanics (in-place updates, stale entries), the correctness proof, and why non-negative costs are required.
 - **[A* Search](wiki/a-star-search.md)** — UCS with heuristic-shifted costs: ordering by PastCost + h(s), the modified-cost trick, consistency (and admissibility), correctness via telescoping sums, the efficiency bound, and the counterexample of a bad heuristic.
 - **[Heuristics from Relaxation](wiki/heuristics.md)** — How to construct heuristics that are consistent by construction: solve a relaxed problem (fewer costs) and use its future cost. The three structured relaxations (closed form, fewer states, independent subproblems), fair accounting, and max-combining heuristics.
+- **[Markov Decision Processes](wiki/markov-decision-processes.md)** — Search problems with stochastic actions: the formal definition (T, R, γ), why the solution must be a policy, rollouts and discounted utility, and the two running examples (flaky tram, dice game).
+- **[Monte Carlo Policy Evaluation](wiki/monte-carlo-evaluation.md)** — Estimating V_π by averaging rollout utilities: the 1/√n convergence rate, the coin-flip intuition, and the lecture's numbers (−11.7 vs the true −12).
+- **[Policy Evaluation](wiki/policy-evaluation.md)** — Computing V_π exactly: Q-values as the recurrence's building block, bootstrapping, the L∞ convergence test, the two phases of convergence, and the tram/dice demos (27 iterations → −12; 2/3-decay → 12).
+- **[Value Iteration](wiki/value-iteration.md)** — Computing V* and the optimal policy: the max-over-actions recurrence (one line from policy evaluation), Bellman's 1957 foundation, the flaky-tram optimum (walk until 5, then tram; −7.33), and why the optimal policy is deterministic for MDPs.
 
 ## Raw Materials
 
@@ -33,4 +38,4 @@ Stanford's introductory AI course. Covers perception, reasoning, action, and lea
 
 ---
 
-Built with the Cairn KB skill. Lectures 1–6 of 20. See [`TODO.md`](TODO.md) for build progress.
+Built with the Cairn KB skill. Lectures 1–7 of 20. See [`TODO.md`](TODO.md) for build progress.

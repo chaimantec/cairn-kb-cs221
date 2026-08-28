@@ -130,4 +130,4 @@ The general principle: a relaxation isn't automatically easier — costs must be
 
 UCS and A* are **exact** algorithms that **allow cycles** (but require non-negative costs); they order states by increasing past cost, whether under the original costs or the modified ones ([≈1:18:42](../raw/transcripts/06-search-ii.md)). You can't do better than UCS in general; A*'s contribution is a channel for **domain knowledge** — heuristics — that speeds up the search while keeping the optimality guarantee ([≈1:18:42](../raw/transcripts/06-search-ii.md)). The recipe for heuristics is to think of them as **future costs of some relaxed problem**, obtained by lowering costs in a structured way ([≈1:18:42](../raw/transcripts/06-search-ii.md)).
 
-**Next time**: actions with non-deterministic outcomes — dice rolls — and the Markov decision process framework ([≈1:19:28](../raw/transcripts/06-search-ii.md)).
+**Next time**: [lecture 7](07-markov-decision-processes.md) — actions with non-deterministic outcomes — dice rolls — and the Markov decision process framework ([≈1:19:28](../raw/transcripts/06-search-ii.md)).
