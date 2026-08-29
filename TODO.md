@@ -9,6 +9,8 @@
 - [x] 06 Search II — video 4Iu4KPVbnAY
 - [x] 07 Markov Decision Processes — video 2ZtF1j3n6XE
 - [x] 08 Reinforcement Learning — video 34Hk2v2kwg4 (edited transcript adjudicated 2026-08-29: 101 markers verified, number inventory clean, 6 boundary splits restored)
+- [x] 09 Policy Gradient — video lOMNskWVeD8 (raw transcript fetched 2026-08-29)
+- [x] 09 Policy Gradient — video lOMNskWVeD8 (edited transcript adjudicated 2026-08-29: 96 markers verified, number inventory clean, 2 [Ed: unclear] markers kept, 3 student questions rendered from captions)
 
 ## Crawl
 - [x] Fetch course site index: https://stanford-cs221.github.io/autumn2025/
@@ -18,6 +20,7 @@
 - [x] Figure descriptions for slide file 06 (vision pass, 2026-08-28: 6 static images; numeric figures cross-checked against source-derived values — 8-puzzle Manhattan sum and A* counterexample modified costs both reconcile exactly)
 - [x] Slide file for 07 (mdp.py executable, executed 2026-08-28 with edtrace; demo outputs read from the trace; 2 graphviz figures vision-passed against source — no discrepancies; 2 distance plots described from exact trace data)
 - [x] Slide file for 08 (reinforcement_learning.py — demo outputs read 2026-08-29 from the published trace var/traces/reinforcement_learning.json; 3 new figures vision-passed — rl-framework, policy_evaluation_recurrence, value_iteration_recurrence; flaky_tram_graph reuses the lecture 7 description)
+- [x] Slide file for 09 (policy_gradient.py — demo outputs read 2026-08-29 from the published trace var/traces/policy_gradient.json; 2 photographs vision-passed — robot_kitchen.jpg and mobile_aloha.jpg from the repo's var/files/ cache; rl-framework reuses the lecture 8 description; live-demo vs published-trace discrepancy noted in the variance-reduction section)
 
 ## Wiki
 - [x] wiki/01-course-overview.md
@@ -32,7 +35,9 @@
 - [x] MDP topic pages (markov decision processes, monte carlo evaluation, policy evaluation, value iteration; cross-links added in 01, 05-topic, 06 pages)
 - [x] wiki/08-reinforcement-learning.md
 - [x] RL topic pages (reinforcement learning, q-learning; cross-links added in markov-decision-processes and search-problems pages)
-- [x] INDEX.md table of contents (update for lecture 8)
+- [x] wiki/09-policy-gradient.md
+- [x] Policy gradient topic page (policy-gradients; cross-links added in reinforcement-learning and q-learning pages)
+- [x] INDEX.md table of contents (update for lecture 9)
 - [ ] Re-link Bayesian networks / Turing test mentions in wiki/01-course-overview.md when those lectures are built (unlinked 2026-08-27 because the pages did not exist yet)
 - [x] Topic pages (cross-lecture concepts)
 - [x] INDEX.md table of contents (update for lectures 3-4)
