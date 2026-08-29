@@ -55,6 +55,7 @@ The counterpoint is **world models**: with foundation models making world simula
 ## Related Pages
 
 - [Q-learning](q-learning.md) — the Q-estimation side: Monte Carlo, bootstrapping, on- vs. off-policy
+- [Policy gradients](policy-gradients.md) — the third family: learning the policy $\pi_\theta(a \mid s)$ directly (lecture 9)
 - [Lecture 8](08-reinforcement-learning.md) — the lecture page, with the worked demos and leaderboard
 - [Markov decision processes](markov-decision-processes.md) — the formalism RL relaxes
 - [Policy evaluation](policy-evaluation.md), [value iteration](value-iteration.md) — the exact algorithms the model-based approach reuses on its estimated MDP
