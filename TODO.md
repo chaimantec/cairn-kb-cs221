@@ -8,7 +8,7 @@
 - [x] 05 Search I — video fPESauMaJYA
 - [x] 06 Search II — video 4Iu4KPVbnAY
 - [x] 07 Markov Decision Processes — video 2ZtF1j3n6XE
-- [ ] 08 Reinforcement Learning — video 34Hk2v2kwg4 (transcript fetched 2026-08-29; edit pending)
+- [x] 08 Reinforcement Learning — video 34Hk2v2kwg4 (edited transcript adjudicated 2026-08-29: 101 markers verified, number inventory clean, 6 boundary splits restored)
 
 ## Crawl
 - [x] Fetch course site index: https://stanford-cs221.github.io/autumn2025/
