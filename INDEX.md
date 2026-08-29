@@ -1,6 +1,6 @@
 # CS221 — Artificial Intelligence: Principles and Techniques | Autumn 2025 — Percy Liang
 
-Stanford's introductory AI course. Covers perception, reasoning, action, and learning under resource constraints, drawing on symbolic, neural, and statistical AI traditions. This knowledge base covers lectures 1–7 of 20, with edited transcripts, slide transcriptions, and interlinked wiki pages.
+Stanford's introductory AI course. Covers perception, reasoning, action, and learning under resource constraints, drawing on symbolic, neural, and statistical AI traditions. This knowledge base covers lectures 1–8 of 20, with edited transcripts, slide transcriptions, and interlinked wiki pages.
 
 ## Lectures
 
@@ -11,6 +11,7 @@ Stanford's introductory AI course. Covers perception, reasoning, action, and lea
 - **[Lecture 5 — Search I](wiki/05-search-i.md)** — Search as reasoning: the search-problem abstraction (start_state, successors, is_end), the travel problem and what belongs in the state, future cost and exhaustive search (exponential time), dynamic programming = exhaustive search + caching, approximate search via best-of-n and beam search, and test-time compute in language models cast as a search problem (the Bitter Lesson's "search and learning").
 - **[Lecture 6 — Search II](wiki/06-search-ii.md)** — Search with cycles: uniform cost search (past costs in increasing order, priority queue, correctness proof) and A* (UCS with heuristic-modified costs, consistency and admissibility, telescoping-sums correctness). Then the relaxation recipe for heuristics: knock down walls (Manhattan distance), free tram (fewer states), overlapping tiles (independent subproblems), and combining heuristics with max.
 - **[Lecture 7 — Markov Decision Processes](wiki/07-markov-decision-processes.md)** — Search with stochastic actions: the MDP formalism (states, actions, transition probabilities, rewards, discount), policies as solutions, rollouts and expected utility, Monte Carlo estimation, and the two exact algorithms — policy evaluation (value of a given policy) and value iteration (value and construction of the optimal policy), differing by a single max. Running examples: the flaky tram (walk until 5, then tram) and the dice game (stay: 12 > 10).
+- **[Lecture 8 — Reinforcement Learning](wiki/08-reinforcement-learning.md)** — MDPs without the model: the agent/environment loop, get_action and incorporate_feedback, and four algorithms on the flaky tram — model-based value iteration (estimate the MDP, then value-iterate: explore −9, exploit −6.6), model-free Monte Carlo (average rollout utilities into Q-values), SARSA (bootstrap mid-rollout, on-policy), and Q-learning (bootstrap off-policy to estimate Q*). The leaderboard and the epsilon-greedy exploration/exploitation balance.
 
 ## Topic Pages
 
@@ -29,6 +30,8 @@ Stanford's introductory AI course. Covers perception, reasoning, action, and lea
 - **[Monte Carlo Policy Evaluation](wiki/monte-carlo-evaluation.md)** — Estimating V_π by averaging rollout utilities: the 1/√n convergence rate, the coin-flip intuition, and the lecture's numbers (−11.7 vs the true −12).
 - **[Policy Evaluation](wiki/policy-evaluation.md)** — Computing V_π exactly: Q-values as the recurrence's building block, bootstrapping, the L∞ convergence test, the two phases of convergence, and the tram/dice demos (27 iterations → −12; 2/3-decay → 12).
 - **[Value Iteration](wiki/value-iteration.md)** — Computing V* and the optimal policy: the max-over-actions recurrence (one line from policy evaluation), Bellman's 1957 foundation, the flaky-tram optimum (walk until 5, then tram; −7.33), and why the optimal policy is deterministic for MDPs.
+- **[Reinforcement Learning](wiki/reinforcement-learning.md)** — MDPs where the agent doesn't know T or R: the agent interface (get_action / incorporate_feedback), policy vs. agent, the four-algorithm map (model-based vs. model-free, MC vs. bootstrapping, on- vs. off-policy), epsilon-greedy exploration, and the world-models debate.
+- **[Q-Learning](wiki/q-learning.md)** — Estimating Q-values without the MDP, in three steps: Monte Carlo averaging (wait for the episode), SARSA (bootstrap mid-rollout, on-policy), and Q-learning (bootstrap off-policy to target Q*). The gradient update, the one-line code difference, and policy improvement.
 
 ## Raw Materials
 
@@ -38,4 +41,4 @@ Stanford's introductory AI course. Covers perception, reasoning, action, and lea
 
 ---
 
-Built with the Cairn KB skill. Lectures 1–7 of 20. See [`TODO.md`](TODO.md) for build progress.
+Built with the Cairn KB skill. Lectures 1–8 of 20. See [`TODO.md`](TODO.md) for build progress.

@@ -24,7 +24,7 @@ Each $(s, a, s')$ triple bundles two decisions ([≈10:56](../raw/transcripts/07
 
 **Why the reward depends on $s'$**: some formulations use $R(s)$ or $R(s, a)$. They're all equivalent — you can absorb the difference with dummy states — but $R(s, a, s')$ is the most natural to define and doesn't change the algorithms ([≈29:29](../raw/transcripts/07-markov-decision-processes.md), [≈30:16](../raw/transcripts/07-markov-decision-processes.md)).
 
-**Where the probabilities come from**: they are part of the problem definition — you specify them ([≈9:21](../raw/transcripts/07-markov-decision-processes.md)). If you don't know them, that's reinforcement learning territory — the subject of next lecture ([≈10:06](../raw/transcripts/07-markov-decision-processes.md)). *(Page not built yet; link to follow.)*
+**Where the probabilities come from**: they are part of the problem definition — you specify them ([≈9:21](../raw/transcripts/07-markov-decision-processes.md)). If you don't know them, that's [reinforcement learning](reinforcement-learning.md) territory — the subject of the next lecture ([≈10:06](../raw/transcripts/07-markov-decision-processes.md)).
 
 ## The Two Running Examples
 

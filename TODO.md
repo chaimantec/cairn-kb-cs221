@@ -30,9 +30,9 @@
 - [x] Search II topic pages (uniform cost search, A*, heuristics from relaxation)
 - [x] wiki/07-markov-decision-processes.md
 - [x] MDP topic pages (markov decision processes, monte carlo evaluation, policy evaluation, value iteration; cross-links added in 01, 05-topic, 06 pages)
-- [ ] wiki/08-reinforcement-learning.md
-- [ ] RL topic pages (reinforcement learning, model-based vs model-free, bootstrapping/Q-learning)
-- [ ] INDEX.md table of contents (update for lecture 8)
+- [x] wiki/08-reinforcement-learning.md
+- [x] RL topic pages (reinforcement learning, q-learning; cross-links added in markov-decision-processes and search-problems pages)
+- [x] INDEX.md table of contents (update for lecture 8)
 - [ ] Re-link Bayesian networks / Turing test mentions in wiki/01-course-overview.md when those lectures are built (unlinked 2026-08-27 because the pages did not exist yet)
 - [x] Topic pages (cross-lecture concepts)
 - [x] INDEX.md table of contents (update for lectures 3-4)

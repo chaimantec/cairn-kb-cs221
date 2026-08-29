@@ -4,7 +4,7 @@ title: Search Problems — States, Actions, Costs, and the Modeling Game
 
 # Search Problems
 
-A **search problem** is the formal abstraction that turns a word problem ("how do I get from location 1 to location n the fastest?") into a structure general algorithms can solve. It is the unit of lecture 5, and the foundation everything after it builds on: dynamic programming, best-of-n and beam search in [lecture 5](05-search-i.md), [uniform-cost search](uniform-cost-search.md) and [A*](a-star-search.md) in lecture 6, and — via the same state/action/cost vocabulary — Markov decision processes and reinforcement learning.
+A **search problem** is the formal abstraction that turns a word problem ("how do I get from location 1 to location n the fastest?") into a structure general algorithms can solve. It is the unit of lecture 5, and the foundation everything after it builds on: dynamic programming, best-of-n and beam search in [lecture 5](05-search-i.md), [uniform-cost search](uniform-cost-search.md) and [A*](a-star-search.md) in lecture 6, and — via the same state/action/cost vocabulary — [Markov decision processes](markov-decision-processes.md) and [reinforcement learning](reinforcement-learning.md).
 
 ## The Three Components
 
