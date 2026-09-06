@@ -19,3 +19,15 @@ Papers and readings the course links to but which are hosted elsewhere. They are
 | `UCAM-CL-TR-209.pdf` | <https://www.cl.cam.ac.uk/techreports/UCAM-CL-TR-209.pdf> | 2026-07-26 |
 | `CSD-MenloPrinciplesCORE-20120803_1.pdf` | <https://www.dhs.gov/sites/default/files/publications/CSD-MenloPrinciplesCORE-20120803_1.pdf> | 2026-07-26 |
 
+## Executable lectures
+
+CS221 Autumn 2025 delivers lectures as executable Python programs rather than slide PDFs. The canonical sources are:
+
+| What | URL |
+| ---- | --- |
+| Lecture source repo (all `.py` files, figure images, published execution traces) | <https://github.com/stanford-cs221/autumn2025-lectures> |
+| Rendered lecture UI (pick a lecture by trace name) | <https://stanford-cs221.github.io/autumn2025-lectures/> |
+
+Each `raw/slides/NN-*.md` front matter names the exact source file and trace it was compiled from.
+
+
