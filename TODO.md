@@ -12,7 +12,7 @@
 - [x] 09 Policy Gradient — video lOMNskWVeD8 (raw transcript fetched 2026-08-29)
 - [x] 09 Policy Gradient — video lOMNskWVeD8 (edited transcript adjudicated 2026-08-29: 96 markers verified, number inventory clean, 2 [Ed: unclear] markers kept, 3 student questions rendered from captions)
 - [x] 10 Games I — video SMOD_GiRzb8 (raw transcript fetched 2026-09-07)
-- [ ] 10 Games I — video SMOD_GiRzb8 (edited transcript — delegated to subagent, adjudication pending)
+- [x] 10 Games I — video SMOD_GiRzb8 (edited transcript adjudicated 2026-09-07: 95 markers verified, number inventory clean, 0 ratio outliers; adjudication reverted one over-correction at [1:37] — "environment is random and unknown" kept as captioned — and kept the word "left" in the coin-policy sentence at [46:52]; 1 student question rendered)
 
 ## Crawl
 - [x] Fetch course site index: https://stanford-cs221.github.io/autumn2025/
