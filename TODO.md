@@ -41,9 +41,9 @@
 - [x] wiki/09-policy-gradient.md
 - [x] Policy gradient topic page (policy-gradients; cross-links added in reinforcement-learning and q-learning pages)
 - [x] INDEX.md table of contents (update for lecture 9)
-- [ ] wiki/10-games-i.md
-- [ ] Games topic pages (cross-lecture concepts)
-- [ ] INDEX.md table of contents (update for lecture 10)
+- [x] wiki/10-games-i.md
+- [x] Games topic pages (games, minimax, alpha-beta pruning, evaluation functions; cross-links added in policy-evaluation, value-iteration, q-learning, search-problems and heuristics pages)
+- [x] INDEX.md table of contents (update for lecture 10)
 - [ ] Re-link Bayesian networks / Turing test mentions in wiki/01-course-overview.md when those lectures are built (unlinked 2026-08-27 because the pages did not exist yet)
 - [x] Topic pages (cross-lecture concepts)
 - [x] INDEX.md table of contents (update for lectures 3-4)

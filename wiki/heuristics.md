@@ -56,6 +56,7 @@ No search needed at all ([≈59:59](../raw/transcripts/06-search-ii.md)). On the
 ## Related Pages
 
 - [A* search](a-star-search.md) — the consumer of heuristics, with consistency and admissibility
+- [Alpha-beta pruning](alpha-beta-pruning.md) — the same pattern in games: ordering heuristics shrink bounds and make the exact minimax search fast — never wrong, only slow when the heuristic is bad (lecture 10)
 - [Uniform cost search](uniform-cost-search.md) — the engine underneath
 - [Search problems](search-problems.md) — the abstraction being relaxed
 - [Lecture 6](06-search-ii.md) — all three worked relaxations with demo numbers

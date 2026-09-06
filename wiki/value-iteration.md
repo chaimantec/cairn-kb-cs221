@@ -51,6 +51,7 @@ A question from the floor: is the resulting policy always deterministic? For MDP
 ## Related Pages
 
 - [Policy evaluation](policy-evaluation.md) — the one-line difference, in full detail
+- [Games](games.md) — expectimax is value iteration in game clothing (opponent policy fixed); [minimax](minimax.md) swaps averaging for a min, which has no MDP analogue
 - [Markov decision processes](markov-decision-processes.md) — the framework and notation
 - [Dynamic programming](dynamic-programming.md) — Bellman's idea in its deterministic form
 - [Lecture 7](07-markov-decision-processes.md)

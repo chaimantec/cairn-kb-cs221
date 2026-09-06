@@ -58,6 +58,7 @@ Estimating $Q_\pi$ is not wasted even though you want $Q^*$: the argmax of $Q_\p
 
 - [Reinforcement learning](reinforcement-learning.md) — the setting and the four-algorithm map
 - [Policy gradients](policy-gradients.md) — the alternative to estimating Q at all: learn the policy directly (lecture 9)
+- [Evaluation functions](evaluation-functions.md) — lecture 10's bridge: a game evaluation function is a Q-value in disguise, and it can be learned — the setup for TD learning
 - [Lecture 8](08-reinforcement-learning.md) — the lecture page, with the worked demos and leaderboard
 - [Policy evaluation](policy-evaluation.md) — Q-values first appear there, inside the exact recurrence
 - [Value iteration](value-iteration.md) — the source of the $Q^*$ target Q-learning estimates

@@ -1,6 +1,6 @@
 # CS221 — Artificial Intelligence: Principles and Techniques | Autumn 2025 — Percy Liang
 
-Stanford's introductory AI course. Covers perception, reasoning, action, and learning under resource constraints, drawing on symbolic, neural, and statistical AI traditions. This knowledge base covers lectures 1–9 of 20, with edited transcripts, slide transcriptions, and interlinked wiki pages.
+Stanford's introductory AI course. Covers perception, reasoning, action, and learning under resource constraints, drawing on symbolic, neural, and statistical AI traditions. This knowledge base covers lectures 1–10 of 20, with edited transcripts, slide transcriptions, and interlinked wiki pages.
 
 ## Lectures
 
@@ -13,6 +13,7 @@ Stanford's introductory AI course. Covers perception, reasoning, action, and lea
 - **[Lecture 7 — Markov Decision Processes](wiki/07-markov-decision-processes.md)** — Search with stochastic actions: the MDP formalism (states, actions, transition probabilities, rewards, discount), policies as solutions, rollouts and expected utility, Monte Carlo estimation, and the two exact algorithms — policy evaluation (value of a given policy) and value iteration (value and construction of the optimal policy), differing by a single max. Running examples: the flaky tram (walk until 5, then tram) and the dice game (stay: 12 > 10).
 - **[Lecture 8 — Reinforcement Learning](wiki/08-reinforcement-learning.md)** — MDPs without the model: the agent/environment loop, get_action and incorporate_feedback, and four algorithms on the flaky tram — model-based value iteration (estimate the MDP, then value-iterate: explore −9, exploit −6.6), model-free Monte Carlo (average rollout utilities into Q-values), SARSA (bootstrap mid-rollout, on-policy), and Q-learning (bootstrap off-policy to estimate Q*). The leaderboard and the epsilon-greedy exploration/exploitation balance.
 - **[Lecture 9 — Policy Gradient](wiki/09-policy-gradient.md)** — RL beyond lookup tables: function approximation (parameterized Q_θ(s, a) with features φ(s, a) for image/sentence states), then learning the policy directly as a probabilistic classifier π_θ(a | s). The policy gradient theorem, REINFORCE (imitation learning on your own demonstrations, weighted by utility), and variance reduction — baselines, returns-to-go, actor-critic.
+- **[Lecture 10 — Games I](wiki/10-games-i.md)** — Games complete the tour of state-based models: the game tree (two-player, zero-sum), game evaluation via the V_eval recurrence, then expectimax (optimal against a known opponent) and minimax (assume the opponent plays optimally — the face-off shows each "optimal" policy is only optimal against its baked-in assumption), expectiminimax with chance nodes, and the two speedups: alpha-beta pruning (exact) and evaluation functions (approximate, depth-limited).
 
 ## Topic Pages
 
@@ -34,6 +35,10 @@ Stanford's introductory AI course. Covers perception, reasoning, action, and lea
 - **[Reinforcement Learning](wiki/reinforcement-learning.md)** — MDPs where the agent doesn't know T or R: the agent interface (get_action / incorporate_feedback), policy vs. agent, the four-algorithm map (model-based vs. model-free, MC vs. bootstrapping, on- vs. off-policy), epsilon-greedy exploration, and the world-models debate.
 - **[Q-Learning](wiki/q-learning.md)** — Estimating Q-values without the MDP, in three steps: Monte Carlo averaging (wait for the episode), SARSA (bootstrap mid-rollout, on-policy), and Q-learning (bootstrap off-policy to target Q*). The gradient update, the one-line code difference, and policy improvement.
 - **[Policy Gradients](wiki/policy-gradients.md)** — The third RL family: parameterize the policy π_θ(a | s) directly and gradient-ascent expected utility. The policy gradient theorem, REINFORCE, and the variance-reduction toolkit — baselines (mean-zero, unbiased), returns-to-go, and actor-critic bootstrapping.
+- **[Games](wiki/games.md)** — State-based models with an adversary: the game formalism (five methods, sparse utility, per-state players), the value of a game (V_eval recurrence and Monte Carlo), expectimax against a known opponent, expectiminimax with chance nodes, and the face-off — the matrix (1, 2, −5, 5) showing every "optimal" policy is only optimal against its assumption.
+- **[Minimax](wiki/minimax.md)** — Assume the opponent plays optimally: the max/min recurrence, the halving-game solution (winning n: 2, 3, 5, 7, 8, 9, 11), perfect play and solved games (strongly solved tic-tac-toe vs. unsolved chess/Go), and why minimax is a lower bound against any opponent — and beatable if you know yours.
+- **[Alpha-Beta Pruning](wiki/alpha-beta-pruning.md)** — Exact minimax speedup via branch and bound: α lower bounds on max nodes, β upper bounds on min nodes, prune when bounds don't overlap every ancestor. The worked 9, 7 / 6, [3, 4] [7, 9] / 8, 3 example, and why ordering determines how much you prune.
+- **[Evaluation Functions](wiki/evaluation-functions.md)** — Approximate speedup: search to depth d, then guess with prior knowledge. The Deep-Blue-style chess evaluation (material 9/5/3/1, mobility 0.1), depth-limited minimax, and the bridge to Q-values — evaluation functions can be learned (next lecture's TD learning).
 
 ## Raw Materials
 
@@ -43,4 +48,4 @@ Stanford's introductory AI course. Covers perception, reasoning, action, and lea
 
 ---
 
-Built with the Cairn KB skill. Lectures 1–9 of 20. See [`TODO.md`](TODO.md) for build progress.
+Built with the Cairn KB skill. Lectures 1–10 of 20. See [`TODO.md`](TODO.md) for build progress.

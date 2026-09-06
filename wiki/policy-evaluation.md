@@ -60,6 +60,7 @@ The first iteration already shows the structure ([≈56:55](../raw/transcripts/0
 ## Related Pages
 
 - [Value iteration](value-iteration.md) — the same algorithm with a max over actions
+- [Games](games.md) — the same recurrence appears in lecture 10 as game evaluation ($V_{eval}$): the opponent's known policy plays the role of the transition probabilities
 - [Markov decision processes](markov-decision-processes.md) — the framework, including the $Q$-value's place in it
 - [Monte Carlo evaluation](monte-carlo-evaluation.md) — the estimate this replaces
 - [Dynamic programming](dynamic-programming.md) — the same recurrence idea for deterministic search

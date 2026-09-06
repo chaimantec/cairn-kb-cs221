@@ -47,3 +47,4 @@ Symbolic AI of the 1950s was built on search and stalled. Rich Sutton's 2019 ess
 - [Best-of-n and beam search](beam-search.md) approximate it when exact search is intractable.
 - [Lecture 6](06-search-ii.md) lifts the no-cycles assumption with [uniform-cost search](uniform-cost-search.md) and [A*](a-star-search.md) ([≈33:32](../raw/transcripts/05-search-i.md)).
 - Next week the same state vocabulary reappears in **MDPs**, where transitions become probabilistic and value iteration handles cycles ([≈15:39](../raw/transcripts/05-search-i.md)).
+- In **games** (lecture 10) the FutureCost idea returns as the [evaluation function](evaluation-functions.md): search a few moves deep, then approximate the rest — the lecturer draws the analogy explicitly ([≈1:10:54](../raw/transcripts/10-games-i.md)).
