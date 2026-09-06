@@ -11,6 +11,8 @@
 - [x] 08 Reinforcement Learning — video 34Hk2v2kwg4 (edited transcript adjudicated 2026-08-29: 101 markers verified, number inventory clean, 6 boundary splits restored)
 - [x] 09 Policy Gradient — video lOMNskWVeD8 (raw transcript fetched 2026-08-29)
 - [x] 09 Policy Gradient — video lOMNskWVeD8 (edited transcript adjudicated 2026-08-29: 96 markers verified, number inventory clean, 2 [Ed: unclear] markers kept, 3 student questions rendered from captions)
+- [x] 10 Games I — video SMOD_GiRzb8 (raw transcript fetched 2026-09-07)
+- [ ] 10 Games I — video SMOD_GiRzb8 (edited transcript — delegated to subagent, adjudication pending)
 
 ## Crawl
 - [x] Fetch course site index: https://stanford-cs221.github.io/autumn2025/
@@ -21,6 +23,7 @@
 - [x] Slide file for 07 (mdp.py executable, executed 2026-08-28 with edtrace; demo outputs read from the trace; 2 graphviz figures vision-passed against source — no discrepancies; 2 distance plots described from exact trace data)
 - [x] Slide file for 08 (reinforcement_learning.py — demo outputs read 2026-08-29 from the published trace var/traces/reinforcement_learning.json; 3 new figures vision-passed — rl-framework, policy_evaluation_recurrence, value_iteration_recurrence; flaky_tram_graph reuses the lecture 7 description)
 - [x] Slide file for 09 (policy_gradient.py — demo outputs read 2026-08-29 from the published trace var/traces/policy_gradient.json; 2 photographs vision-passed — robot_kitchen.jpg and mobile_aloha.jpg from the repo's var/files/ cache; rl-framework reuses the lecture 8 description; live-demo vs published-trace discrepancy noted in the variance-reduction section)
+- [ ] Slide file for 10 (games.py — demo outputs read 2026-09-07 from the published trace var/traces/games.json; 27 figures vision-pass pending)
 
 ## Wiki
 - [x] wiki/01-course-overview.md
@@ -38,6 +41,9 @@
 - [x] wiki/09-policy-gradient.md
 - [x] Policy gradient topic page (policy-gradients; cross-links added in reinforcement-learning and q-learning pages)
 - [x] INDEX.md table of contents (update for lecture 9)
+- [ ] wiki/10-games-i.md
+- [ ] Games topic pages (cross-lecture concepts)
+- [ ] INDEX.md table of contents (update for lecture 10)
 - [ ] Re-link Bayesian networks / Turing test mentions in wiki/01-course-overview.md when those lectures are built (unlinked 2026-08-27 because the pages did not exist yet)
 - [x] Topic pages (cross-lecture concepts)
 - [x] INDEX.md table of contents (update for lectures 3-4)
