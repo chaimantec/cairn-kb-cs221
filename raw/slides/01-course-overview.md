@@ -19,7 +19,7 @@ Lecture 1 comprises three executable Python files: `welcome.py`, `history.py`, a
 ---
 
 ## Part 1: Welcome (`welcome.py`)
-**Source:** <https://raw.githubusercontent.com/stanford-cs221/autumn2025-lectures/main/welcome.py>
+**Source:** <https://raw.githubusercontent.com/stanford-cs221/autumn2025-lectures/245d8855/welcome.py>
 **Rendered:** <https://stanford-cs221.github.io/autumn2025-lectures/?trace=welcome>
 
 (Staff roster — `course-staff.png`: circular portrait headshots with two-line labels (name in dark red, role in gray). Top row: "Percy Liang / Instructor" and "Ken Liu / Head CA"; below a divider, seven CAs: Adi Badlani, Aryaman Arora, Erick Ramirez, Iddah Mlauze, Linda Liu, Minsik Oh, and Zhengxuan (Zen) Wu.)
@@ -106,7 +106,7 @@ This is an executable lecture — a program whose execution delivers the content
 ---
 
 ## Part 2: History of AI (`history.py`)
-**Source:** <https://raw.githubusercontent.com/stanford-cs221/autumn2025-lectures/main/history.py>
+**Source:** <https://raw.githubusercontent.com/stanford-cs221/autumn2025-lectures/245d8855/history.py>
 **Rendered:** <https://stanford-cs221.github.io/autumn2025-lectures/?trace=history>
 
 The history of AI is the story of three intellectual traditions: symbolic AI, neural AI, and statistical AI.
@@ -269,7 +269,7 @@ This class will see elements of all three traditions.
 ---
 
 ## Part 3: Tensors (`tensors.py`)
-**Source:** <https://raw.githubusercontent.com/stanford-cs221/autumn2025-lectures/main/tensors.py>
+**Source:** <https://raw.githubusercontent.com/stanford-cs221/autumn2025-lectures/17570e8f/tensors.py>
 **Rendered:** <https://stanford-cs221.github.io/autumn2025-lectures/?trace=tensors>
 
 (Image: `tensor.jpg` — a drawing of a 3×3×3 cube of small cuboids in isometric view: the front face (bluish-gray) shows the numbers 1–9 in a 3×3 grid, the top face (orange) shows letters A, B, C in its back row and a, b, c in its front row, and the right face (salmon-pink) shows c, g, j and C, G, J in its columns — each face a 3×3 matrix, the cube built from three matrices. Shown with the note: 'This is probably what you think of when you hear the word "tensor".')

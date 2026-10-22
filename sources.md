@@ -30,4 +30,24 @@ CS221 Autumn 2025 delivers lectures as executable Python programs rather than sl
 
 Each `raw/slides/NN-*.md` front matter names the exact source file and trace it was compiled from.
 
+**The repo's `main` branch is no longer the Autumn 2025 version.** From 2026-09-22 the course staff rewrote every lecture file in place for a later offering (commits a270be95 onward), so a link to `main`, and the rendered lecture UI, now shows the rewrite rather than what was taught. Every source link in this KB is therefore pinned to a commit. For lectures 1–10 that is the last commit to touch each file before the rewrite, which is the version those slide files were transcribed from (all built by 2026-09-07). Lecture 11 was built after the rewrite, so it is pinned to cbedcb10, the commit the repo labels "lecture 11", which landed on 2025-10-27 eight minutes before the lecture.
+
+| Lecture | Source file | Pinned commit |
+| ------- | ----------- | ------------- |
+| 1 | `welcome.py`, `history.py` | 245d8855 |
+| 1 | `tensors.py` | 17570e8f |
+| 2 | `backpropagation.py` | 4f1dc062 |
+| 2 | `linear_regression.py` | 17570e8f |
+| 3 | `linear_classification.py` | 4f1dc062 |
+| 4 | `deep_learning.py` | c86c4e70 |
+| 5 | `search.py` | 6c54c89e |
+| 6 | `ucs_astar.py` | 3a36a378 |
+| 7 | `mdp.py` | 23c10936 |
+| 8 | `reinforcement_learning.py` | 0d981424 |
+| 9 | `policy_gradient.py` | ea43de33 |
+| 10 | `games.py` | 9a9fc146 |
+| 11 | `td_learning.py`, `simultaneous_games.py` (and their traces and images) | cbedcb10 |
+
+A file at a pinned commit is at `https://raw.githubusercontent.com/stanford-cs221/autumn2025-lectures/<commit>/<file>`.
+
 

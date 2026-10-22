@@ -57,6 +57,7 @@ Estimating $Q_\pi$ is not wasted even though you want $Q^*$: the argmax of $Q_\p
 ## Related Pages
 
 - [Reinforcement learning](reinforcement-learning.md) — the setting and the four-algorithm map
+- [TD learning](td-learning.md) — SARSA's counterpart for state values: "TD learning : $V_\pi$ :: SARSA : $Q_\pi$", used with self-play to learn game evaluation functions (lecture 11)
 - [Policy gradients](policy-gradients.md) — the alternative to estimating Q at all: learn the policy directly (lecture 9)
 - [Evaluation functions](evaluation-functions.md) — lecture 10's bridge: a game evaluation function is a Q-value in disguise, and it can be learned — the setup for TD learning
 - [Lecture 8](08-reinforcement-learning.md) — the lecture page, with the worked demos and leaderboard

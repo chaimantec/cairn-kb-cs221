@@ -47,9 +47,9 @@
 - [x] wiki/10-games-i.md
 - [x] Games topic pages (games, minimax, alpha-beta pruning, evaluation functions; cross-links added in policy-evaluation, value-iteration, q-learning, search-problems and heuristics pages)
 - [x] INDEX.md table of contents (update for lecture 10)
-- [ ] wiki/11-games-ii.md
-- [ ] Games II topic pages (TD learning, simultaneous games / minimax theorem, Nash equilibrium; cross-links from games, evaluation-functions, reinforcement-learning, q-learning, policy-evaluation)
-- [ ] INDEX.md table of contents (update for lecture 11)
+- [x] wiki/11-games-ii.md
+- [x] Games II topic pages (td-learning, simultaneous-games, nash-equilibrium; cross-links added in 10-games-i, games, minimax, evaluation-functions, q-learning, reinforcement-learning, policy-evaluation)
+- [x] INDEX.md table of contents (update for lecture 11)
 - [ ] Re-link Bayesian networks / Turing test mentions in wiki/01-course-overview.md when those lectures are built (unlinked 2026-08-27 because the pages did not exist yet)
 - [x] Topic pages (cross-lecture concepts)
 - [x] INDEX.md table of contents (update for lectures 3-4)
@@ -57,8 +57,9 @@
 - [x] INDEX.md table of contents (update for lecture 7)
 
 ## Publish
-- [ ] kb.json and sources.md for lecture 11
-- [ ] verify_kb.py clean, and its review section read
+- [ ] Fix pre-existing GitHub math rendering in lectures 1–10 pages: `check_math.mjs --github` on 2026-10-22 reported 96 GitHub-only errors and 67 warnings, none from lecture 11 (mostly `\\` in `cases` blocks → `\cr`, `\,` → `\thinspace`, `^*` → `^{\ast}`); chat rendering is clean
+- [x] kb.json and sources.md for lecture 11 (also: every slide-file source link for lectures 1–10 re-pinned from `main` to its last pre-rewrite commit — the lecture repo's main was rewritten from 2026-09-22; 15 pinned URLs checked 200; table in sources.md; pinning rule added to AGENTS.md; kb.json executableLectures redefined as programs, 15)
+- [x] verify_kb.py clean (hard checks), review read; its math step reported "skipped", so check_math.mjs was run directly: lecture 11 files and every line this run added pass both the chat and --github checks; chat 0 errors KB-wide
 - [ ] Commit and push lecture 11
 - [ ] Create BUILD_LOG.md; move finished sections out of TODO.md (TODO.md keeps only open work)
 - [x] Commit and push

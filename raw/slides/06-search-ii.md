@@ -3,7 +3,7 @@ title: Lecture 6 — Search II (Slides)
 lecture: 6
 source_format: executable-python
 source_repo: https://github.com/stanford-cs221/autumn2025-lectures
-source_file: https://raw.githubusercontent.com/stanford-cs221/autumn2025-lectures/main/ucs_astar.py
+source_file: https://raw.githubusercontent.com/stanford-cs221/autumn2025-lectures/3a36a378/ucs_astar.py
 rendered: https://stanford-cs221.github.io/autumn2025-lectures/?trace=ucs_astar
 note: >
   CS221 uses "executable lectures" — Python programs whose execution delivers the

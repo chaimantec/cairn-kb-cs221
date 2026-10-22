@@ -120,7 +120,7 @@ Figure: `td-algorithm.png` — the boxed algorithm (see Figures):
 
 $$\mathbf{w} \leftarrow \mathbf{w} - \eta \left[ V(s; \mathbf{w}) - (r + \gamma V(s'; \mathbf{w})) \right] \nabla_{\mathbf{w}} V(s; \mathbf{w})$$
 
-with $V(s; \mathbf{w})$ labeled **prediction** and $r + \gamma V(s'; \mathbf{w})$ labeled **target**. Note on notation: the printed text calls the step size $\alpha$; the figure calls it $\eta$, the course's usual learning-rate symbol. The figure's update also drops the factor of 2 from differentiating the square and treats the target as a constant (no gradient through $V(s'; \mathbf{w})$); both are as printed.
+with $V(s; \mathbf{w})$ labeled **prediction** and $r + \gamma V(s'; \mathbf{w})$ labeled **target**. Note on notation: the printed text calls the step size $\alpha$; the figure calls it $\eta$, the course's usual learning-rate symbol. The figure's update also drops the factor of 2 from differentiating the square and treats the target as a constant, with no gradient through $V(s'; \mathbf{w})$. Both are as printed.
 
 ### The code
 
@@ -163,7 +163,7 @@ The demo implementation keeps $V$ as a **table** (a `defaultdict` from state to 
 Traced values (the first `get_action` and first `incorporate_feedback` are stepped into; the remaining four calls are stepped over, so their values are not shown):
 
 1. `get_action(state=1)`: the random draw is not below $\epsilon = 0.2$, so it calls `pi(1)`. With every $V$ still 0, the Q-values are **walk: −1.0** and **tram: −2.0** (tram: $0.9 \cdot (-2 + 0) + 0.1 \cdot (-2 + 0) = -2$). Chosen action: **walk**.
-2. `incorporate_feedback(state=1, action="walk", reward=-1, next_state=2)`: predicted $V(1) = 0.0$; target $= -1 + 1 \cdot V(2) = -1.0$; update $V(1) \leftarrow 0 + 0.1 \cdot (-1 - 0) = $ **−0.1**. Trace shows `self.V = {2: 0.0, 1: -0.1}`.
+2. `incorporate_feedback(state=1, action="walk", reward=-1, next_state=2)`: predicted $V(1) = 0.0$; target $= -1 + 1 \cdot V(2) = -1.0$; update $V(1) \leftarrow 0 + 0.1 \cdot (-1 - 0) = -0.1$. Trace shows `self.V = {2: 0.0, 1: -0.1}`.
 3. Stepped over: `get_action(state=2)`, `incorporate_feedback(2, walk, −1, 3)`, `get_action(state=3)`, `incorporate_feedback(3, tram, −2, 6, is_end=True)`.
 
 **Summary:**
@@ -200,10 +200,10 @@ $$\pi_{\text{dice}} \to \pi_{\text{agent}} \to \pi_{\text{dice}} \to \pi_{\text{
 
 We are learning $\pi_{\text{agent}}$ and $\pi_{\text{opp}}$, but $\pi_{\text{dice}}$ is fixed.
 
-**The parameterized value function.** First define a feature vector for each state (figure: `backgammon-features.png` — a small board and its features $\phi(s)$). Then define
+**The parameterized value function.** First define a feature vector for each state (figure: `backgammon-features.png`, a small board with its features $\phi(s)$ listed beside it). Then define
 
 - a linear value function: $V(s; \mathbf{w}) = \phi(s) \cdot \mathbf{w}$ (printed as `φ(s) * w`),
-- ...or an MLP value function: $V(s; \mathbf{w}) = \text{MLP}_{\mathbf{w}}(\phi(s))$.
+- ...or an MLP value function: $V(s; \mathbf{w}) = \text{MLP}_ {\mathbf{w}}(\phi(s))$.
 
 Then just apply TD learning!
 
@@ -451,9 +451,9 @@ The chess board in its initial position and the hand-written evaluation function
 
 A bordered box headed "Algorithm: SARSA" in blue, with a laptop icon. Text: "On each $(s, a, r, s', a')$:", then the update
 
-$$\hat{Q}_\pi(s, a) \leftarrow (1 - \eta) \hat{Q}_\pi(s, a) + \eta \left[ r + \gamma \hat{Q}_\pi(s', a') \right]$$
+$$\hat{Q}_ \pi(s, a) \leftarrow (1 - \eta) \hat{Q}_ \pi(s, a) + \eta \left[ r + \gamma \hat{Q}_ \pi(s', a') \right]$$
 
-The bracketed target is green. A brace under $r$ labels it **data**; a brace under $\gamma \hat{Q}_\pi(s', a')$ labels it **estimate**. Symbols: $\hat{Q}_\pi$ is the estimated Q-value of the current policy, $\eta$ the learning rate, $\gamma$ the discount, $a'$ the next action actually taken.
+The bracketed target is green. A brace under $r$ labels it **data**; a brace under $\gamma \hat{Q}_ \pi(s', a')$ labels it **estimate**. Symbols: $\hat{Q}_ \pi$ is the estimated Q-value of the current policy, $\eta$ the learning rate, $\gamma$ the discount, $a'$ the next action actually taken.
 
 ### `td-algorithm.png`
 

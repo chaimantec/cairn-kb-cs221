@@ -3,7 +3,7 @@ title: Lecture 4 — Learning III (Slides)
 lecture: 4
 source_format: executable-python
 source_repo: https://github.com/stanford-cs221/autumn2025-lectures
-source_file: https://raw.githubusercontent.com/stanford-cs221/autumn2025-lectures/main/deep_learning.py
+source_file: https://raw.githubusercontent.com/stanford-cs221/autumn2025-lectures/c86c4e70/deep_learning.py
 rendered: https://stanford-cs221.github.io/autumn2025-lectures/?trace=deep_learning
 note: >
   CS221 uses "executable lectures" — Python programs whose execution delivers the

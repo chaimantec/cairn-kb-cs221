@@ -66,6 +66,10 @@ The three properties ([≈39:07](../raw/transcripts/10-games-i.md)–[≈43:46](
 
 The four values chain as **−5 ≤ 1 ≤ 2 ≤ 5** ([≈44:33](../raw/transcripts/10-games-i.md), [≈45:20](../raw/transcripts/10-games-i.md)). The lecturer's preferred reading of minimax follows from property 2: not "the opponent is the worst possible," but "minimax gives a **lower bound** against any unknown opponent" — the interpretation for when you want guarantees ([≈45:20](../raw/transcripts/10-games-i.md), [≈46:06](../raw/transcripts/10-games-i.md)).
 
+## Beyond Turn-Based Zero-Sum Games
+
+[Lecture 11](11-games-ii.md) takes up two of the cases lecture 10 set aside. In [simultaneous games](simultaneous-games.md) both players move at once, so the game tree breaks down; the analysis uses a payoff matrix and mixed strategies, and von Neumann's minimax theorem shows that with mixed strategies going first or second gives the same value ([≈38:53](../raw/transcripts/11-games-ii.md), [≈1:02:24](../raw/transcripts/11-games-ii.md)). In non-zero-sum games such as the prisoner's dilemma the solution concept becomes the [Nash equilibrium](nash-equilibrium.md) ([≈1:08:39](../raw/transcripts/11-games-ii.md)). The same lecture also learns a game's value function by [TD learning](td-learning.md) with self-play.
+
 ---
 
-See also [minimax](minimax.md), [alpha-beta pruning](alpha-beta-pruning.md), and [evaluation functions](evaluation-functions.md).
+See also [minimax](minimax.md), [alpha-beta pruning](alpha-beta-pruning.md), [evaluation functions](evaluation-functions.md), [TD learning](td-learning.md), [simultaneous games](simultaneous-games.md), and [Nash equilibrium](nash-equilibrium.md).

@@ -3,7 +3,7 @@ title: Lecture 9 — Policy Gradient (Slides)
 lecture: 9
 source_format: executable-python
 source_repo: https://github.com/stanford-cs221/autumn2025-lectures
-source_file: https://raw.githubusercontent.com/stanford-cs221/autumn2025-lectures/main/policy_gradient.py
+source_file: https://raw.githubusercontent.com/stanford-cs221/autumn2025-lectures/ea43de33/policy_gradient.py
 rendered: https://stanford-cs221.github.io/autumn2025-lectures/?trace=policy_gradient
 note: >
   CS221 uses "executable lectures" — Python programs whose execution delivers the

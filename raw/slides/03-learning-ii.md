@@ -3,7 +3,7 @@ title: Lecture 3 — Learning II (Slides)
 lecture: 3
 source_format: executable-python
 source_repo: https://github.com/stanford-cs221/autumn2025-lectures
-source_file: https://raw.githubusercontent.com/stanford-cs221/autumn2025-lectures/main/linear_classification.py
+source_file: https://raw.githubusercontent.com/stanford-cs221/autumn2025-lectures/4f1dc062/linear_classification.py
 rendered: https://stanford-cs221.github.io/autumn2025-lectures/?trace=linear_classification
 note: >
   CS221 uses "executable lectures" — Python programs whose execution delivers the

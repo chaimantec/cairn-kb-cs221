@@ -3,7 +3,7 @@ title: Lecture 10 — Games I (Slides)
 lecture: 10
 source_format: executable-python
 source_repo: https://github.com/stanford-cs221/autumn2025-lectures
-source_file: https://raw.githubusercontent.com/stanford-cs221/autumn2025-lectures/main/games.py
+source_file: https://raw.githubusercontent.com/stanford-cs221/autumn2025-lectures/9a9fc146/games.py
 rendered: https://stanford-cs221.github.io/autumn2025-lectures/?trace=games
 note: >
   CS221 uses "executable lectures" — Python programs whose execution delivers the

@@ -60,6 +60,7 @@ The first iteration already shows the structure ([≈56:55](../raw/transcripts/0
 ## Related Pages
 
 - [Value iteration](value-iteration.md) — the same algorithm with a max over actions
+- [TD learning](td-learning.md) — estimates the same $V_\pi$ from sampled experience with a learned function, for state spaces too large for this exact recurrence (lecture 11)
 - [Games](games.md) — the same recurrence appears in lecture 10 as game evaluation ($V_{eval}$): the opponent's known policy plays the role of the transition probabilities
 - [Markov decision processes](markov-decision-processes.md) — the framework, including the $Q$-value's place in it
 - [Monte Carlo evaluation](monte-carlo-evaluation.md) — the estimate this replaces

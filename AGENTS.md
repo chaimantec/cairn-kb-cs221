@@ -16,7 +16,8 @@ raw.githubusercontent.com and follows relative markdown links.
 | `sources.md`        | Crawl inventory: source URL → local file, fetch date.         |
 | `kb.json`           | Machine-readable coverage and provenance. Read this to know what this KB does and does not cover, and how far to trust a citation. |
 | `SEE_ALSO.md`       | Sibling KBs worth reading for this course, by raw URL.        |
-| `TODO.md`           | Build tracker. Unchecked boxes are outstanding work.          |
+| `TODO.md`           | Build tracker: open work only. Unchecked boxes are outstanding work. |
+| `BUILD_LOG.md`      | Finished runs, moved out of `TODO.md`: what each run did and found. Never read by the chat. |
 
 ## Conventions
 
@@ -39,6 +40,13 @@ raw.githubusercontent.com and follows relative markdown links.
   source instead of the formula. Define each symbol on first use, and follow the
   course's own notation rather than a tidier one, since the learner is comparing
   the page against the lecturer's board.
+- **Pin every link into the lecture repo to a commit.** `stanford-cs221/autumn2025-lectures`
+  is being rewritten in place for a later offering (from 2026-09-22), so its `main` branch and
+  the rendered lecture UI no longer show what was taught in Autumn 2025. For a new lecture, find
+  the commit the course made for it on or just before the lecture date (the commit message or
+  its README diff names the lecture), read the source, traces and images at that commit, and
+  check that the trace's embedded source matches the pinned file. Record the commit in the slide
+  file's front matter and in the table in `sources.md`.
 - **Transcripts stay verbatim.** Captions spell notation out as speech ("theta
   sub j"); reconstructing it as $\theta_j$ belongs in `wiki/`, not in
   `raw/transcripts/`.

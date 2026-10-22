@@ -17,7 +17,7 @@ Lecture 2 comprises two executable Python files: `backpropagation.py` and `linea
 ---
 
 ## Part 1: Backpropagation (`backpropagation.py`)
-**Source:** <https://raw.githubusercontent.com/stanford-cs221/autumn2025-lectures/main/backpropagation.py>
+**Source:** <https://raw.githubusercontent.com/stanford-cs221/autumn2025-lectures/4f1dc062/backpropagation.py>
 **Rendered:** <https://stanford-cs221.github.io/autumn2025-lectures/?trace=backpropagation>
 
 ### Section: Einops Review
@@ -188,7 +188,7 @@ backpropagation(total_loss)
 ---
 
 ## Part 2: Linear Regression (`linear_regression.py`)
-**Source:** <https://raw.githubusercontent.com/stanford-cs221/autumn2025-lectures/main/linear_regression.py>
+**Source:** <https://raw.githubusercontent.com/stanford-cs221/autumn2025-lectures/17570e8f/linear_regression.py>
 **Rendered:** <https://stanford-cs221.github.io/autumn2025-lectures/?trace=linear_regression>
 
 This part covers the full machine learning pipeline for linear regression.

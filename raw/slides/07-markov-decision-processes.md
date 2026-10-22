@@ -3,7 +3,7 @@ title: Lecture 7 — Markov Decision Processes (Slides)
 lecture: 7
 source_format: executable-python
 source_repo: https://github.com/stanford-cs221/autumn2025-lectures
-source_file: https://raw.githubusercontent.com/stanford-cs221/autumn2025-lectures/main/mdp.py
+source_file: https://raw.githubusercontent.com/stanford-cs221/autumn2025-lectures/23c10936/mdp.py
 rendered: https://stanford-cs221.github.io/autumn2025-lectures/?trace=mdp
 note: >
   CS221 uses "executable lectures" — Python programs whose execution delivers the

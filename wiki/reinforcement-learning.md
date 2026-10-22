@@ -55,6 +55,7 @@ The counterpoint is **world models**: with foundation models making world simula
 ## Related Pages
 
 - [Q-learning](q-learning.md) — the Q-estimation side: Monte Carlo, bootstrapping, on- vs. off-policy
+- [TD learning](td-learning.md) — estimating $V_\pi$ instead of $Q_\pi$; usable when the transitions are known, as in games, where RL is used because the state space is exponential rather than because the MDP is unknown (lecture 11)
 - [Policy gradients](policy-gradients.md) — the third family: learning the policy $\pi_\theta(a \mid s)$ directly (lecture 9)
 - [Lecture 8](08-reinforcement-learning.md) — the lecture page, with the worked demos and leaderboard
 - [Markov decision processes](markov-decision-processes.md) — the formalism RL relaxes
