@@ -30,7 +30,7 @@ CS221 Autumn 2025 delivers lectures as executable Python programs rather than sl
 
 Each `raw/slides/NN-*.md` front matter names the exact source file and trace it was compiled from.
 
-**The repo's `main` branch is no longer the Autumn 2025 version.** From 2026-09-22 the course staff rewrote every lecture file in place for a later offering (commits a270be95 onward), so a link to `main`, and the rendered lecture UI, now shows the rewrite rather than what was taught. Every source link in this KB is therefore pinned to a commit. For lectures 1–10 that is the last commit to touch each file before the rewrite, which is the version those slide files were transcribed from (all built by 2026-09-07). Lecture 11 was built after the rewrite, so it is pinned to cbedcb10, the commit the repo labels "lecture 11", which landed on 2025-10-27 eight minutes before the lecture.
+**The repo's `main` branch is no longer the Autumn 2025 version.** From 2026-09-22 the course staff rewrote every lecture file in place for a later offering (commits a270be95 onward), so a link to `main`, and the rendered lecture UI, now shows the rewrite rather than what was taught. Every source link in this KB is therefore pinned to a commit. For lectures 1–10 that is the last commit to touch each file before the rewrite, which is the version those slide files were transcribed from (all built by 2026-09-07). Lecture 11 was built after the rewrite, so it is pinned to cbedcb10, the commit the repo labels "lecture 11", which landed on 2025-10-27 eight minutes before the lecture. Lecture 12 is pinned the same way, to f22938e ("add bayes"), which landed on 2025-10-29 four minutes before the lecture and whose README diff adds "Wed Oct 29: bayes i (lecture 12)"; the next commit to `bayes.py` (ed66b66, for lecture 13) only added two trace annotations.
 
 | Lecture | Source file | Pinned commit |
 | ------- | ----------- | ------------- |
@@ -47,6 +47,7 @@ Each `raw/slides/NN-*.md` front matter names the exact source file and trace it 
 | 9 | `policy_gradient.py` | ea43de33 |
 | 10 | `games.py` | 9a9fc146 |
 | 11 | `td_learning.py`, `simultaneous_games.py` (and their traces and images) | cbedcb10 |
+| 12 | `bayes.py` (and its trace and images) | f22938e |
 
 A file at a pinned commit is at `https://raw.githubusercontent.com/stanford-cs221/autumn2025-lectures/<commit>/<file>`.
 

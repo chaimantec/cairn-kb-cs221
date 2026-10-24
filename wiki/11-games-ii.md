@@ -196,7 +196,7 @@ The contrast ([≈1:11:46](../raw/transcripts/11-games-ii.md), [slides](../raw/s
 
 ## Summary and What Comes Next
 
-In simultaneous games the two players move at the same time ([≈1:12:32](../raw/transcripts/11-games-ii.md)). In general the second player has an advantage and can play a pure strategy, but the minimax theorem says that with mixed strategies the second player has no advantage and both players can play optimally. Nash equilibria exist for non-zero-sum games but are not unique. There is a huge literature in game theory and economics, and a game-theory course is the place to learn more ([≈1:13:19](../raw/transcripts/11-games-ii.md)). This lecture concludes the games unit and the state-based models (search, MDPs, RL, games); the next unit is Bayesian networks ([≈1:13:19](../raw/transcripts/11-games-ii.md)).
+In simultaneous games the two players move at the same time ([≈1:12:32](../raw/transcripts/11-games-ii.md)). In general the second player has an advantage and can play a pure strategy, but the minimax theorem says that with mixed strategies the second player has no advantage and both players can play optimally. Nash equilibria exist for non-zero-sum games but are not unique. There is a huge literature in game theory and economics, and a game-theory course is the place to learn more ([≈1:13:19](../raw/transcripts/11-games-ii.md)). This lecture concludes the games unit and the state-based models (search, MDPs, RL, games); the next unit is [Bayesian networks](12-bayesian-networks-i.md) ([≈1:13:19](../raw/transcripts/11-games-ii.md)).
 
 ---
 

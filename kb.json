@@ -9,25 +9,25 @@
     "courseUrl": "https://stanford-cs221.github.io/autumn2025/"
   },
   "coverage": {
-    "lecturesCovered": 11,
+    "lecturesCovered": 12,
     "lecturesTotal": 20,
-    "transcripts": 11,
-    "wikiLecturePages": 11,
-    "wikiTopicPages": 25
+    "transcripts": 12,
+    "wikiLecturePages": 12,
+    "wikiTopicPages": 29
   },
   "materials": {
     "primary": "executable-lectures",
     "executableLectures": {
-      "available": 15,
-      "transcribed": 15,
-      "note": "Counts Python lecture programs, not lectures: lecture 1 has three (welcome.py, history.py, tensors.py), lectures 2 and 11 two each, the rest one. Before 2026-10-22 this field held a running counter one below the number of lectures covered, which matched neither lectures nor programs.",
+      "available": 16,
+      "transcribed": 16,
+      "note": "Counts Python lecture programs, not lectures: lecture 1 has three (welcome.py, history.py, tensors.py), lectures 2 and 11 two each, the rest one (lecture 12: bayes.py). Before 2026-10-22 this field held a running counter one below the number of lectures covered, which matched neither lectures nor programs.",
       "pinnedCommits": true
     },
     "method": "source-text",
     "figuresAudited": true,
     "figureImages": {
-      "available": 82,
-      "described": 82,
+      "available": 85,
+      "described": 85,
       "method": "vision-pass",
       "audited": true,
       "video": {
@@ -36,7 +36,7 @@
       }
     },
     "sourceRepo": "https://github.com/stanford-cs221/autumn2025-lectures",
-    "sourceRepoNote": "The lecture repo's main branch was rewritten in place for a later offering from 2026-09-22; every slide file links its source at a pinned pre-rewrite commit (table in sources.md). Lecture 11 is pinned to cbedcb10."
+    "sourceRepoNote": "The lecture repo's main branch was rewritten in place for a later offering from 2026-09-22; every slide file links its source at a pinned pre-rewrite commit (table in sources.md). Lecture 11 is pinned to cbedcb10 and lecture 12 to f22938e."
   },
   "provenance": {
     "builtBy": [
@@ -46,7 +46,7 @@
       "claude-sonnet-5-5"
     ],
     "caveats": [
-      "PARTIAL: covers lectures 1-11 of 20. Do not cite this KB as covering CS221 as a whole - it says nothing about Bayesian networks, logic, or any material after lecture 11.",
+      "PARTIAL: covers lectures 1-12 of 20. Do not cite this KB as covering CS221 as a whole. Bayesian networks are covered only as far as lecture 12 (definition, exact inference on small networks, explaining away, rejection sampling); Gibbs sampling, learning, logic and everything after lecture 12 are not covered.",
       "Figure descriptions were written by vision-capable subagents (deepseek-v4-flash-vision-exp) because the parent model (deepseek-v4-pro) cannot perceive images. The chart- and text-dense figures were then audited by a second vision pass, which corrected four errors: a circle radius (2 → 1.4, matching the source code's boundary), a scatter point count (25 → 20), a graph line colour (red → green), and an invented monkey inside a magnifying-glass illustration.",
       "Lecture 6 figures were described by a single vision pass, cross-checked against source-derived values instead of a second vision audit: the 8-puzzle Manhattan distances sum exactly to the lecture's 1+1+3+1+1+1+1+3 = 12, and the A* counterexample's modified costs reconcile exactly with the code arithmetic (e.g. C→D: 1 + 0 − 1000 = −999).",
       "The SVM-with-polynomial-kernel video in lecture 4 was described from 7 sampled frames of 43, not watched in full.",
@@ -55,9 +55,10 @@
       "Lecture 8's demo outputs were read from the published execution trace (var/traces/reinforcement_learning.json) rather than by re-executing the lecture this session. The three new figures (rl-framework, policy_evaluation_recurrence, value_iteration_recurrence) were described by a single vision pass, not a second audit; they are simple diagrams with little numeric content. The lecture 8 transcript edit was delegated to a subagent and parent-adjudicated: timestamp sequence and number inventory verified against the verbatim original; six sentences the edit had completed across marker boundaries were restored to the captions' splits.",
       "Lecture 9's demo outputs were read from the published execution trace (var/traces/policy_gradient.json). The lecturer's live variance-reduction demo used different numbers than the published trace (uniform probabilities 0.25, true mean 1, estimator variance 36 vs. the trace's 0.1, 0.4, 38.29); both are preserved in their places and the discrepancy is stated in both the slide file and the transcript editing notes. The two lecture 9 photographs (Berkeley Bridge robot kitchen, Mobile ALOHA teleoperation) were described by a single vision pass with ambiguities flagged rather than guessed; they are photographs with no numeric content, not charts. The lecture 9 transcript edit was delegated to a subagent and parent-adjudicated: timestamp sequence and number inventory verified; two [Ed: unclear] markers kept (the 'walk tram' rollout and the garbled utility formula); three student questions rendered from the captions after the subagent had marked them 'not captured'.",
       "Lecture 10's demo outputs were read from the published execution trace (var/traces/games.json). Its 27 figures were described by a single vision pass, then ground-truth cross-checked in the parent rather than a second vision audit: every game-tree value and the face-off matrix (1, 2, -5, 5) reconcile with the trace and the source; game 2's coin-flip rule and the chess weights are confirmed by the transcript; the depth-limited recurrence's d/d-1 asymmetry (agent keeps d, opponent decrements) is confirmed verbatim by the lecturer. The vision pass caught an error the parent had introduced from memory (game 2 uses a coin, not a die). The lecture 10 transcript edit was delegated to a subagent and parent-adjudicated: 95 markers identical, number inventory clean, zero word-ratio outliers; adjudication reverted one over-correction at [1:37] ('environment is random and unknown' kept as captioned) and restored the word 'left' in the coin-policy sentence at [46:52].",
-      "Lecture 11 (Games II) was built by a different model pair from lectures 1-10: the parent was claude-opus-5-5 and the transcript copy-edit was delegated to claude-sonnet-5-5. Its sources are td_learning.py and simultaneous_games.py pinned at commit cbedcb10 (the repo's 'lecture 11' commit, 2025-10-27), because both files were rewritten on main in 2026; demo outputs were read from the traces at the same commit, whose embedded source matches the pinned files exactly. Its 24 new figures were described by the parent model directly (small images, about 1k tokens each), with no second vision audit; the numeric figures were ground-truth checked instead: the Morra payoff matrix matches the code, the five traced game values (0, -0.5, 0.5, -0.5, 0.5) and the traced optimum -1/12 reconcile with it, and the lines 5p-3 and -7p+4 intersect at p = 7/12. backgammon2.jpg's dice pips are illegible at its 287px size and are not described. The lecture 11 transcript edit was parent-adjudicated: 95 markers identical, every paragraph word ratio 0.75-1.03, number inventory clean apart from four deliberate fraction restorations; the lecturer's two in-lecture corrections after student interjections (B's best response at about 53:45-55:21, max to min at about 57:44-58:35) and his 'chess program' slip for Samuel's checkers at about 32:39 are kept as spoken and flagged on the wiki page."
+      "Lecture 11 (Games II) was built by a different model pair from lectures 1-10: the parent was claude-opus-5-5 and the transcript copy-edit was delegated to claude-sonnet-5-5. Its sources are td_learning.py and simultaneous_games.py pinned at commit cbedcb10 (the repo's 'lecture 11' commit, 2025-10-27), because both files were rewritten on main in 2026; demo outputs were read from the traces at the same commit, whose embedded source matches the pinned files exactly. Its 24 new figures were described by the parent model directly (small images, about 1k tokens each), with no second vision audit; the numeric figures were ground-truth checked instead: the Morra payoff matrix matches the code, the five traced game values (0, -0.5, 0.5, -0.5, 0.5) and the traced optimum -1/12 reconcile with it, and the lines 5p-3 and -7p+4 intersect at p = 7/12. backgammon2.jpg's dice pips are illegible at its 287px size and are not described. The lecture 11 transcript edit was parent-adjudicated: 95 markers identical, every paragraph word ratio 0.75-1.03, number inventory clean apart from four deliberate fraction restorations; the lecturer's two in-lecture corrections after student interjections (B's best response at about 53:45-55:21, max to min at about 57:44-58:35) and his 'chess program' slip for Samuel's checkers at about 32:39 are kept as spoken and flagged on the wiki page.",
+      "Lecture 12 (Bayesian Networks I) was built like lecture 11: parent claude-opus-5-5, transcript copy-edit delegated to claude-sonnet-5-5. Its source is bayes.py pinned at commit f22938e ('add bayes', 2025-10-29, four minutes before the lecture), since the next commit changed it for lecture 13 and main was later rewritten; demo outputs were read from the trace at the same commit, whose embedded source matches the pinned file exactly, and the numbers the lecturer read out in class (0.56 for the 1,000-sample alarm estimate, one accepted sample out of ten) match that trace. Its 3 new figures (alarm-bayes, medical-bayes, hmm) are plain node-and-arrow diagrams described by the parent directly and checked against the code's factorizations; no second vision audit. The transcript edit was parent-adjudicated: 100 markers identical, paragraph word ratios 0.73-1.00, number inventory clean apart from garbled-decimal restorations; one dropped number ('100' at 56:09) was restored by the parent; three [Ed: unclear] markers remain (38:57 '09', 52:13 '6 of the time', 1:10:45 'floor line network'). Lecturer slips kept as spoken: 'cough' for cold at 1:11:33, and the probability of a cold given a cough quoted as both 0.28 and 0.27 (exact 0.2778)."
     ]
   },
   "entryPoint": "INDEX.md",
-  "updated": "2026-10-22"
+  "updated": "2026-10-24"
 }

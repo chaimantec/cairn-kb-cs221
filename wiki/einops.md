@@ -3,6 +3,7 @@ title: Einops
 lectures:
   - 01 — introduced as readable alternative to axis-position gymnastics
   - 02 — reviewed in detail with vector/matrix examples
+  - 12 — probability tables as tensors: marginalization, conditioning and Bayesian-network joints as einsums
 ---
 
 # Einops
@@ -96,8 +97,13 @@ x = rearrange(x, "... heads hidden2 -> ... (heads hidden2)")
 - **No transposes:** You never need `.transpose(-2, -1)` — just rename the axes in the output ([≈8:33](../raw/transcripts/02-learning-i.md)).
 - **Easier debugging:** The string pattern acts as a shape check.
 
+## Probability Tables Are Tensors (Lecture 12)
+
+Einops comes back in [Lecture 12](12-bayesian-networks-i.md): a probability table over $k$ variables is a $k$-axis tensor, so "all the laws of probability are essentially all covered by einops" ([≈10:57](../raw/transcripts/12-bayesian-networks-i.md)). Marginalization leaves an axis off the output, as in `einsum(P_SR, "s r -> s")` for $P(S = s) = \sum_r P(S = s, R = r)$ ([≈11:45](../raw/transcripts/12-bayesian-networks-i.md)). Conditioning multiplies in an indicator tensor such as `[0, 1]` for the evidence, then divides by the probability of the evidence, itself an einsum with no output axes (`"s ->"`) ([≈16:24](../raw/transcripts/12-bayesian-networks-i.md)–[≈17:58](../raw/transcripts/12-bayesian-networks-i.md)). A [Bayesian network](bayesian-networks.md)'s joint distribution is one einsum over its local tables, `"b, e, b e a -> b e a"` for the alarm network ([≈33:32](../raw/transcripts/12-bayesian-networks-i.md)). See [probabilistic inference](probabilistic-inference.md).
+
 ## Resources
 
 - [Lecture 1 transcript](../raw/transcripts/01-course-overview.md) — introduction (~54:18–1:05:58)
 - [Lecture 2 transcript](../raw/transcripts/02-learning-i.md) — detailed review (~0:05–17:12)
+- [Lecture 12 transcript](../raw/transcripts/12-bayesian-networks-i.md) — einsum for probability (~10:57–18:44, 32:44–41:17)
 - [Einops tutorial](https://einops.rocks/1-einops-basics/)
