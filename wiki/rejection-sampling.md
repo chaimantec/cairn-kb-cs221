@@ -65,9 +65,18 @@ The **hidden Markov model** shows off how succinct the approach is ([≈1:11:33]
 
 Estimating by sampling is a recurring move in the course; the lecturer compares it to sampling rollouts in policy evaluation ([≈1:10:00](../raw/transcripts/12-bayesian-networks-i.md); see [Monte Carlo evaluation](monte-carlo-evaluation.md)). Lecture 12 ends by promising better inference algorithms next time ([≈1:17:06](../raw/transcripts/12-bayesian-networks-i.md)).
 
+## Lecture 13: Against Gibbs Sampling
+
+Lecture 13 reviews rejection sampling and sets it against [Gibbs sampling](gibbs-sampling.md) ([lecture 13](13-gibbs-sampling.md)). Its strength is that **every sample is independent**; its weaknesses are that each sample starts from scratch and is generated without looking at the evidence, so if the probability of hitting the evidence is something like $10^{-30}$ you "would just be sitting around and rejecting, rejecting, rejecting" ([≈14:04](../raw/transcripts/13-gibbs-sampling.md)–[≈16:23](../raw/transcripts/13-gibbs-sampling.md)). The lecturer still likes it as the fastest path to a Bayesian network plus an inference algorithm that provably works in the limit ([≈14:50](../raw/transcripts/13-gibbs-sampling.md)).
+
+New runs, from the [lecture 13 slide file](../raw/slides/13-gibbs-sampling.md): the alarm's $P(B = 1 \mid A = 1)$ from 300 samples is 0.448 (29 kept; read in class as 0.44, "in the ballpark" of the exact 0.513), and the telephone network's $P(A = 1 \mid C = 1)$ from 100 samples is 0.653 (49 kept), against 0.68 for 100 iterations of Gibbs sampling ([≈13:19](../raw/transcripts/13-gibbs-sampling.md), [≈21:49](../raw/transcripts/13-gibbs-sampling.md), [≈33:24](../raw/transcripts/13-gibbs-sampling.md)).
+
+The two samplers fail in complementary ways ([≈51:17](../raw/transcripts/13-gibbs-sampling.md)–[≈57:31](../raw/transcripts/13-gibbs-sampling.md)). The fraction of samples rejection sampling keeps is about the probability of the evidence: in $A \to B$ with $p(B = 1 \mid A)$ of 0.0001 or 0.0002, it keeps about one sample in 10,000 and might need a hundred thousand or more, while Gibbs sampling conditions on $B = 1$ directly. But when variables are highly correlated, say $B = A$ always, rejection sampling "will nail" $P(A)$, since it generates from scratch and with no evidence rejects nothing, while Gibbs sampling gets stuck. In practice rejection sampling "generally doesn't get used," because the probability of hitting the evidence is generally low ([≈58:16](../raw/transcripts/13-gibbs-sampling.md)).
+
 ## Related Pages
 
 - [Lecture 12](12-bayesian-networks-i.md) — the lecture, with all three examples
 - [Probabilistic inference](probabilistic-inference.md) — the exact computation this approximates
 - [Bayesian networks](bayesian-networks.md) — the models being sampled
 - [Monte Carlo evaluation](monte-carlo-evaluation.md) — estimation by sampling in the MDP unit
+- [Lecture 13](13-gibbs-sampling.md) and [Gibbs sampling](gibbs-sampling.md) — the alternative sampler, and when each one fails

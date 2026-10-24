@@ -55,11 +55,15 @@ Sampling forward from a prompt is what language models normally do. Inference in
 
 ## Two Ways to Write a Network Down
 
-The four steps write a network as tables. A **probabilistic program** writes the same network as code that draws one sample from the joint distribution, each variable sampled from its local distribution given the values already drawn for its parents. The alarm network is three lines: `B = Bernoulli(0.05)`, `E = Bernoulli(0.05)`, `A = B or E`. "This is actually a formal definition of a Bayesian network," just an unusual one ([≈1:04:34](../raw/transcripts/12-bayesian-networks-i.md)–[≈1:06:07](../raw/transcripts/12-bayesian-networks-i.md)). Programs make approximate inference by [rejection sampling](rejection-sampling.md) natural.
+The four steps write a network as tables. A **probabilistic program** writes the same network as code that draws one sample from the joint distribution, each variable sampled from its local distribution given the values already drawn for its parents. The alarm network is three lines: `B = Bernoulli(0.05)`, `E = Bernoulli(0.05)`, `A = B or E`. "This is actually a formal definition of a Bayesian network," just an unusual one ([≈1:04:34](../raw/transcripts/12-bayesian-networks-i.md)–[≈1:06:07](../raw/transcripts/12-bayesian-networks-i.md)). Programs make approximate inference by [rejection sampling](rejection-sampling.md) natural. Lecture 13 adds a second sampler, [Gibbs sampling](gibbs-sampling.md), which works on the tables rather than the program: it changes one variable at a time, and needs only the local conditionals in that variable's [Markov blanket](markov-blanket.md) ([lecture 13](13-gibbs-sampling.md)).
 
 ## What Comes Out: Explaining Away
 
 Defining the joint distribution carefully is what produces reasoning patterns that intuition gets wrong. The defining example is [explaining away](explaining-away.md): two independent causes of an observed effect become dependent, so learning that one cause occurred lowers the probability of the other. In general, observed evidence **propagates** through the network, raising and lowering the probabilities of other nodes, and computing these quantities exactly can be NP-hard ([≈43:37](../raw/transcripts/12-bayesian-networks-i.md), [≈56:54](../raw/transcripts/12-bayesian-networks-i.md), [≈57:40](../raw/transcripts/12-bayesian-networks-i.md)).
+
+## Structure and Independence
+
+A Bayesian network is at once a distribution and a graph, and lecture 13 reads independence facts off the graph ([≈58:16](../raw/transcripts/13-gibbs-sampling.md)–[≈1:13:50](../raw/transcripts/13-gibbs-sampling.md)). Two unconnected variables are independent, which is "generally the right intuition." Connected ones usually are not, with one special case: two parents of a common child, $A \to C \leftarrow B$, are independent as long as the child is unobserved, and become dependent once it is observed, which is explaining away in the alarm network. The opposite shape, a common parent $A \leftarrow C \to B$, makes $A$ and $B$ dependent until $C$ is observed. A four-step procedure (shade the evidence, prune unshaded leaves, marry parents, look for an unblocked path) decides the general case. See [conditional independence](conditional-independence.md).
 
 ## Why Use Them: A Shift from Classifiers
 
@@ -78,4 +82,8 @@ The lecturer's broader case: before uncertainty was "nailed down probabilistical
 - [Probabilistic inference](probabilistic-inference.md) — the questions a network answers, and the select–sum–divide recipe
 - [Explaining away](explaining-away.md) — the signature reasoning pattern, in the alarm and medical-diagnosis networks
 - [Rejection sampling](rejection-sampling.md) — probabilistic programs, and approximate inference by sampling
+- [Lecture 13](13-gibbs-sampling.md) — Gibbs sampling, the Markov blanket, and conditional independence
+- [Gibbs sampling](gibbs-sampling.md) — approximate inference one variable at a time
+- [Markov blanket](markov-blanket.md) — the variables a Gibbs update needs
+- [Conditional independence](conditional-independence.md) — reading independence off the graph
 - [Einops](einops.md) — the einsum notation that builds and queries the tables

@@ -61,10 +61,14 @@ The exact numbers are from the traced tables in the [slide file](../raw/slides/1
 
 Writing out the whole joint table is something no one really does for a large number of variables ([≈1:04:34](../raw/transcripts/12-bayesian-networks-i.md)), and in general computing these quantities can be NP-hard ([≈57:40](../raw/transcripts/12-bayesian-networks-i.md)). Going "backwards" through a language model, from a response to the prompt that produced it, is the extreme case: "extremely computationally expensive" and "in general exponentially hard" ([≈1:03:49](../raw/transcripts/12-bayesian-networks-i.md)). Lecture 12 ends with one approximate method, [rejection sampling](rejection-sampling.md), which estimates a query from samples and is "very flexible and very slow," and promises better inference algorithms next time ([≈1:17:06](../raw/transcripts/12-bayesian-networks-i.md), [slides](../raw/slides/12-bayesian-networks-i.md)).
 
+Lecture 13 puts the cost in numbers: with 100 binary variables the joint has $2^{100}$ assignments, "and you definitely don't want to be writing that down," so exact inference by forming the joint is exponential in the number of nodes ([≈9:23](../raw/transcripts/13-gibbs-sampling.md), [≈1:14:40](../raw/transcripts/13-gibbs-sampling.md)). It adds a second approximate method, [Gibbs sampling](gibbs-sampling.md), which starts from an assignment satisfying the evidence and resamples one variable at a time, never building the joint table. The two samplers fail in complementary ways: rare evidence is hard for rejection sampling, highly correlated variables are hard for Gibbs sampling ([lecture 13](13-gibbs-sampling.md), [≈56:44](../raw/transcripts/13-gibbs-sampling.md), [≈57:31](../raw/transcripts/13-gibbs-sampling.md)). Lecture 13 also orders the exact recipe slightly differently, as four steps on the alarm: slice the joint at the evidence, marginalize out the other variables, sum to get the probability of the evidence, and divide ([≈6:18](../raw/transcripts/13-gibbs-sampling.md)–[≈9:23](../raw/transcripts/13-gibbs-sampling.md)).
+
 ## Related Pages
 
 - [Lecture 12](12-bayesian-networks-i.md) — the probability review and both worked networks
 - [Bayesian networks](bayesian-networks.md) — how the joint distribution being queried is defined
 - [Explaining away](explaining-away.md) — what the queries above reveal
 - [Rejection sampling](rejection-sampling.md) — approximate inference by sampling
+- [Gibbs sampling](gibbs-sampling.md) — approximate inference one variable at a time (lecture 13)
+- [Conditional independence](conditional-independence.md) — which variables a query can ignore, read off the graph
 - [Einops](einops.md) — the einsum notation

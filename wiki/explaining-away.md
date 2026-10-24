@@ -26,7 +26,7 @@ Burglaries $B$ and earthquakes $E$ are independent, each with probability 0.05, 
 
 The alarm alone makes a burglary "a little bit over 50%" likely; adding the earthquake sends it back to its prior. The intuition ([≈42:05](../raw/transcripts/12-bayesian-networks-i.md)): why did the alarm sound? It must have been an earthquake or a burglary. Once you see the earthquake, it explains the alarm, which "takes the pressure off of the burglary and puts it on the earthquake."
 
-**What happened to independence?** $B$ and $E$ are independent **only as long as you do not observe $A$**. Observing a variable downstream of two independent variables makes the upstream variables dependent ([≈42:50](../raw/transcripts/12-bayesian-networks-i.md)).
+**What happened to independence?** $B$ and $E$ are independent **only as long as you do not observe $A$**. Observing a variable downstream of two independent variables makes the upstream variables dependent ([≈42:50](../raw/transcripts/12-bayesian-networks-i.md)). Lecture 13 states this in the language of [conditional independence](conditional-independence.md): in the shape $A \to C \leftarrow B$, $A$ and $B$ are marginally independent but not conditionally independent given $C$; in the alarm, $B$ and $E$ are independent but not conditionally independent given $A = 1$, "which is how you get explaining away" ([lecture 13](13-gibbs-sampling.md), [≈1:09:56](../raw/transcripts/13-gibbs-sampling.md), [≈1:10:44](../raw/transcripts/13-gibbs-sampling.md)).
 
 ## Medical Diagnosis: Explaining Away at One Remove
 
@@ -48,3 +48,4 @@ Explaining away is one case of a general behaviour: in a Bayesian network, obser
 - [Lecture 12](12-bayesian-networks-i.md) — both examples, worked step by step
 - [Bayesian networks](bayesian-networks.md) — the alarm and medical-diagnosis networks and how they are defined
 - [Probabilistic inference](probabilistic-inference.md) — the select–sum–divide computation behind each number above
+- [Conditional independence](conditional-independence.md) — the general rule: a common effect, once observed, makes its causes dependent
