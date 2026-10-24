@@ -242,7 +242,7 @@ The slide also printed "C and H are independent given A." That line was not disc
 
 The summary ([≈1:13:50](../raw/transcripts/13-gibbs-sampling.md)–[≈1:15:27](../raw/transcripts/13-gibbs-sampling.md), [slides](../raw/slides/13-gibbs-sampling.md)): probabilistic inference answers queries on the database that is the Bayesian network. **Exact** inference forms the joint distribution, then marginalizes and conditions (einops); it is exact, but its complexity can be exponential in the number of nodes. **Approximate** inference by rejection sampling or Gibbs sampling has complementary strengths and weaknesses. **Conditional independence**, whether two variables are independent given evidence, reduces to a graph property: are the two variables connected after some processing of the graph?
 
-So far the Bayesian network has been given. Next time: how to **learn** its parameters, the probability tables themselves ([≈1:15:27](../raw/transcripts/13-gibbs-sampling.md)).
+So far the Bayesian network has been given. Next time: how to **learn** its parameters, the probability tables themselves ([≈1:15:27](../raw/transcripts/13-gibbs-sampling.md); see [lecture 14](14-bayesian-networks-learning.md)).
 
 ---
 
@@ -250,3 +250,4 @@ So far the Bayesian network has been given. Next time: how to **learn** its para
 - **[Transcript](../raw/transcripts/13-gibbs-sampling.md)**: edited and timestamped. Verbatim captions are in `original/`.
 - Topic pages: [Gibbs sampling](gibbs-sampling.md), [Markov blanket](markov-blanket.md), [conditional independence](conditional-independence.md); also [rejection sampling](rejection-sampling.md), [probabilistic inference](probabilistic-inference.md), [Bayesian networks](bayesian-networks.md) and [explaining away](explaining-away.md).
 - Previous lecture: [Lecture 12 — Bayesian Networks I](12-bayesian-networks-i.md).
+- Next lecture: [Lecture 14 — Bayesian Networks and Learning](14-bayesian-networks-learning.md).

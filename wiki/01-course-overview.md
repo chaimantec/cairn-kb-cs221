@@ -24,7 +24,7 @@ An intelligent agent — whether human or machine — must be able to do four th
 
 3. **Act** — output actions that affect the world: generate text, synthesize speech, control a robot ([≈5:32](../raw/transcripts/01-course-overview.md)).
 
-4. **Learn** — update beliefs or state based on experience. Methods include [gradient descent](gradient-descent.md), Q-learning, and expectation maximization ([≈6:20](../raw/transcripts/01-course-overview.md)).
+4. **Learn** — update beliefs or state based on experience. Methods include [gradient descent](gradient-descent.md), Q-learning, and [expectation maximization](expectation-maximization.md) ([≈6:20](../raw/transcripts/01-course-overview.md)).
 
 These four capabilities must operate under **resource constraints** — limited computation (time, memory, communication) and limited information (data, experience, available inputs). The challenge is doing something sensible with what you have ([≈7:07](../raw/transcripts/01-course-overview.md)).
 

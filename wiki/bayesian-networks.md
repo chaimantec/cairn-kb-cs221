@@ -51,7 +51,7 @@ $$P(X_1, \ldots, X_T) = \prod_t p(x_t \mid x_1, \ldots, x_{t-1})$$
 
 Sampling forward from a prompt is what language models normally do. Inference in the other direction, from a response back to the prompts likely to have produced it, has an application in jailbreaking; it is expensive and "in general exponentially hard" ([≈1:02:15](../raw/transcripts/12-bayesian-networks-i.md)–[≈1:03:49](../raw/transcripts/12-bayesian-networks-i.md)).
 
-**Hidden Markov model for object tracking.** Hidden positions $H_1 \to H_2 \to \cdots \to H_5$ form a chain, and each $H_t$ has a child $E_t$, a noisy sensor reading. In the lecture's version the object advances by one with probability 0.5 at each step, and the reading is the position plus 0 or 1 ([≈1:11:33](../raw/transcripts/12-bayesian-networks-i.md)–[≈1:13:09](../raw/transcripts/12-bayesian-networks-i.md), [slides](../raw/slides/12-bayesian-networks-i.md)).
+**Hidden Markov model for object tracking.** Hidden positions $H_1 \to H_2 \to \cdots \to H_5$ form a chain, and each $H_t$ has a child $E_t$, a noisy sensor reading. In the lecture's version the object advances by one with probability 0.5 at each step, and the reading is the position plus 0 or 1 ([≈1:11:33](../raw/transcripts/12-bayesian-networks-i.md)–[≈1:13:09](../raw/transcripts/12-bayesian-networks-i.md), [slides](../raw/slides/12-bayesian-networks-i.md)). Lecture 14 returns to the HMM with binary positions and readings, as the main example of [parameter sharing](parameter-sharing.md): one transition table and one emission table serve every time step. See [hidden Markov models](hidden-markov-models.md).
 
 ## Two Ways to Write a Network Down
 
@@ -64,6 +64,10 @@ Defining the joint distribution carefully is what produces reasoning patterns th
 ## Structure and Independence
 
 A Bayesian network is at once a distribution and a graph, and lecture 13 reads independence facts off the graph ([≈58:16](../raw/transcripts/13-gibbs-sampling.md)–[≈1:13:50](../raw/transcripts/13-gibbs-sampling.md)). Two unconnected variables are independent, which is "generally the right intuition." Connected ones usually are not, with one special case: two parents of a common child, $A \to C \leftarrow B$, are independent as long as the child is unobserved, and become dependent once it is observed, which is explaining away in the alarm network. The opposite shape, a common parent $A \leftarrow C \to B$, makes $A$ and $B$ dependent until $C$ is observed. A four-step procedure (shade the evidence, prune unshaded leaves, marry parents, look for an unblocked path) decides the general case. See [conditional independence](conditional-independence.md).
+
+## Learning the Parameters
+
+Lectures 12 and 13 took the local conditional distributions as given. [Lecture 14](14-bayesian-networks-learning.md) learns them from data ([≈13:17](../raw/transcripts/14-bayesian-networks-learning.md)). When every training example assigns every variable, the algorithm is **count and normalize**: for each local distribution, count how often each value of the node occurs with each assignment to its parents, ignoring the other variables, then normalize each parent assignment's counts. That is exactly the [maximum likelihood](maximum-likelihood.md) estimate, in closed form ([≈52:27](../raw/transcripts/14-bayesian-networks-learning.md), [≈54:48](../raw/transcripts/14-bayesian-networks-learning.md)). Three refinements follow. With [parameter sharing](parameter-sharing.md) several nodes are powered by one table, so the parameters are no longer one per variable. [Laplace smoothing](laplace-smoothing.md) adds pseudocounts so that unseen values do not get probability zero. And when some variables are never observed, [expectation maximization](expectation-maximization.md) alternates guessing them with re-counting.
 
 ## Why Use Them: A Shift from Classifiers
 
@@ -87,3 +91,9 @@ The lecturer's broader case: before uncertainty was "nailed down probabilistical
 - [Markov blanket](markov-blanket.md) — the variables a Gibbs update needs
 - [Conditional independence](conditional-independence.md) — reading independence off the graph
 - [Einops](einops.md) — the einsum notation that builds and queries the tables
+- [Lecture 14](14-bayesian-networks-learning.md) — learning the parameters: count and normalize, smoothing, EM
+- [Maximum likelihood](maximum-likelihood.md) — why count and normalize is the right estimate
+- [Parameter sharing](parameter-sharing.md) — one table powering several nodes
+- [Hidden Markov models](hidden-markov-models.md) — the chain-structured network used in lectures 12 and 14
+- [Laplace smoothing](laplace-smoothing.md) — pseudocounts against zero probabilities
+- [Expectation maximization](expectation-maximization.md) — learning with hidden variables

@@ -112,7 +112,7 @@ Given a logit:
 
 ### Logistic Loss — Maximum Likelihood
 
-**Maximum likelihood principle:** maximize the probability of the training targets under the model ([≈40:29](../raw/transcripts/03-learning-ii.md)). For multiple examples, multiply probabilities → equivalently, sum log probabilities. To turn into a loss (minimize instead of maximize), negate:
+**Maximum likelihood principle:** maximize the probability of the training targets under the model ([≈40:29](../raw/transcripts/03-learning-ii.md); see [maximum likelihood](maximum-likelihood.md), which lecture 14 returns to for Bayesian networks). For multiple examples, multiply probabilities → equivalently, sum log probabilities. To turn into a loss (minimize instead of maximize), negate:
 
 $$\text{loss}_{\text{logistic}}(\mathbf{w}, b; \mathbf{x}, y) = -\log \sigma(y \cdot (\mathbf{w} \cdot \mathbf{x} + b)) = -\log \sigma(\text{margin})$$
 

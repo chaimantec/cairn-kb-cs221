@@ -54,6 +54,20 @@ To decide whether $A$ and $B$ are independent given a set of variables $C$ in a 
 
 (The source numbers the last two steps "3." and "3.") The lecture's summary describes this as reducing conditional independence to a graph property: whether the two variables are connected "after a bunch of processing on the graph" ([≈1:15:27](../raw/transcripts/13-gibbs-sampling.md)).
 
+## Lecture 14's Restatement: Blocked Paths
+
+Lecture 14 opens by presenting the same idea "in a slightly different way," as a rule about paths ([lecture 14](14-bayesian-networks-learning.md), [≈4:47](../raw/transcripts/14-bayesian-networks-learning.md)–[≈6:18](../raw/transcripts/14-bayesian-networks-learning.md), [slides](../raw/slides/14-bayesian-networks-learning.md)). $A$ and $B$ are conditionally independent given $C$ if and only if **every path from $A$ to $B$ is blocked** by nodes in $C$. A path is blocked if it contains one of three patterns:
+
+1. A chain $X \to C \to Y$ through a conditioned node.
+2. A fork $X \leftarrow C \to Y$ at a conditioned node.
+3. A v-structure $X \to Z \leftarrow Y$, **unless** $Z$ or a descendant of $Z$ is conditioned on ("remember explaining away!").
+
+The third pattern works the opposite way from the first two: it blocks the path when nothing is conditioned, and conditioning on its middle node, or on anything below it, opens the path. The two contrasting pairs, examples 3 and 4 above, are the ones to remember: "if you just remember these contrasting pairs, then I think you get basically 90% of what's happening" ([≈9:22](../raw/transcripts/14-bayesian-networks-learning.md)).
+
+A whiteboard game then built up networks around $A$ and $B$ and polled the class. The drawings are not recorded in the transcript, but two lessons are: conditioning on a descendant of a v-structure's middle node also makes its parents dependent, and unobserved leaves can be ignored, "pretend they don't exist," which is step 2 of the procedure above ([≈10:11](../raw/transcripts/14-bayesian-networks-learning.md), [≈10:56](../raw/transcripts/14-bayesian-networks-learning.md)).
+
+Why it matters in practice: when you condition on some variables, whatever becomes independent can be handled separately. In Gibbs sampling, a variable $Z$ whose children $X_1, X_2, \ldots$ are data points blocks every path between them once it is conditioned on, so all the $X_i$ can be sampled given $Z$ at once ([≈11:44](../raw/transcripts/14-bayesian-networks-learning.md), [≈12:32](../raw/transcripts/14-bayesian-networks-learning.md)).
+
 ## Worked Example: Medical Diagnosis
 
 The network from lecture 12: cold $C$ and allergies $A$ both cause cough $H$, and allergies cause itchy eyes $I$ (edges $C \to H$, $A \to H$, $A \to I$). Worked in class ([≈1:12:16](../raw/transcripts/13-gibbs-sampling.md)–[≈1:13:50](../raw/transcripts/13-gibbs-sampling.md), [slides](../raw/slides/13-gibbs-sampling.md)):
@@ -71,3 +85,4 @@ The slide also listed "C and H are independent given A." It was not discussed in
 - [Explaining away](explaining-away.md) — what the failure of conditional independence in example 3 looks like with numbers
 - [Bayesian networks](bayesian-networks.md) — the alarm and medical-diagnosis networks
 - [Markov blanket](markov-blanket.md) — the other place lecture 13 uses the graph's structure
+- [Lecture 14](14-bayesian-networks-learning.md) — the path-blocking restatement and the whiteboard game
