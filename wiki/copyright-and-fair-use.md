@@ -45,6 +45,8 @@ Lecture 18 weighs both sides ([≈45:10](../raw/transcripts/18-ai-and-society.md
 
 **Terms of service** can restrict use further even when copyright allows it: YouTube carries a lot of Creative Commons content, but its terms of service prohibit downloading videos ([≈47:29](../raw/transcripts/18-ai-and-society.md)–[≈48:14](../raw/transcripts/18-ai-and-society.md)).
 
+[Lecture 19](19-economics-of-ai.md) reads the Anthropic settlement as a **price**: \$1.5 billion for about 500,000 works implies about \$3,000 per work, if all the works are claimed. Data laws such as copyright and piracy law thereby imply prices for data ([slide 24](../raw/slides/19-economics-of-ai.md); [≈27:52](../raw/transcripts/19-economics-of-ai.md)–[≈28:38](../raw/transcripts/19-economics-of-ai.md)). Compliance with copyright and other data laws is one reason that lecture gives for understanding the data supply chain, not just the final dataset ([AI supply chain](ai-supply-chain.md)).
+
 ## Memorization versus Extraction
 
 The transformation argument assumes the model does not simply contain its training data. Sometimes it does ([≈48:14](../raw/transcripts/18-ai-and-society.md)–[≈52:52](../raw/transcripts/18-ai-and-society.md)).
@@ -64,3 +66,4 @@ Deciding whether a model infringes needs at least a disclosure of what data it w
 - [Lecture 1](01-course-overview.md): copyright among the societal questions AI raises.
 - [Lecture 17](17-language-models.md): copyright and fair use first on the list of open problems ([slide 118](../raw/slides/17-language-models.md)); pre-training data from the web ([pre-training](pre-training.md)).
 - [Lecture 18](18-ai-and-society.md): copyright law, licenses, the four fair-use factors, foundation models, terms of service, memorization versus extraction.
+- [Lecture 19](19-economics-of-ai.md): the settlement as a price for data; compliance as a reason to study the data supply chain.

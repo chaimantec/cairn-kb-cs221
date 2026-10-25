@@ -31,6 +31,8 @@ Web pages (DCLM-Baseline) are 3.71T of the 3.90T tokens. Samples of such documen
 
 The lecturer summarizes it as filtering URLs, keeping only English, deduplicating, and applying another language model to judge whether text is high quality, and finds it "hard to imagine… how much bad data is in this stuff." There is a lot of data curation behind pre-training.
 
+Seen as a supply chain ([lecture 19](19-economics-of-ai.md); [AI supply chain](ai-supply-chain.md)), pre-training data comes mostly from public datasets such as SQuAD and the Pile and from crawling the web, which is "currently free" ([slides 21 and 23](../raw/slides/19-economics-of-ai.md)). Over the last few years websites have restricted crawlers more, and unevenly between companies: OpenAI's crawlers are blocked by name more often than Anthropic's ([≈24:48](../raw/transcripts/19-economics-of-ai.md)–[≈25:34](../raw/transcripts/19-economics-of-ai.md)). Lecture 19 also lists the open question of whether we will run out of data ([≈28:38](../raw/transcripts/19-economics-of-ai.md)).
+
 ## Capabilities Emerge from Pre-training
 
 The GPT-3 paper, *Language Models are Few-Shot Learners* (OpenAI, 2020), is the key result ([≈50:54](../raw/transcripts/17-language-models.md)–[≈53:59](../raw/transcripts/17-language-models.md), [slides 85–87](../raw/slides/17-language-models.md)). Take a good dataset, filter it, train a very large model on a lot of data, and do nothing to specialize it for any task. Then evaluate it on benchmarks such as multiple-choice questions and summarization. As the parameter count grows from 0.1B to 175B, the average accuracy over 42 benchmarks keeps going up, with no task-specific training ([slide 86](../raw/slides/17-language-models.md); the numbers are on the [scaling laws](scaling-laws.md) page).
@@ -59,3 +61,4 @@ A pre-trained base model is still "autocomplete on steroids": it follows the pat
 
 - [Lecture 1](01-course-overview.md): pre-trained language models in the history of AI.
 - [Lecture 17](17-language-models.md): pre-training data and filtering, GPT-3 and in-context learning.
+- [Lecture 19](19-economics-of-ai.md): where the data comes from and what it costs; web-crawling restrictions; whether we will run out of data.

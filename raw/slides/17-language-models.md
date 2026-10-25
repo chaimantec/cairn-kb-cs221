@@ -8,8 +8,8 @@ source_commit: caa93be (2025-11-19, "add language models lecture")
 source_files:
   - https://raw.githubusercontent.com/stanford-cs221/autumn2025-lectures/caa93be/language_models.pdf
 note: >
-  Lecture 17 is the one lecture of CS221 Autumn 2025 delivered as a slide deck
-  rather than an executable Python program ("one of the very few lectures that
+  Lecture 17 is one of two lectures of CS221 Autumn 2025 delivered as a slide
+  deck rather than an executable Python program (the other is lecture 19) ("one of the very few lectures that
   don't have executable format", [0:05] of the transcript). It was given on
   Mon Nov 17 2025 by Ken Liu (slide 1), who also made the commit below. The deck, a Keynote export
   titled "cs221-lm-lecture" (PDF created 2025-11-19 08:11 UTC), was added to the

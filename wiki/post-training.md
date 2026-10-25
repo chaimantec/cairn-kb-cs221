@@ -49,3 +49,4 @@ The techniques are still evolving ([≈1:04:47](../raw/transcripts/17-language-m
 - [Lecture 12](12-bayesian-networks-i.md): backward inference in a language model as a route to jailbreaks.
 - [Lecture 17](17-language-models.md): instruction following, RLHF, safety tuning, jailbreaks and post-training techniques.
 - [Lecture 18](18-ai-and-society.md): what can go wrong with the reward: reward hacking, pluralism and scalable oversight ([alignment](alignment.md)); a reward model, Starling 7B, that scores Western countries higher ([inequality in AI](ai-inequality.md)); sycophancy as an accident of tuning models to please.
+- [Lecture 19](19-economics-of-ai.md): post-training data as part of the [AI supply chain](ai-supply-chain.md): synthetic data a firm generates itself (RLAIF), paid for in compute, and new annotations bought from companies such as Scale and Mercor, paid for in labor.

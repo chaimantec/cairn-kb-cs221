@@ -46,3 +46,4 @@ The program's overall verdict: "need more clarity and measurement" ([slides](../
 
 - [Lecture 17](17-language-models.md): closed, open-weight and open-source language models.
 - [Lecture 18](18-ai-and-society.md): centralization of power, the Foundation Model Transparency Index, the openness spectrum, marginal risk.
+- [Lecture 19](19-economics-of-ai.md): a seven-level access spectrum, and how the release choice shapes vertical control, pricing, data flows and adaptability downstream.

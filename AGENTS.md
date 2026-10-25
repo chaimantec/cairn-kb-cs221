@@ -52,6 +52,10 @@ raw.githubusercontent.com and follows relative markdown links.
   readers in parallel page ranges, a figure audit at 600 dpi), cite "slide N" as the PDF page when
   the deck prints no numbers, and record it under `materials.slideDecks` in `kb.json` with method
   `page-images`. Check the deck's commit date against the lecture date, since it may postdate it.
+  A deck may not be in the repo at all: the README can link a Google Slides document instead.
+  Export it with `https://docs.google.com/presentation/d/<id>/export/pdf`, say in the slide file
+  and `sources.md` that it is live and was exported on a given date, and look in the transcript
+  for signs that it changed after the lecture.
 - **Transcripts stay verbatim.** Captions spell notation out as speech ("theta
   sub j"); reconstructing it as $\theta_j$ belongs in `wiki/`, not in
   `raw/transcripts/`.
