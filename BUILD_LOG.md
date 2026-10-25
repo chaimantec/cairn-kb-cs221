@@ -19,6 +19,7 @@ Finished runs, moved verbatim from `TODO.md` once committed and pushed. Never re
 | 16 | 2026-10-25 (a later run the same day) |
 | 17 | 2026-10-25 (a third run that day) |
 | 18 | 2026-10-25 (a fourth run that day) |
+| 19 | 2026-10-26 |
 
 ## Runs 2026-07-26 to 2026-09-07 — lectures 1–10 (pre-log)
 
@@ -371,3 +372,30 @@ Lecture 18 is an executable program again, `society.py`, pinned at 1b5bd22 ("add
 - **Printed vs. figure vs. spoken.** The program's bullet says "Llama 3 70B"; its figure's row and the lecturer (twice, captioned "3.17B") say Llama 3.1 70B. The lecturer says copyright "kind of emerged in" a place the captions give as "the US" right after "the 1700s in England"; the program says England (Statute of Anne), kept as an [Ed: unclear] note. Mistral 7B's spoken "55 out of 100" matches the FMTI total score. The program's typos ("camed", "explicity", "Sychopancy") are marked [sic] in the slide file. Historical and legal figures (Tuskegee "1974", "Lasts for 75 years", "December 2022" for ChatGPT, spoken) are reported as stated, with no outside correction; the parent removed one outside-knowledge gloss of ChatGPT's release date from its own wiki draft.
 - **Transcript adjudication.** The Sonnet edit was clean on every script check. The parent's changes: two edits that reverse the captions ("That's my department" → "not my department"; "complete in their coverage" → "incomplete") were kept, following the program, but each now carries an inline note quoting the captions; "llamoth 3.17B" and "llama 3.17b" → Llama 3.1 70B and "and butterfly" → *M. Butterfly*, from the memorization figure the agent had not seen; "450 to 460,000" back to "450, 460,000" with an [Ed: unclear] note (the agent had inserted "to"); and the header's spoken-only list, which named a dozen names printed in the figures (Face++, Claude 3, Mistral 7B, GPT-5, DeepSeek and others). With the memory's prompt items the agent wrote no `$`, moved nothing across a marker (it caught and undid one "window" move itself), and correctly marked no student questions (there are none; "Any ideas?" at [28:51] is rhetorical). "Rishi" (captions "Richishi") is spoken-only; no surname is given.
 - **Topic pages.** Five new: societal-impact (why care, dual use, intent × impact, ecosystem view, auditing), ai-inequality, alignment, copyright-and-fair-use, openness-and-transparency. Cross-links from lectures 1 (alignment, societal goals), 16 (forward reference), 17 (slide 118's open problems), post-training, language-models and reinforcement-learning. The Turing-test TODO stays open: lecture 18 does not mention it.
+
+## Run 2026-10-26 — lecture 19 (Economics of AI; catalog title "AI Supply Chains")
+
+Lecture 19 is a guest lecture by Rishi Bommasani given as a Google Slides deck, "CS 221 - Economics of AI" (70 pages, exported as PDF 2026-10-26). The lecture repo has no program or PDF for it: its only commit, f700637 ("update Rishi", 2025-12-01 17:48 PST, after the lecture), adds a README entry "Mon Dec 1: Economics of AI (lecture 19)" linking the Google Slides document. Parent claude-opus-5-5; deck reading and transcript copy-edit delegated to claude-sonnet-5-5.
+
+### Transcripts
+
+- [x] 19 Economics of AI — video lPx5PF1ttkc (raw transcript fetched 2026-10-26: 97 markers, ~14k words; slug `19-economics-of-ai`)
+- [x] 19 — edited transcript (Sonnet copy-edit, adjudicated 2026-10-26: 97 markers identical; 0 of 97 paragraphs outside 0.72–1.10; no `$` in the body; number inventory differs only by "100 years" spelled out and slide numbers and markers inside [Ed:] notes; 3 student questions, speakers marked; parent restored Daron Acemoglu, Arvind and Sayash, Dario and David Autor with inline caption notes, marked the inserted [AI] at [1:39], reverted "returns to scale" to the captioned "returns of scale", and removed a guess about where Percy made an earlier remark)
+
+### Crawl
+
+- [x] Slide file for 19 (Google Slides PDF export of 2026-10-26; 70 pages, no printed numbers, slide N = PDF page N; three Sonnet readers, pages 1–24, 25–47, 48–70; `--verify` OK on the 1:1 fallback map)
+- [x] Figure audit of the deck's chart-, table- and diagram-heavy pages (two Sonnet passes, 600 dpi crops, 20 pages: 11 exact, 9 corrected; one substantive error on slide 22, whose robots.txt panel reversal the parent confirmed on its own render)
+
+### Wiki
+
+- [x] wiki/19-economics-of-ai.md
+- [x] Topic pages and cross-links for lecture 19 (new: ai-supply-chain, general-purpose-technologies, economic-growth; lecture 19 links added to lectures 17 and 18, societal-impact, openness-and-transparency, ai-inequality, pre-training, post-training, copyright-and-fair-use; "the one slide-deck lecture" claims about lecture 17 corrected in INDEX, kb.json, sources.md, and lecture 17's wiki page and slide file)
+- [x] INDEX.md table of contents (update for lecture 19; coverage sentence, lecture 17's entry, raw/slides note, footer, four topic entries)
+
+### Publish
+
+- [x] kb.json and sources.md for lecture 19 (slideDecks now 2; one new caveat; AGENTS.md gained one general rule: a deck may be a Google Slides link)
+- [x] verify_kb.py clean (all hard checks), review read: the open TODO boxes are this run's commit and move plus lecture 20 and the three standing items, all still open; its math step again "did not return JSON", so check_math.mjs --github was run directly: chat 0 errors, GitHub exactly the 96 errors and 67 warnings pre-existing in lectures 1–10; the only new findings were four notation warnings (plain "9×"/"900×"), fixed. kb-checkers: check_transcript PASS (timestamps identical, 0 of 97 outside 0.72–1.10); check_links found 5 broken pseudo-links on slide 31 ("(link, underlined teal)"), replaced with the URLs from the PDF's link annotations, then 0 broken; check_quotes 131 quotations in this run's pages, 1 unmatched ("Nvidia GPUs in data centers", fixed to the transcript's wording)
+- [x] Commit and push lecture 19 (542117c)
+- [x] BUILD_LOG.md — lecture 19's record; move this section there; TODO.md keeps only open work

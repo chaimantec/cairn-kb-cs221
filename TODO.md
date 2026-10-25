@@ -6,33 +6,6 @@ Open work only. When a run is committed and pushed, its section moves verbatim t
 
 - [ ] 20 Fireside Chat, Conclusion — video 5u5I5jvWR5k
 
-## Run 2026-10-26 — lecture 19 (Economics of AI; catalog title "AI Supply Chains")
-
-Lecture 19 is a guest lecture by Rishi Bommasani given as a Google Slides deck, "CS 221 - Economics of AI" (70 pages, exported as PDF 2026-10-26). The lecture repo has no program or PDF for it: its only commit, f700637 ("update Rishi", 2025-12-01 17:48 PST, after the lecture), adds a README entry "Mon Dec 1: Economics of AI (lecture 19)" linking the Google Slides document. Parent claude-opus-5-5; deck reading and transcript copy-edit delegated to claude-sonnet-5-5.
-
-### Transcripts
-
-- [x] 19 Economics of AI — video lPx5PF1ttkc (raw transcript fetched 2026-10-26: 97 markers, ~14k words; slug `19-economics-of-ai`)
-- [x] 19 — edited transcript (Sonnet copy-edit, adjudicated 2026-10-26: 97 markers identical; 0 of 97 paragraphs outside 0.72–1.10; no `$` in the body; number inventory differs only by "100 years" spelled out and slide numbers and markers inside [Ed:] notes; 3 student questions, speakers marked; parent restored Daron Acemoglu, Arvind and Sayash, Dario and David Autor with inline caption notes, marked the inserted [AI] at [1:39], reverted "returns to scale" to the captioned "returns of scale", and removed a guess about where Percy made an earlier remark)
-
-### Crawl
-
-- [x] Slide file for 19 (Google Slides PDF export of 2026-10-26; 70 pages, no printed numbers, slide N = PDF page N; three Sonnet readers, pages 1–24, 25–47, 48–70; `--verify` OK on the 1:1 fallback map)
-- [x] Figure audit of the deck's chart-, table- and diagram-heavy pages (two Sonnet passes, 600 dpi crops, 20 pages: 11 exact, 9 corrected; one substantive error on slide 22, whose robots.txt panel reversal the parent confirmed on its own render)
-
-### Wiki
-
-- [x] wiki/19-economics-of-ai.md
-- [x] Topic pages and cross-links for lecture 19 (new: ai-supply-chain, general-purpose-technologies, economic-growth; lecture 19 links added to lectures 17 and 18, societal-impact, openness-and-transparency, ai-inequality, pre-training, post-training, copyright-and-fair-use; "the one slide-deck lecture" claims about lecture 17 corrected in INDEX, kb.json, sources.md, and lecture 17's wiki page and slide file)
-- [x] INDEX.md table of contents (update for lecture 19; coverage sentence, lecture 17's entry, raw/slides note, footer, four topic entries)
-
-### Publish
-
-- [x] kb.json and sources.md for lecture 19 (slideDecks now 2; one new caveat; AGENTS.md gained one general rule: a deck may be a Google Slides link)
-- [x] verify_kb.py clean (all hard checks), review read: the open TODO boxes are this run's commit and move plus lecture 20 and the three standing items, all still open; its math step again "did not return JSON", so check_math.mjs --github was run directly: chat 0 errors, GitHub exactly the 96 errors and 67 warnings pre-existing in lectures 1–10; the only new findings were four notation warnings (plain "9×"/"900×"), fixed. kb-checkers: check_transcript PASS (timestamps identical, 0 of 97 outside 0.72–1.10); check_links found 5 broken pseudo-links on slide 31 ("(link, underlined teal)"), replaced with the URLs from the PDF's link annotations, then 0 broken; check_quotes 131 quotations in this run's pages, 1 unmatched ("Nvidia GPUs in data centers", fixed to the transcript's wording)
-- [x] Commit and push lecture 19
-- [ ] BUILD_LOG.md — lecture 19's record; move this section there; TODO.md keeps only open work
-
 ## Wiki
 
 - [ ] Re-link the Turing test mention in wiki/01-course-overview.md when a lecture that covers it is built (unlinked 2026-08-27 because no page existed; the Bayesian networks mentions were re-linked 2026-10-24) — blocked until then
