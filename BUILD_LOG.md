@@ -15,6 +15,7 @@ Finished runs, moved verbatim from `TODO.md` once committed and pushed. Never re
 | 12 | 2026-10-24 |
 | 13 | 2026-10-24 (a later run the same day) |
 | 14 | 2026-10-24 (a third run the same day) |
+| 15 | 2026-10-25 |
 
 ## Runs 2026-07-26 to 2026-09-07 — lectures 1–10 (pre-log)
 
@@ -224,3 +225,39 @@ Covered lecture 14 end to end: transcript, slide file, figures, edited transcrip
 - **Source typos kept with [sic]:** "When do you parameter sharing?", "heterogenous", "Not that we can only recover" (for "Note that"), and the HMM's `p_E`.
 - **Transcript adjudication.** 104 markers identical; word ratios 0.76–1.09, no outliers; number differences are decimal restorations ("69 and.3" → 0.69 and 0.3, "04 and point 6" → 0.4 and 0.6), digits for spoken numbers, "22" → "2, 2", and "1,00" → "1,000". The parent removed LaTeX the agent had written into the transcript body (this KB's edited transcripts keep notation as speech), corrected the header's claim that the HMM program was a lecture 1 demo (it was lecture 12's), reclassified two "slips" that were correct readings (the 0.6/0.4 → 0.69/0.3 update is the p_R row; "comedy is 0.75" is p(2 | comedy)), and marked two readings inline: "the smoothing lambda goes to zero" for the caption's "the the ghost is zero" (1:02:32), and "EM can't get stuck" (1:18:07), where the sense requires "can". Nine [Ed: unclear] markers in all. Restored names all appear in the slide files (Lagrange, Laplace, Markov, Gibbs, Bayesian); spoken-only: CS228 ("228"), cross entropy, perplexity, bespoke, bootstrap.
 - **Topic pages.** Five new (maximum likelihood, parameter sharing, hidden Markov models, Laplace smoothing, expectation maximization). Maximum likelihood and hidden Markov models link lectures 3 and 12 respectively; EM links lecture 1's slide listing it as a learning method.
+
+## Run 2026-10-25 — lecture 15 (Logic I)
+
+Covered lecture 15 end to end: transcript, slide file, figures, edited transcript, wiki page, four topic pages, cross-links, index, `kb.json`, `sources.md`. Parent claude-opus-5-5; transcript copy-edit delegated to claude-sonnet-5-5.
+
+### Transcripts
+
+- [x] 15 Logic I — video Q7V13XriJEc (raw transcript fetched 2026-10-25: 95 markers, ~10.5k words; slug `15-logic-i`)
+- [x] 15 — edited transcript (Sonnet copy-edit, adjudicated 2026-10-25: 95 markers identical, paragraph word ratios 0.81–1.02, number inventory clean apart from "04" → 0.4 and digits for spoken numbers; no `$` in the body; 5 [Ed: unclear] markers; parent removed an unneeded unclear marker at [0:05], marked a student question at [38:05], reclassified two non-slips and recorded two slips kept as spoken)
+
+### Crawl
+
+- [x] Slide file for 15 (propositional_logic.py pinned at commit 0116e139, "add logic 1", 2025-11-10 1:30pm PST as the lecture began; trace's embedded source byte-identical; demo outputs from var/traces/propositional_logic.json at the same commit; 16 new figures read in the parent (claude-opus-5-5); perceive-reason-act-learn.png byte-identical to lecture 12's; post-lecture commits af5f29c1 and 79ab1572 recorded at the end of the file)
+
+### Wiki
+
+- [x] wiki/15-logic-i.md
+- [x] Topic pages propositional-logic, entailment, satisfiability, inference-rules; cross-links from 14-bayesian-networks-learning, probabilistic-inference, bayesian-networks, 01-course-overview
+- [x] INDEX.md table of contents (update for lecture 15)
+
+### Publish
+
+- [x] kb.json and sources.md for lecture 15
+- [x] verify_kb.py clean (all hard checks), review read: open TODO boxes confirmed open, no images; its math step reported "skipped", so check_math.mjs was run directly: chat 0 errors KB-wide; --github 0 issues in this run's files, leaving exactly the 96 errors and 67 warnings pre-existing in lectures 1–10
+- [x] Commit and push lecture 15 (e0e111b)
+- [x] BUILD_LOG.md — lecture 15's record; move this section there; TODO.md keeps only open work
+
+### Findings
+
+- **Pinning.** Commit 0116e139 "add logic 1" landed 2025-11-10 21:30:51 UTC (1:30pm PST), as the lecture began, adding `propositional_logic.py`, its trace, sixteen images and `z3-solver` to `pyproject.toml`. Its README diff adds "Mon Nov 10: learning (lecture 15)" over the `propositional_logic` link (the word "learning" is carried over from lecture 14's heading) and a "Wed Nov 12: learning (lecture 16)" entry for `first_order_logic`, "under construction". The trace's embedded source is byte-identical to the pinned file. `perceive-reason-act-learn.png` has blob 3c8f4ce4 at both f22938e and 0116e139.
+- **Post-lecture changes.** af5f29c1 "fix typos" (10:51pm PST the same evening) reworded the interpretation function's two cases, added an `@inspect g h`, reordered the second Ask example's KB to `[Wet, Not(Rain)]`, changed "While there are no changes to KB" to "Until there are no more changes to KB", and glossed the two set definitions. 79ab1572 (2025-11-13, after lecture 16) fixed "Think a logic as a language" and "are are". No traced value changed. The lecturer read the original loop wording aloud at 1:05:43; the wiki states the algorithm correctly and says what was printed.
+- **Trace vs. class.** The one number read out, $P(\text{Rain}) = 0.4$ at 54:59 (caption "04"), is 0.1 + 0.3 from the traced joint table. All model sets, Ask answers and Tell responses in the wiki are the traced values. The trace's interpretation of $(\neg A \wedge B) \leftrightarrow C$ short-circuits and never evaluates $B$, while the figure shows $\mathcal{I}(B, w) = 1$; both are recorded.
+- **Figures read in the parent.** Sixteen images, read directly: eleven diagrams (syntax/semantics overview, $\mathcal{I}(f, w)$, the evaluation tree, $\mathcal{M}(f)$, entailment/contradiction/contingency set pictures, the 0-to-1 line, the satisfiability decision tree, the modus ponens rule and worked example), two soundness grids, and three stock photographs of water glasses. The tree's values and both soundness grids match the traced model sets exactly. The "half" water glass is filled to roughly four-fifths; the slide file describes what is shown and notes the file name. The satisfiability figure asks about KB ∪ {¬f} first while the printed text describes the KB ∪ {f} call first; both are recorded.
+- **Not in the lecture.** $P(\text{Rain} \mid \text{Wet} = 1) = 0.75$ is computed for the wiki page from the lecture's table and says so, as lecture 13's 0.68 was. One sentence on why modus ponens cannot derive Rain → Slippery was drafted for the inference-rules topic page and removed before commit as outside material.
+- **Transcript adjudication.** 95 markers identical; word ratios 0.81–1.02, no outliers; number differences are "04" → 0.4 and digits for spoken numbers ("2 to the 100" for the caption's "two to 100"). No LaTeX in the body: the prompt said so explicitly, per the lecture 14 lesson, and the agent complied. The parent removed an [Ed: unclear] the agent had put on "AI society section" (the course's lecture list has lecture 18 "AI & Society"); marked a student question at [38:05] the agent had left unmarked as the lecturer's own (the lecturer later calls it "the previous question" and "your earlier question"); reclassified two "slips" that were correct readings ([10:53] is the slide's four example formulas read aloud; [37:18] states the entailment/contradiction relationship correctly); and recorded two genuine slips kept as spoken ([58:47] "there's no contradiction" for an unsatisfiable KB ∪ {¬f}; [1:08:53] "the syntax" for the set of entailed formulas). Five [Ed: unclear] markers remain. Restored names: John McCarthy appears in lecture 1's slide file; spoken-only terms include SMT solver, NP-complete, monotonic, proof by contradiction and existence proof.
+- **Topic pages.** Four new: propositional logic, entailment (with contradiction, contingency and Ask/Tell), satisfiability (model checking, Z3, SAT solvers), inference rules (modus ponens, forward inference, soundness and completeness). Lecture 16 (first-order logic) will extend them. Cross-links added from lectures 1 and 14, probabilistic inference and Bayesian networks.
