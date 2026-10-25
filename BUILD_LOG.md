@@ -16,6 +16,7 @@ Finished runs, moved verbatim from `TODO.md` once committed and pushed. Never re
 | 13 | 2026-10-24 (a later run the same day) |
 | 14 | 2026-10-24 (a third run the same day) |
 | 15 | 2026-10-25 |
+| 16 | 2026-10-25 (a later run the same day) |
 
 ## Runs 2026-07-26 to 2026-09-07 — lectures 1–10 (pre-log)
 
@@ -261,3 +262,39 @@ Covered lecture 15 end to end: transcript, slide file, figures, edited transcrip
 - **Not in the lecture.** $P(\text{Rain} \mid \text{Wet} = 1) = 0.75$ is computed for the wiki page from the lecture's table and says so, as lecture 13's 0.68 was. One sentence on why modus ponens cannot derive Rain → Slippery was drafted for the inference-rules topic page and removed before commit as outside material.
 - **Transcript adjudication.** 95 markers identical; word ratios 0.81–1.02, no outliers; number differences are "04" → 0.4 and digits for spoken numbers ("2 to the 100" for the caption's "two to 100"). No LaTeX in the body: the prompt said so explicitly, per the lecture 14 lesson, and the agent complied. The parent removed an [Ed: unclear] the agent had put on "AI society section" (the course's lecture list has lecture 18 "AI & Society"); marked a student question at [38:05] the agent had left unmarked as the lecturer's own (the lecturer later calls it "the previous question" and "your earlier question"); reclassified two "slips" that were correct readings ([10:53] is the slide's four example formulas read aloud; [37:18] states the entailment/contradiction relationship correctly); and recorded two genuine slips kept as spoken ([58:47] "there's no contradiction" for an unsatisfiable KB ∪ {¬f}; [1:08:53] "the syntax" for the set of entailed formulas). Five [Ed: unclear] markers remain. Restored names: John McCarthy appears in lecture 1's slide file; spoken-only terms include SMT solver, NP-complete, monotonic, proof by contradiction and existence proof.
 - **Topic pages.** Four new: propositional logic, entailment (with contradiction, contingency and Ask/Tell), satisfiability (model checking, Z3, SAT solvers), inference rules (modus ponens, forward inference, soundness and completeness). Lecture 16 (first-order logic) will extend them. Cross-links added from lectures 1 and 14, probabilistic inference and Bayesian networks.
+
+## Run 2026-10-25 — lecture 16 (Logic II)
+
+Covered lecture 16 end to end: transcript, slide file, figures, edited transcript, wiki page, three topic pages, cross-links, index, `kb.json`, `sources.md`. Parent claude-opus-5-5; transcript copy-edit delegated to claude-sonnet-5-5.
+
+### Transcripts
+
+- [x] 16 Logic II — video x9Mbqu06OVo (raw transcript fetched 2026-10-25: 98 markers, ~9.9k words; slug `16-logic-ii`)
+- [x] 16 — edited transcript (Sonnet copy-edit, adjudicated 2026-10-25: 98 markers identical; the parent moved back one sentence carried across the [49:41]/[50:29] boundary (ratio 0.70 before, 0.85 after); ratios then 0.72–1.02, up to 1.15 only in the four paragraphs carrying [Ed: unclear] notes; number inventory clean apart from o1/o2/o3 and cs221 restorations; no `$` in the body; 5 [Ed: unclear] markers; parent removed a guessed `*[Student]*` speaker tag at [1:39] and reorganized the slips list)
+
+### Crawl
+
+- [x] Slide file for 16 (first_order_logic.py pinned at commit c88136d, "add first-order logic", 2025-11-12 1:29pm PST; trace's embedded source byte-identical; two new figures read in the parent)
+
+### Wiki
+
+- [x] wiki/16-logic-ii.md
+- [x] Topic pages first-order-logic, propositionalization, unification; lecture 16 sections and cross-links in inference-rules, propositional-logic, entailment, satisfiability, 15-logic-i
+- [x] INDEX.md table of contents (update for lecture 16)
+
+### Publish
+
+- [x] kb.json and sources.md for lecture 16
+- [x] verify_kb.py clean (all hard checks, after staging the new files), review read: open TODO boxes confirmed open, no images; its math step reported "skipped", so check_math.mjs was run directly: chat 0 errors KB-wide; --github found six errors in this run's pages (four `)$)` closings, two formulas inside italics), all fixed, leaving exactly the 96 errors and 67 warnings pre-existing in lectures 1–10; check_quotes.py: 1 unmatched in this run's text, a notation gloss as on lecture 15's page
+- [x] Commit and push lecture 16 (2b9e032)
+- [x] BUILD_LOG.md — lecture 16's record; move this section there; TODO.md keeps only open work
+
+### Findings
+
+- **Pinning.** Commit c88136d "add first-order logic" landed 2025-11-12 21:29:06 UTC (1:29pm PST), a minute before the lecture, adding `first_order_logic.py`, its trace and two images (`fol-example.png`, `unique-names-domain-closure.png`). Its README diff only removes "under construction" from the `first_order_logic` entry, which lecture 15's commit had already added under "Wed Nov 12: learning (lecture 16)" (the word "learning" carried over again). The trace's embedded source is byte-identical to the pinned file; `hidden_line_numbers` is empty. `syntax-semantics-rules.png` has blob 447d69f4 at both 0116e139 and c88136d.
+- **Slips on screen, fixed the next day (79ab157, 2025-11-13 6:03pm PST).** The definite-clause example's code built `Knows(x, y)` where its comment said `Takes(x, y)`; "there is some course that every student has taken" lacked Course(x) (the lecturer pointed this out at [1:09:59]); the unique-names line read "each constant maps to each object corresponds to at most one constant" (the lecturer corrected it aloud at [45:49]); the model's code had Knows(o2, o3) false while `fol-example.png` draws that arrow (the lecturer noticed at [41:57]). The same commit made missing predicate entries default to false, removed the second `motivating_example()` call, and fixed two lecture 15 typos. Re-reading the 79ab157 trace: every Ask, unify and substitute value is unchanged, and the ∀ example stays false (now at o3 rather than o2). All recorded in the slide file's "Changes after the lecture".
+- **Trace vs. class.** Every value in the wiki is the traced one: the three Ask answers (I don't know, I don't know, No, repeated by the second run), Knows(alice, arithmetic) = true, ∀x Knows(x, arithmetic) = false (o1 true, o2 false, o3 never evaluated because `and` short-circuits), the two substitutions, the three unifications (the third None), θ = {x: alice, y: cs221, z: logic} and Knows(alice, logic). The interpretation code's ∃, negation, connective, unary-predicate and function-application branches are never run by the trace; the slide file says so.
+- **Figures read in the parent.** Two images, read directly (claude-opus-5-5). `fol-example.png` adds a constant robert for o2 that is not in the code and omits the father function; the lecturer says he added Robert "just for fun". `unique-names-domain-closure.png` uses john and bob while the section's KB uses alice and bob.
+- **Not in the lecture.** The lecturer leaves the motivating example's final "No" to the class ("ponder this, maybe offline"); the wiki derives it from the KB (Alice is a person and Phoenix a hot place, so Snowing would make her unhappy, contradicting Happy(alice)) and says the lecture does not spell it out. The complexity example's count is garbled in the captions ("10 time different"); the wiki gives $10^2 = 100$ as what the stated formula yields, not as what was said. The parent removed "Goldbach" from two of its own table rows in the slide file, since the source program never names the conjecture; the name is spoken-only (captions "code box" and "gold blocks conjecture").
+- **Transcript adjudication.** The ratio check caught the one real defect: the agent moved "Takes x y and Covers y z, and implies another atomic formula, Knows x z" from [50:29] back into [49:41], completing the sentence across the marker. Marker and number checks passed it. The agent had also tagged "Yes or no or I don't know?" at [1:39] as a student's, from the captions' `>>` marks alone; the tag was removed and the [Ed: unclear] note kept. Its slips list mixed the lecturer's reactions to on-screen errors, caption omissions and one real slip; the parent split them, keeping one slip ([48:54] "propositional logic in general" for first-order logic). With the no-LaTeX and "So the question is" instructions in the prompt it wrote no `$` and marked all five restated student questions.
+- **Topic pages.** Three new: first-order logic, propositionalization, substitution and unification. inference-rules gained a "First-Order Modus Ponens" section; propositional-logic a section on what it cannot say compactly; entailment and satisfiability a lecture 16 note each; lecture 15's page links forward. satisfiability now says lecture 16 does not return to what an SMT solver is, as lecture 15 had deferred it.
