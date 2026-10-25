@@ -61,4 +61,5 @@ The counterpoint is **world models**: with foundation models making world simula
 - [Markov decision processes](markov-decision-processes.md) — the formalism RL relaxes
 - [Policy evaluation](policy-evaluation.md), [value iteration](value-iteration.md) — the exact algorithms the model-based approach reuses on its estimated MDP
 - [Monte Carlo evaluation](monte-carlo-evaluation.md) — the averaging idea, first seen in lecture 7
+- [Post-training](post-training.md) — lecture 17's RLHF treats a language model as a policy, each generation as an action, and a learned reward model as the reward
 - [Lecture 12](12-bayesian-networks-i.md) — revisits model-free vs. model-based as the motivation for Bayesian networks: model-based methods can change the reward on the fly, while a Q-value compiles rewards and transitions together

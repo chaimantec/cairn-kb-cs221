@@ -101,3 +101,4 @@ First-order logic is not powerful enough for every sentence ([≈3:12](../raw/tr
 - [Substitution and unification](unification.md) — the matching that first-order modus ponens needs
 - [Inference rules](inference-rules.md) — modus ponens, soundness and completeness, and the first-order version
 - [Entailment, contradiction and contingency](entailment.md) and [satisfiability](satisfiability.md) — the semantic relations behind Ask and Tell
+- [Lecture 17](17-language-models.md) — the contrast: a logic puzzle of the kind the logic homework solved with first-order logic, answered by a [language model](language-models.md) through next-token prediction alone, with no symbols or rules ([slide 61](../raw/slides/17-language-models.md))

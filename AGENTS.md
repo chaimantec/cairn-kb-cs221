@@ -47,6 +47,11 @@ raw.githubusercontent.com and follows relative markdown links.
   its README diff names the lecture), read the source, traces and images at that commit, and
   check that the trace's embedded source matches the pinned file. Record the commit in the slide
   file's front matter and in the table in `sources.md`.
+- **Not every lecture is a program.** If the lecture's commit adds a `.pdf` rather than a `.py`,
+  the lecture is a slide deck: read it as page images (the skill's Step 1b: number map, Sonnet
+  readers in parallel page ranges, a figure audit at 600 dpi), cite "slide N" as the PDF page when
+  the deck prints no numbers, and record it under `materials.slideDecks` in `kb.json` with method
+  `page-images`. Check the deck's commit date against the lecture date, since it may postdate it.
 - **Transcripts stay verbatim.** Captions spell notation out as speech ("theta
   sub j"); reconstructing it as $\theta_j$ belongs in `wiki/`, not in
   `raw/transcripts/`.

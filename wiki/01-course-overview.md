@@ -60,7 +60,7 @@ Liang tells the history of AI as the story of three intellectual traditions. The
 
 ### Foundation Models (2018–present)
 
-- Pretrained language models: ELMo, BERT, T5. Then scaling: GPT-2, GPT-3, scaling laws, Llama 3, DeepSeek v3 ([≈31:44](../raw/transcripts/01-course-overview.md)).
+- Pretrained language models: ELMo, BERT, T5. Then scaling: GPT-2, GPT-3, scaling laws, Llama 3, DeepSeek v3 ([≈31:44](../raw/transcripts/01-course-overview.md)). [Lecture 17](17-language-models.md) returns to these models; see [language models](language-models.md), [pre-training](pre-training.md) and [scaling laws](scaling-laws.md).
 - Reasoning models (OpenAI o1–o4, DeepSeek r1) produce "thoughts" before responding ([≈33:19](../raw/transcripts/01-course-overview.md)).
 - Industrialization: GPT-4 (~1.8T parameters, ~$100M to train), xAI's Colossus (200K H100s), Stargate ($500B over 4 years). Frontier model details are no longer public ([≈34:08](../raw/transcripts/01-course-overview.md)).
 

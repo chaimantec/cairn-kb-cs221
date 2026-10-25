@@ -82,6 +82,10 @@ NumPy tensor operations are written in C and heavily optimized. The same operati
 
 The parameters of any neural network are just a collection of tensors. For example, DeepSeek V3 has 670 billion parameters — a set of large matrices like `(7168, 16384)` stored as tensors ([≈44:13](../raw/transcripts/01-course-overview.md)).
 
+## Language Models as Tensors (Lecture 17)
+
+[Lecture 17](17-language-models.md) describes a [language model](language-models.md) entirely by its tensor shapes, with $T$ the sequence length, $D$ the embedding dimension, $V$ the vocabulary size and $B$ the batch size ([slides 22–33](../raw/slides/17-language-models.md)). Token IDs have shape $(T,)$; embedding each ID as a $D$-dimensional vector gives $(T, D)$; predicting a distribution over the vocabulary at every position gives $(T, V)$. With a batch of $B$ sequences the shapes become $(B, T)$, $(B, T, D)$ and $(B, T, V)$, "standard batching" from homework 2 ([≈14:41](../raw/transcripts/17-language-models.md)). The same lecture shows a real model's weights as named tensors with their shapes, such as an embedding matrix of shape [151 936, 4 096] ([slide 9](../raw/slides/17-language-models.md)): "all of this for some giant matrices of numbers."
+
 ## Resources
 
 - [Lecture 1 transcript](../raw/transcripts/01-course-overview.md) — introduction to tensors (~38:03–1:05:58)

@@ -49,7 +49,7 @@ with $p(C = 1) = 0.1$, $p(A = 1) = 0.2$, a cough with probability 0.9 if cold or
 
 $$P(X_1, \ldots, X_T) = \prod_t p(x_t \mid x_1, \ldots, x_{t-1})$$
 
-Sampling forward from a prompt is what language models normally do. Inference in the other direction, from a response back to the prompts likely to have produced it, has an application in jailbreaking; it is expensive and "in general exponentially hard" ([≈1:02:15](../raw/transcripts/12-bayesian-networks-i.md)–[≈1:03:49](../raw/transcripts/12-bayesian-networks-i.md)).
+Sampling forward from a prompt is what language models normally do. Inference in the other direction, from a response back to the prompts likely to have produced it, has an application in jailbreaking; it is expensive and "in general exponentially hard" ([≈1:02:15](../raw/transcripts/12-bayesian-networks-i.md)–[≈1:03:49](../raw/transcripts/12-bayesian-networks-i.md)). [Lecture 17](17-language-models.md) reaches the same factorization from the chain rule, "recall Bayesian lectures"; see [language models](language-models.md).
 
 **Hidden Markov model for object tracking.** Hidden positions $H_1 \to H_2 \to \cdots \to H_5$ form a chain, and each $H_t$ has a child $E_t$, a noisy sensor reading. In the lecture's version the object advances by one with probability 0.5 at each step, and the reading is the position plus 0 or 1 ([≈1:11:33](../raw/transcripts/12-bayesian-networks-i.md)–[≈1:13:09](../raw/transcripts/12-bayesian-networks-i.md), [slides](../raw/slides/12-bayesian-networks-i.md)). Lecture 14 returns to the HMM with binary positions and readings, as the main example of [parameter sharing](parameter-sharing.md): one transition table and one emission table serve every time step. See [hidden Markov models](hidden-markov-models.md).
 

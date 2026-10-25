@@ -62,3 +62,5 @@ Policy gradients are introduced and fully worked in [lecture 9](09-policy-gradie
 - [Reinforcement learning](reinforcement-learning.md) — the setting, and the model-based/value-based baseline this method is contrasted against
 - [Q-learning](q-learning.md) — the value-based family; its bootstrapped target reappears here as the biased-but-low-variance option
 - [Gradient descent](gradient-descent.md) and [backpropagation](backpropagation.md) — the optimizer doing the ascent on $V(\theta)$
+
+They reappear in [lecture 17](17-language-models.md) as the training algorithm of RLHF, the [post-training](post-training.md) step that treats a language model as a policy: generations are samples from the policy, the reward is a model of human preference labels, and training is "policy gradient (basically)," with slight modifications such as a baseline to reduce variance ([≈59:26](../raw/transcripts/17-language-models.md), [slide 91](../raw/slides/17-language-models.md)).

@@ -212,7 +212,7 @@ Split the string into a sequence of tokens and map each token to an integer inde
 
 A `Vocabulary` class maintains bidirectional mapping: string ↔ index, assigning new indices when it encounters unseen tokens ([≈1:06:43](../raw/transcripts/03-learning-ii.md)).
 
-**Beyond naive splitting:** Modern language models use **Byte-Pair Encoding (BPE)** [Sennrich et al., 2015], popularized by GPT-2. BPE automatically determines how to split strings into subword tokens, handling punctuation, compound words, and out-of-vocabulary tokens more gracefully than space-splitting ([≈1:08:16](../raw/transcripts/03-learning-ii.md)).
+**Beyond naive splitting:** Modern language models use **Byte-Pair Encoding (BPE)** [Sennrich et al., 2015], popularized by GPT-2. BPE automatically determines how to split strings into subword tokens, handling punctuation, compound words, and out-of-vocabulary tokens more gracefully than space-splitting ([≈1:08:16](../raw/transcripts/03-learning-ii.md)). [Lecture 17](17-language-models.md) explains how BPE builds its vocabulary by merging frequent pairs; see [tokenization](tokenization.md).
 
 ### Step 2 — One-Hot Encoding
 

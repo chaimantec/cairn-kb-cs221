@@ -146,6 +146,8 @@ class MultiLayerPerceptron(nn.Module):
 
 This tiny change — a `max(0, x)` — makes the model genuinely nonlinear and much more expressive.
 
+[Lecture 17](17-language-models.md) asks what goes wrong if this MLP is applied directly to language modeling: its parameter count grows with the sequence length and the vocabulary, its weights cannot favour different positions depending on the input, and it cannot reuse computation, the three problems a Transformer is designed around ([slides 76–79](../raw/slides/17-language-models.md)).
+
 **Historical note:** "Perceptron" comes from Rosenblatt (1958). "Multi-layer perceptron" (MLP) comes from stacking them in the 60s–80s. "Neural network" is synonymous ([≈41:53](../raw/transcripts/04-learning-iii.md)).
 
 **Terminology:**

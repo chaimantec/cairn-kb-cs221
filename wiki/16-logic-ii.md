@@ -197,7 +197,7 @@ The summary ([≈1:12:22](../raw/transcripts/16-logic-ii.md)–[≈1:13:56](../r
 
 **Higher-order logics** ([≈1:13:56](../raw/transcripts/16-logic-ii.md), [≈1:14:42](../raw/transcripts/16-logic-ii.md)). The course's journey in logic ends here, but there are logics that express more. Try writing *70% of students know machine learning* in first-order logic and you will find you cannot: it requires treating the students as a set and operating on that set, not just quantifying over individual elements. The lecturer ties this to the earlier question about functions that return functions.
 
-Next time the course zooms out to think more broadly about AI: language models and AI in society, the last three lectures, followed by a final lecture in a fireside-chat format with some presentations ([≈1:14:42](../raw/transcripts/16-logic-ii.md), [≈1:15:29](../raw/transcripts/16-logic-ii.md)).
+Next time the course zooms out to think more broadly about AI: [language models](17-language-models.md) and AI in society, the last three lectures, followed by a final lecture in a fireside-chat format with some presentations ([≈1:14:42](../raw/transcripts/16-logic-ii.md), [≈1:15:29](../raw/transcripts/16-logic-ii.md)).
 
 ---
 

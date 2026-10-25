@@ -51,3 +51,4 @@ If the hidden states were not observed in training, you could not count them, an
 - [Rejection sampling](rejection-sampling.md) — the inference method lecture 12 uses on it
 - [Bayesian networks](bayesian-networks.md) — the general framework
 - [Expectation maximization](expectation-maximization.md) — learning when hidden variables are unobserved
+- [Language models](language-models.md) — lecture 17's n-gram models make the same kind of assumption, each word depending only on the previous $n - 1$ words: "the Markov assumption but for $n$ instead of 1" ([slide 45](../raw/slides/17-language-models.md))
