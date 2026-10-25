@@ -227,7 +227,7 @@ $p_G$ stays at 0.5 throughout. By iteration 4 the probabilities are "pretty clos
 
 The summary ([≈1:18:52](../raw/transcripts/14-bayesian-networks-learning.md), [≈1:19:37](../raw/transcripts/14-bayesian-networks-learning.md), [slides](../raw/slides/14-bayesian-networks-learning.md)): the learning task is to estimate a Bayesian network's parameters from training data. The parameters are the local conditional distributions; with parameter sharing there can be fewer of them than there are variables. If you are worried about overfitting, use Laplace smoothing, which adds pseudocounts. Expectation maximization handles partially observed data: guess each unseen variable, weight each guess by its probability given the observed variables, count and normalize the weighted, now fully labeled data as in the supervised setting, and iterate.
 
-That ends Bayesian networks. Next time is "something quite different": **logic**, which enables higher-order reasoning. Bayesian modeling is one kind of probabilistic reasoning; logic adds quantifiers, as in "every student has a TA", where the word *every* "requires a bit more sophistication" ([≈1:19:37](../raw/transcripts/14-bayesian-networks-learning.md)).
+That ends Bayesian networks. Next time ([lecture 15](15-logic-i.md)) is "something quite different": **logic**, which enables higher-order reasoning. Bayesian modeling is one kind of probabilistic reasoning; logic adds quantifiers, as in "every student has a TA", where the word *every* "requires a bit more sophistication" ([≈1:19:37](../raw/transcripts/14-bayesian-networks-learning.md)).
 
 ---
 

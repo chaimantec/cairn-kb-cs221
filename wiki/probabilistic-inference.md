@@ -63,6 +63,10 @@ Writing out the whole joint table is something no one really does for a large nu
 
 Lecture 13 puts the cost in numbers: with 100 binary variables the joint has $2^{100}$ assignments, "and you definitely don't want to be writing that down," so exact inference by forming the joint is exponential in the number of nodes ([≈9:23](../raw/transcripts/13-gibbs-sampling.md), [≈1:14:40](../raw/transcripts/13-gibbs-sampling.md)). It adds a second approximate method, [Gibbs sampling](gibbs-sampling.md), which starts from an assignment satisfying the evidence and resamples one variable at a time, never building the joint table. The two samplers fail in complementary ways: rare evidence is hard for rejection sampling, highly correlated variables are hard for Gibbs sampling ([lecture 13](13-gibbs-sampling.md), [≈56:44](../raw/transcripts/13-gibbs-sampling.md), [≈57:31](../raw/transcripts/13-gibbs-sampling.md)). Lecture 13 also orders the exact recipe slightly differently, as four steps on the alarm: slice the joint at the evidence, marginalize out the other variables, sum to get the probability of the evidence, and divide ([≈6:18](../raw/transcripts/13-gibbs-sampling.md)–[≈9:23](../raw/transcripts/13-gibbs-sampling.md)).
 
+## Connection to Logic
+
+[Lecture 15](15-logic-i.md) maps probabilistic inference onto [propositional logic](propositional-logic.md) ([≈51:54](../raw/transcripts/15-logic-i.md)–[≈56:31](../raw/transcripts/15-logic-i.md)). Random variables correspond to propositional symbols and assignments to models, so a joint distribution is a distribution over models. The evidence plays the role of a knowledge base and the query is what you ask it: $P(\text{Rain} \mid \text{Wet} = 1)$ corresponds to telling a knowledge base Wet and asking whether Rain. Summing the probabilities of the models of a knowledge base gives $P(\text{KB})$, and $P(f \mid \text{KB}) = P(\text{KB} \cup \lbrace f \rbrace) / P(\text{KB})$ generalizes logic's yes, no and I don't know to a number between 0 and 1 ([entailment](entailment.md#relation-to-probabilistic-inference)). In return, logic lets the evidence and query be arbitrary formulas, such as "raining or snowing," where a Bayesian network conditions only on "variable equals value."
+
 ## Related Pages
 
 - [Lecture 12](12-bayesian-networks-i.md) — the probability review and both worked networks
@@ -72,3 +76,4 @@ Lecture 13 puts the cost in numbers: with 100 binary variables the joint has $2^
 - [Gibbs sampling](gibbs-sampling.md) — approximate inference one variable at a time (lecture 13)
 - [Conditional independence](conditional-independence.md) — which variables a query can ignore, read off the graph
 - [Einops](einops.md) — the einsum notation
+- [Entailment, contradiction and contingency](entailment.md) — logic's yes / no / I don't know, which probabilistic inference generalizes (lecture 15)

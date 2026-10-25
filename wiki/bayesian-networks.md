@@ -97,3 +97,4 @@ The lecturer's broader case: before uncertainty was "nailed down probabilistical
 - [Hidden Markov models](hidden-markov-models.md) — the chain-structured network used in lectures 12 and 14
 - [Laplace smoothing](laplace-smoothing.md) — pseudocounts against zero probabilities
 - [Expectation maximization](expectation-maximization.md) — learning with hidden variables
+- [Lecture 15](15-logic-i.md) — how a Bayesian network's variables, assignments, evidence and query map onto propositional logic

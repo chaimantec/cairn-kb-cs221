@@ -43,7 +43,7 @@ Liang tells the history of AI as the story of three intellectual traditions. The
 - **1950**: Alan Turing asks "Can machines think?" and proposes the imitation game (the Turing test), grounding a philosophical question in objective measurement ([≈17:55](../raw/transcripts/01-course-overview.md)).
 - **1956**: John McCarthy organizes the Dartmouth workshop and coins the term "artificial intelligence." Early successes include Samuel's checkers player and Newell & Simon's Logic Theorist ([≈20:13](../raw/transcripts/01-course-overview.md)).
 - **1966**: The ALPAC report cuts MT funding → **first AI winter**. Problems: limited computation, limited information ([≈23:16](../raw/transcripts/01-course-overview.md)).
-- **1970s–80s**: Expert systems (MYCIN, DENDRAL) encode domain knowledge as rules. First real industrial AI impact, but rules don't handle uncertainty and become too complex → **second AI winter** in 1987 ([≈24:50](../raw/transcripts/01-course-overview.md)).
+- **1970s–80s**: Expert systems (MYCIN, DENDRAL) encode domain knowledge as rules. First real industrial AI impact, but rules don't handle uncertainty and become too complex → **second AI winter** in 1987 ([≈24:50](../raw/transcripts/01-course-overview.md)). [Lecture 15](15-logic-i.md) returns to logic, the paradigm behind this tradition, and to why the course still studies it: for all its problems with uncertainty and data, it offers expressivity in a compact way.
 
 ### Neural AI
 
