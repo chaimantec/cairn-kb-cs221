@@ -62,4 +62,5 @@ The counterpoint is **world models**: with foundation models making world simula
 - [Policy evaluation](policy-evaluation.md), [value iteration](value-iteration.md) — the exact algorithms the model-based approach reuses on its estimated MDP
 - [Monte Carlo evaluation](monte-carlo-evaluation.md) — the averaging idea, first seen in lecture 7
 - [Post-training](post-training.md) — lecture 17's RLHF treats a language model as a policy, each generation as an action, and a learned reward model as the reward
+- [Alignment](alignment.md) — lecture 18: the RL recipe (define a reward, maximize its expectation) as the frame for alignment, and what goes wrong when the reward is misspecified (reward hacking, as in CoastRunners)
 - [Lecture 12](12-bayesian-networks-i.md) — revisits model-free vs. model-based as the motivation for Bayesian networks: model-based methods can change the reward on the fly, while a Q-value compiles rewards and transitions together

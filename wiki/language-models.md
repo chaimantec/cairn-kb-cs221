@@ -64,3 +64,4 @@ A language model at scale goes through [pre-training](pre-training.md), next-tok
 - [Lecture 12](12-bayesian-networks-i.md): language models as Bayesian networks; backward inference and jailbreaking.
 - [Lecture 14](14-bayesian-networks-learning.md): cross entropy as maximum likelihood, including for language models.
 - [Lecture 17](17-language-models.md): the full treatment, everything on this page.
+- [Lecture 18](18-ai-and-society.md): memorization measured with the model's own next-token probabilities, and extraction of a whole book ([copyright and fair use](copyright-and-fair-use.md)); closed, open-weight, open-source and open-development models ([openness and transparency](openness-and-transparency.md)).

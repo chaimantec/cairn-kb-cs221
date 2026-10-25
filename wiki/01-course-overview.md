@@ -30,9 +30,9 @@ These four capabilities must operate under **resource constraints** — limited 
 
 ### Goals and Alignment
 
-An agent encodes values, goals, or utility functions — either explicitly stated or implicitly built in. **Alignment** is the problem of making sure the agent's values correspond to what the developer actually wants. The canonical example: OpenAI wants ChatGPT to be informative, avoid hallucinations, and refuse harmful queries. **Misalignment** occurs when, despite best intentions, the AI does something unintended ([≈8:39](../raw/transcripts/01-course-overview.md)).
+An agent encodes values, goals, or utility functions — either explicitly stated or implicitly built in. **Alignment** is the problem of making sure the agent's values correspond to what the developer actually wants. The canonical example: OpenAI wants ChatGPT to be informative, avoid hallucinations, and refuse harmful queries. **Misalignment** occurs when, despite best intentions, the AI does something unintended ([≈8:39](../raw/transcripts/01-course-overview.md)). [Lecture 18](18-ai-and-society.md) returns to it with reward hacking, pluralism and scalable oversight; see [alignment](alignment.md).
 
-There is a broader question: what impact do we want AI to have on society? This involves privacy, copyright, jobs, inequality, and geopolitics — a deep **sociotechnical** problem with fundamental tradeoffs between different people's values ([≈10:10](../raw/transcripts/01-course-overview.md)).
+There is a broader question: what impact do we want AI to have on society? This involves privacy, copyright, jobs, inequality, and geopolitics — a deep **sociotechnical** problem with fundamental tradeoffs between different people's values ([≈10:10](../raw/transcripts/01-course-overview.md)). Lecture 18 takes these up; see [societal impact](societal-impact.md).
 
 ## History of AI: Three Traditions
 
