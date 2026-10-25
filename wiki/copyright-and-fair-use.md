@@ -67,3 +67,4 @@ Deciding whether a model infringes needs at least a disclosure of what data it w
 - [Lecture 17](17-language-models.md): copyright and fair use first on the list of open problems ([slide 118](../raw/slides/17-language-models.md)); pre-training data from the web ([pre-training](pre-training.md)).
 - [Lecture 18](18-ai-and-society.md): copyright law, licenses, the four fair-use factors, foundation models, terms of service, memorization versus extraction.
 - [Lecture 19](19-economics-of-ai.md): the settlement as a price for data; compliance as a reason to study the data supply chain.
+- [Lecture 20](20-fireside-chat-conclusion.md): measuring how much memorized content can be extracted from language models as work only academia can do, since labs will not do it: "they're already getting sued"; lawsuits as one reason companies are not transparent about data.

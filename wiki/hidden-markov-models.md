@@ -52,3 +52,4 @@ If the hidden states were not observed in training, you could not count them, an
 - [Bayesian networks](bayesian-networks.md) — the general framework
 - [Expectation maximization](expectation-maximization.md) — learning when hidden variables are unobserved
 - [Language models](language-models.md) — lecture 17's n-gram models make the same kind of assumption, each word depending only on the previous $n - 1$ words: "the Markov assumption but for $n$ instead of 1" ([slide 45](../raw/slides/17-language-models.md))
+- [Lecture 20](20-fireside-chat-conclusion.md) — Percy Liang's first research project, in 2005, was training a language model that was a hidden Markov model, by maximum likelihood on perhaps a hundred million words; it clustered city names and days of the week ([≈3:10](../raw/transcripts/20-fireside-chat-conclusion.md)–[≈3:57](../raw/transcripts/20-fireside-chat-conclusion.md))

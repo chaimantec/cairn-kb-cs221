@@ -64,3 +64,4 @@ $$V_\pi(s) = \text{expected utility of starting in state } s \text{ and followin
 - [Value iteration](value-iteration.md) — computing $V^*$ and the optimal policy
 - [Lecture 7](07-markov-decision-processes.md) — the lecture page, with the worked demos
 - [Search problems](search-problems.md) and [dynamic programming](dynamic-programming.md) — what MDPs generalize, and the recurrence pattern they share
+- [Lecture 20](20-fireside-chat-conclusion.md) — Percy Liang's answer to how the course connects to language models: pre-training a language model and then doing reinforcement learning on it is "basically trying to learn a policy" ([≈31:02](../raw/transcripts/20-fireside-chat-conclusion.md))

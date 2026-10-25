@@ -47,3 +47,4 @@ The program's overall verdict: "need more clarity and measurement" ([slides](../
 - [Lecture 17](17-language-models.md): closed, open-weight and open-source language models.
 - [Lecture 18](18-ai-and-society.md): centralization of power, the Foundation Model Transparency Index, the openness spectrum, marginal risk.
 - [Lecture 19](19-economics-of-ai.md): a seven-level access spectrum, and how the release choice shapes vertical control, pricing, data flows and adaptability downstream.
+- [Lecture 20](20-fireside-chat-conclusion.md): three reasons companies are not transparent (competitive advantage, lawsuits, and that it is not a priority), what the Transparency Index was for, and why data transparency may need regulation ([≈51:13](../raw/transcripts/20-fireside-chat-conclusion.md)–[≈53:32](../raw/transcripts/20-fireside-chat-conclusion.md)).

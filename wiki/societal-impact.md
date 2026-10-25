@@ -44,3 +44,4 @@ Across its topics lecture 18 keeps returning to measurement: monitor multiple me
 - [Lecture 17](17-language-models.md): AI safety concerns as models improve (hacking, bioweapons); safety tuning in [post-training](post-training.md).
 - [Lecture 18](18-ai-and-society.md): why technologists should care, principles, dual use, benefits/misuse/accidents, the ecosystem view, auditing.
 - [Lecture 19](19-economics-of-ai.md): the ecosystem view as supply chains, and AI's economic impact: jobs, who wins and loses, growth.
+- [Lecture 20](20-fireside-chat-conclusion.md): why this year's redesign gave the societal impact of AI a homework and lectures; how to get end users to care about AI ethics (transparency, labels, advocacy; human labor and environmental strain); whether AI is a bubble.

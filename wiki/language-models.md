@@ -65,3 +65,4 @@ A language model at scale goes through [pre-training](pre-training.md), next-tok
 - [Lecture 14](14-bayesian-networks-learning.md): cross entropy as maximum likelihood, including for language models.
 - [Lecture 17](17-language-models.md): the full treatment, everything on this page.
 - [Lecture 18](18-ai-and-society.md): memorization measured with the model's own next-token probabilities, and extraction of a whole book ([copyright and fair use](copyright-and-fair-use.md)); closed, open-weight, open-source and open-development models ([openness and transparency](openness-and-transparency.md)).
+- [Lecture 20](20-fireside-chat-conclusion.md): Percy Liang's first project (2005), a language model that was a hidden Markov model trained by maximum likelihood; next-token prediction and perplexity as the underhyped core, long-context loss as a better measure than leaderboards, and thinking traces as overhyped.

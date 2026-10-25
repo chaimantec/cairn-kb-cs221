@@ -37,3 +37,4 @@ Related is Solow's observation, "You can see the computer age everywhere but in 
 
 - [Lecture 19](19-economics-of-ai.md): the definition, the case that AI is a GPT, the J-curve.
 - [Lecture 1](01-course-overview.md)'s history of AI ends with the foundation-model era (2018 to the present), the class of models the 2021 report calls a general-purpose technology.
+- [Lecture 20](20-fireside-chat-conclusion.md): Percy Liang calls training a foundation model on tons of data "an incredibly general-purpose technology", and points to data beyond text (DNA, climate, time series, satellite imagery) as undervalued applications ([≈21:45](../raw/transcripts/20-fireside-chat-conclusion.md)–[≈23:18](../raw/transcripts/20-fireside-chat-conclusion.md)).

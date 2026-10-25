@@ -47,3 +47,4 @@ Lecture 19 does not forecast. It shows how each of three beliefs about AI transl
 
 - [Lecture 19](19-economics-of-ai.md): everything above.
 - Related topics: [general-purpose technologies](general-purpose-technologies.md), including the J-curve; [AI supply chain](ai-supply-chain.md); [societal impact](societal-impact.md).
+- [Lecture 20](20-fireside-chat-conclusion.md): asked about AI's projected impact, Percy Liang places it on lecture 19's scale: "century would be my guess", a magnitude like computing's ([≈23:18](../raw/transcripts/20-fireside-chat-conclusion.md)–[≈24:05](../raw/transcripts/20-fireside-chat-conclusion.md)).

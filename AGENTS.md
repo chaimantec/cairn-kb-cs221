@@ -56,6 +56,9 @@ raw.githubusercontent.com and follows relative markdown links.
   Export it with `https://docs.google.com/presentation/d/<id>/export/pdf`, say in the slide file
   and `sources.md` that it is live and was exported on a given date, and look in the transcript
   for signs that it changed after the lecture.
+  A lecture may have no material at all (a fireside chat with no commit and no site link). Then
+  there is no slide file: the wiki page cites only the transcript and says so, and `INDEX.md`,
+  `sources.md` and `kb.json`'s `methodNote` name the exception.
 - **Transcripts stay verbatim.** Captions spell notation out as speech ("theta
   sub j"); reconstructing it as $\theta_j$ belongs in `wiki/`, not in
   `raw/transcripts/`.
