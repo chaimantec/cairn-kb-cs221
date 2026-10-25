@@ -53,7 +53,7 @@ The lecture's traced examples ([≈40:26](../raw/transcripts/15-logic-i.md)–[�
 
 To answer a query, "we're going to pretend to add it into the KB and see what changes" ([≈41:58](../raw/transcripts/15-logic-i.md)). Ask and Tell do the same computation; the only differences are the string returned and whether a contingent $f$ is actually added. They are kept separate as "more of a user interface thing" ([≈46:34](../raw/transcripts/15-logic-i.md), [≈47:20](../raw/transcripts/15-logic-i.md), [≈50:21](../raw/transcripts/15-logic-i.md), [≈51:08](../raw/transcripts/15-logic-i.md)).
 
-The lecture implements both by enumerating every model, which is exponential. That is "just a proof of concept for understanding"; the real way is two calls to a [satisfiability](satisfiability.md) solver ([≈1:03:21](../raw/transcripts/15-logic-i.md)).
+The lecture implements both by enumerating every model, which is exponential. That is "just a proof of concept for understanding"; the real way is two calls to a [satisfiability](satisfiability.md) solver ([≈1:03:21](../raw/transcripts/15-logic-i.md)). Ask carries over unchanged to [first-order logic](first-order-logic.md): [lecture 16](16-logic-ii.md) opens with a first-order knowledge base whose answers to "Is it snowing?" move from "I don't know" to "No" as facts are added.
 
 ## What Tell Does Not Guarantee
 
@@ -78,3 +78,4 @@ $P(f \mid \text{KB})$ is 1 under entailment and 0 under contradiction, and a con
 - [Satisfiability](satisfiability.md) — deciding all three relations with two solver calls
 - [Inference rules](inference-rules.md) — derivation ($\vdash$), the syntactic counterpart of entailment ($\models$)
 - [Probabilistic inference](probabilistic-inference.md) — the probabilistic generalization of Ask
+- [First-order logic](first-order-logic.md) — where the same relations and Ask/Tell apply to formulas about objects

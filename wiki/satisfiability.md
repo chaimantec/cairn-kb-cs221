@@ -33,7 +33,7 @@ Mapped onto the knowledge-base operations, step 1 failing means Ask answers yes 
 
 ## Model Checking with Z3
 
-**Model checking** takes a KB as input and outputs whether it is satisfiable ([≈1:00:18](../raw/transcripts/15-logic-i.md), [slides](../raw/slides/15-logic-i.md)). The lecture's code has used the **Z3** package throughout to build formulas; Z3 is "an SMT solver" (the lecturer defers what that means to the next lecture) with tools for logical inference, including checking satisfiability ([≈1:01:04](../raw/transcripts/15-logic-i.md)):
+**Model checking** takes a KB as input and outputs whether it is satisfiable ([≈1:00:18](../raw/transcripts/15-logic-i.md), [slides](../raw/slides/15-logic-i.md)). The lecture's code has used the **Z3** package throughout to build formulas; Z3 is "an SMT solver" (the lecturer defers what that means to the next lecture, and [lecture 16](16-logic-ii.md) does not come back to it) with tools for logical inference, including checking satisfiability ([≈1:01:04](../raw/transcripts/15-logic-i.md)):
 
 ```python
 kb = [Rain, Wet]
@@ -46,6 +46,8 @@ if result == sat:
 ```
 
 In the trace, `result` is `sat` and `w` is `[Rain = True, Wet = True]` ([slides](../raw/slides/15-logic-i.md)). When a satisfiability checker answers yes, it also returns a model, "a sort of existence proof": here Rain is true and Wet is true, which justifies why the knowledge base is satisfiable ([≈1:01:50](../raw/transcripts/15-logic-i.md)).
+
+Lecture 16 uses the same two satisfiability calls with Z3 on a first-order knowledge base, to answer "Is it snowing?" about Alice, Phoenix and the weather; see [lecture 16](16-logic-ii.md#a-motivating-example) ([slides](../raw/slides/16-logic-ii.md)).
 
 ## SAT Solvers
 
@@ -61,3 +63,4 @@ With syntax and semantics defined, model checking as a black box already answers
 - [Entailment, contradiction and contingency](entailment.md) — the relations being decided, and Ask and Tell
 - [Propositional logic](propositional-logic.md) — models and knowledge bases
 - [Inference rules](inference-rules.md) — deriving conclusions syntactically instead of checking models
+- [First-order logic](first-order-logic.md) and [propositionalization](propositionalization.md) — satisfiability for a first-order knowledge base

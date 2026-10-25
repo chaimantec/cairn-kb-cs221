@@ -18,7 +18,7 @@ Notation, as in the lecture: $f$, $g$ and $h$ are formulas; $w$ is a model; $\ma
 
 Logical reasoning is what you do when you solve the lecture's opening problem (if $A + B = 10$ and $A - B = 4$, what is $A$?) by adding the equations to get $2A = 14$, rather than searching through possible values: a problem with infinitely many candidates, solved in your head ([≈0:52](../raw/transcripts/15-logic-i.md), [≈1:38](../raw/transcripts/15-logic-i.md)). Logic dominated AI before the 1990s; it fell back because it did not handle **uncertainty** (probability addresses that) or leverage **data** (machine learning addresses that). What it offers that the lecturer calls "sort of irreplaceable" is **expressivity in a compact way** ([≈2:26](../raw/transcripts/15-logic-i.md), [≈3:11](../raw/transcripts/15-logic-i.md)).
 
-Natural language is not precise enough to reason in. "A dime is better than a nickel; a nickel is better than a penny; therefore a dime is better than a penny" is fine, but "a penny is better than nothing; nothing is better than world peace; therefore a penny is better than world peace" has the same shape and is absurd ([≈3:58](../raw/transcripts/15-logic-i.md), [≈4:44](../raw/transcripts/15-logic-i.md)). Logical languages are formal, like programming languages, and there are many of them: first-order logic and description logic are two examples on the slide ([slides](../raw/slides/15-logic-i.md)).
+Natural language is not precise enough to reason in. "A dime is better than a nickel; a nickel is better than a penny; therefore a dime is better than a penny" is fine, but "a penny is better than nothing; nothing is better than world peace; therefore a penny is better than world peace" has the same shape and is absurd ([≈3:58](../raw/transcripts/15-logic-i.md), [≈4:44](../raw/transcripts/15-logic-i.md)). Logical languages are formal, like programming languages, and there are many of them: [first-order logic](first-order-logic.md) and description logic are two examples on the slide ([slides](../raw/slides/15-logic-i.md)).
 
 **Syntax is not semantics.** `2 + 3` and `3 + 2` are different syntax with the same meaning, 5; `3 / 2` is the same syntax with different meanings, 1 in Python 2.7 and 1.5 in Python 3 ([≈7:02](../raw/transcripts/15-logic-i.md)). A string's meaning is not in the string; it comes from the semantics.
 
@@ -72,6 +72,10 @@ Adding formulas makes the KB larger and its set of models smaller: $\mathcal{M}(
 
 Propositional symbols correspond to the random variables of a [Bayesian network](bayesian-networks.md), and models to assignments, so a joint distribution is a probability distribution over models ([≈51:54](../raw/transcripts/15-logic-i.md), [≈52:41](../raw/transcripts/15-logic-i.md)). The lecture develops this connection under [entailment](entailment.md#relation-to-probabilistic-inference).
 
+## What Propositional Logic Cannot Say Compactly
+
+[Lecture 16](16-logic-ii.md) opens by showing where propositional logic breaks down ([≈13:18](../raw/transcripts/16-logic-ii.md)–[≈16:23](../raw/transcripts/16-logic-ii.md), [slides](../raw/slides/16-logic-ii.md)). *Alice and Bob both know arithmetic* is easy: AliceKnowsArithmetic ∧ BobKnowsArithmetic. But *all students know arithmetic* needs a separate implication for every student, AliceIsStudent → AliceKnowsArithmetic and so on, and a thousand students make a very large formula. *Every even integer greater than 2 is the sum of two primes* would need a symbol for every integer. Propositional symbols are monolithic, with no objects inside them, and there are no quantifiers to range over objects that cannot be enumerated. [First-order logic](first-order-logic.md) adds both. Under the right assumptions a first-order knowledge base can be turned back into propositional logic, by [propositionalization](propositionalization.md).
+
 ## Related Pages
 
 - [Lecture 15](15-logic-i.md) — the lecture that introduces propositional logic
@@ -79,3 +83,4 @@ Propositional symbols correspond to the random variables of a [Bayesian network]
 - [Satisfiability](satisfiability.md) — whether a knowledge base has any model, and how solvers check it
 - [Inference rules](inference-rules.md) — modus ponens, derivation, soundness and completeness
 - [Probabilistic inference](probabilistic-inference.md) — the probabilistic counterpart of querying a knowledge base
+- [First-order logic](first-order-logic.md) — the more expressive logic of lecture 16, with objects and quantifiers
